@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Aloha | Gaga酱的奇思妙想</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="萌萌の嘎嘎">
+  
+  
+  
+  
+  <meta name="description" content="最近总是在想“成长”这两个很常常被提起的事情，这对于一个已经25岁的半中年而言，已经是一个不太能高频提起的词。  总是在最前面的叨逼叨最近一些事情吧，总让我觉得我的生长期似乎比正常人来的晚了些，一些属于青春期的标志，比如叛逆，比如和家长吵架等等最近才发生在我的身上。而在这些所谓的斗争中，其实最核心不过是，我在被迫成长。温室里躲久了，似乎也会害怕外面的风吹雨打，但是如果这把年纪了还不走，这辈子是否就">
+<meta name="keywords" content="python,认真学习の日常">
+<meta property="og:type" content="article">
+<meta property="og:title" content="磨刀霍霍：python你慢点飞，我的脑子还在后面追">
+<meta property="og:url" content="http://yoursite.com/2018/12/22/磨刀霍霍：python你慢点飞，我的脑子还在后面追/index.html">
+<meta property="og:site_name" content="Gaga酱の奇思妙想">
+<meta property="og:description" content="最近总是在想“成长”这两个很常常被提起的事情，这对于一个已经25岁的半中年而言，已经是一个不太能高频提起的词。  总是在最前面的叨逼叨最近一些事情吧，总让我觉得我的生长期似乎比正常人来的晚了些，一些属于青春期的标志，比如叛逆，比如和家长吵架等等最近才发生在我的身上。而在这些所谓的斗争中，其实最核心不过是，我在被迫成长。温室里躲久了，似乎也会害怕外面的风吹雨打，但是如果这把年纪了还不走，这辈子是否就">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2018/12/22/磨刀霍霍：python你慢点飞，我的脑子还在后面追/1.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/22/磨刀霍霍：python你慢点飞，我的脑子还在后面追/2.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/22/磨刀霍霍：python你慢点飞，我的脑子还在后面追/3.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/22/磨刀霍霍：python你慢点飞，我的脑子还在后面追/4.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/22/磨刀霍霍：python你慢点飞，我的脑子还在后面追/5.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/22/磨刀霍霍：python你慢点飞，我的脑子还在后面追/6.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/22/磨刀霍霍：python你慢点飞，我的脑子还在后面追/7.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/22/磨刀霍霍：python你慢点飞，我的脑子还在后面追/8.png">
+<meta property="og:updated_time" content="2019-04-10T16:59:51.389Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="磨刀霍霍：python你慢点飞，我的脑子还在后面追">
+<meta name="twitter:description" content="最近总是在想“成长”这两个很常常被提起的事情，这对于一个已经25岁的半中年而言，已经是一个不太能高频提起的词。  总是在最前面的叨逼叨最近一些事情吧，总让我觉得我的生长期似乎比正常人来的晚了些，一些属于青春期的标志，比如叛逆，比如和家长吵架等等最近才发生在我的身上。而在这些所谓的斗争中，其实最核心不过是，我在被迫成长。温室里躲久了，似乎也会害怕外面的风吹雨打，但是如果这把年纪了还不走，这辈子是否就">
+<meta name="twitter:image" content="http://yoursite.com/2018/12/22/磨刀霍霍：python你慢点飞，我的脑子还在后面追/1.png">
+  
+  <link rel="icon" href="/css/images/favicon.png">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/fashion.css">
+  <link rel="stylesheet" href="/css/glyphs.css">
+
+</head>
+</html>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src>
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src>
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pic0.jpg,css/images/pic2.png,css/images/pic4.jpg".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
+
+
+
+
+<header id="allheader" class="site-header" role="banner" style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h3 class="site-title">
+            
+              <a href="/" title="Gaga酱の奇思妙想" rel="home"> Gaga酱の奇思妙想 </a>
+            
+          </h3>
+          
+          
+            <div class="site-description">深水静流</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/">冲鸭❤</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/archives">archives❤</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/categories">碎碎念的基本法❤</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/tags">tags❤</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/about">岁月如歌❤</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/books">阅❤</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/movies">影❤</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-磨刀霍霍：python你慢点飞，我的脑子还在后面追" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost">
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      磨刀霍霍：python你慢点飞，我的脑子还在后面追
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/12/22/磨刀霍霍：python你慢点飞，我的脑子还在后面追/" class="article-date">
+	  <time datetime="2018-12-21T16:29:18.000Z" itemprop="datePublished">December 22, 2018</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/小李の放学后/">小李の放学后</a>
+ 
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近总是在想“成长”这两个很常常被提起的事情，这对于一个已经25岁的半中年而言，已经是一个不太能高频提起的词。</p>
+<!-- less -->
+<h4 id="总是在最前面的叨逼叨"><a href="#总是在最前面的叨逼叨" class="headerlink" title="总是在最前面的叨逼叨"></a>总是在最前面的叨逼叨</h4><p>最近一些事情吧，总让我觉得我的生长期似乎比正常人来的晚了些，一些属于青春期的标志，比如叛逆，比如和家长吵架等等最近才发生在我的身上。<br>而在这些所谓的斗争中，其实最核心不过是，我在被迫成长。温室里躲久了，似乎也会害怕外面的风吹雨打，但是如果这把年纪了还不走，这辈子是否就这样安稳不起波澜的一辈子呢？<br>会在小小的格子间里，抱怨着工作的各种奇怪症状，吐槽着奇奇怪怪的喜欢吃糖很大声的同事。<br>但是似乎这并不是我想要的，所以每当我写这些叨逼叨的时候，其实就是给<strong>自己打鸡血</strong>的时候，<strong><code>愿我们都心愿达成！</code></strong></p>
+<h4 id="开始认真学习"><a href="#开始认真学习" class="headerlink" title="开始认真学习"></a>开始认真学习</h4><p>最近尝试开始刷leetcode题目，用Python刷。<br>然鹅被吊打的不要不要的，要开始回头看起数据结构和算法啦~<br>但是基础还是很重要滴，所以2018年的最后一个小目标呢，就是在2019年来临之前刷完正在看的Python教程。</p>
+<h5 id="函数的参数"><a href="#函数的参数" class="headerlink" title="函数的参数"></a>函数的参数</h5><hr>
+<blockquote>
+<p>Python的函数定义非常简单，但灵活度却非常大。除了正常定义的必选参数外，还可以使用默认参数、可变参数和关键字参数，使得函数定义出来的接口，不但能处理复杂的参数，还可以简化调用者的代码。</p>
+</blockquote>
+<h6 id="位置参数"><a href="#位置参数" class="headerlink" title="位置参数"></a>位置参数</h6><p>这个是我们很熟悉的朋友，在以往的语法中都很了解了，在调用函数的时候，按顺序赋值。</p>
+<h6 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h6><p>设置默认参数时，有几点要注意：<br>一是必选参数在前，默认参数在后，否则Python的解释器会报错；<br>二是如何设置默认参数。<br>当函数有多个参数时，把变化大的参数放前面，变化小的参数放后面。变化小的参数就可以作为默认参数。</p>
+<p><strong><code>定义默认参数要牢记一点：默认参数必须指向不变对象！</code></strong></p>
+<h6 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h6><p><strong>参数个数不确定</strong>的时候，我们考虑使用list或者tuple传参。</p>
+<ul>
+<li>当我们有不定个数的参数时候，在位置参数前加上<code>*</code>，在函数内部接收到的就是一个tuple。这样就可以传入任意个数的参数。</li>
+</ul>
+<p><img src="1.png" alt></p>
+<ul>
+<li>当我们已经有一个list的时候，可以这么干↓Python允许你在list或tuple前面加一个*号，把list或tuple的元素变成可变参数传进去</li>
+</ul>
+<p><img src="2.png" alt></p>
+<p><strong>可变参数可以传入0个或任意个参数。</strong></p>
+<h6 id="关键字参数"><a href="#关键字参数" class="headerlink" title="关键字参数"></a>关键字参数</h6><p><strong>关键字参数允许你传入0个或任意个含参数名的参数，这些关键字参数在函数内部自动组装为一个dict。</strong><br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">person</span><span class="params">(name,age,**kw)</span>:</span></span><br><span class="line">	print(<span class="string">'name:'</span>,name,<span class="string">'age:'</span>,age,<span class="string">'others:'</span>,kw)</span><br></pre></td></tr></table></figure></p>
+<p><code>**kw</code>用来接受任意个数的关键词参数，它也可以啥都没有</p>
+<p><img src="3.png" alt></p>
+<blockquote>
+<p>和可变参数类似，也可以先组装出一个dict，然后，把该dict转换为关键字参数传进去。</p>
+</blockquote>
+<p><img src="4.png" alt><br>注意此处，kw获得的dict其实是<code>extra</code>的拷贝，函数内对kw的改变不会影响到extra。</p>
+<h6 id="命名关键字参数"><a href="#命名关键字参数" class="headerlink" title="命名关键字参数"></a>命名关键字参数</h6><p>我们在关键字参数中，只有在函数内才能检查<code>kw</code>到底传入哪些参数。<br>如果需要<strong>限制关键字参数的名字</strong>，就需要命名关键字参数，并用<code>*</code>隔开。<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">person</span><span class="params">(name, age, *, city, job)</span>:</span></span><br><span class="line">    print(name, age, city, job)</span><br></pre></td></tr></table></figure></p>
+<p>如果函数定义中已经有了一个可变参数，后面跟着的命名关键字参数就不再需要一个特殊分隔符*了：<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">person</span><span class="params">(name, age, *args, city, job)</span>:</span></span><br><span class="line">    print(name, age, args, city, job)</span><br></pre></td></tr></table></figure></p>
+<p><strong>命名关键字参数必须传入参数名，这和位置参数不同。</strong><br><strong>命名关键字参数可以有缺省值，从而简化调用。在具有默认值的时候，可不传入相关参数</strong></p>
+<p><img src="5.png" alt></p>
+<blockquote>
+<p>使用命名关键字参数时，要特别注意，如果没有可变参数，就必须加一个<em>作为特殊分隔符。如果缺少</em>，Python解释器将无法识别位置参数和命名关键字参数。</p>
+</blockquote>
+<h6 id="参数组合"><a href="#参数组合" class="headerlink" title="参数组合"></a>参数组合</h6><p>在Python中定义函数，可以用必选参数、默认参数、可变参数、关键字参数和命名关键字参数，这5种参数都可以组合使用。<br>    但是请注意，参数定义的顺序必须是：**必选参数、默认参数、可变参数、命名关键字参数和关键字参数。</p>
+<h5 id="递归函数"><a href="#递归函数" class="headerlink" title="递归函数"></a>递归函数</h5><p>其实以前学递归的时候，第一个想到的是那个故事：<br>从前有座山，山里有座庙，庙里有个老和尚和小和尚，有一天老和尚跟小和尚说：我给你讲个故事吧。从前有座山，山里有座庙，庙里有个老和尚和小和尚….<br>但是递归不是死循环，总有一天还是会出来的，虽然用的是自己的套路。（很土的说法吧hhh）</p>
+<p>来个正经的定义吧：在函数内部，可以调用其他函数。如果一个函数在内部调用自身本身，这个函数就是递归函数。</p>
+<p>比如计算阶乘n!<br>用递归可以酱紫写↓</p>
+<p><img src="6.png" alt></p>
+<blockquote>
+<p>递归函数的优点是定义简单，逻辑清晰。理论上，所有的递归函数都可以写成循环的方式，但循环的逻辑不如递归清晰。</p>
+</blockquote>
+<p><strong>使用递归函数需要注意防止栈溢出。</strong></p>
+<blockquote>
+<p>解决递归调用栈溢出的方法是通过尾递归优化，事实上尾递归和循环的效果是一样的，所以，把循环看成是一种特殊的尾递归函数也是可以的。<br><code>尾递归</code>是指，在函数返回的时候，调用自身本身，并且，<strong>return语句不能包含表达式</strong>。这样，编译器或者解释器就可以把尾递归做优化，使递归本身无论调用多少次，都只占用一个栈帧，不会出现栈溢出的情况。</p>
+</blockquote>
+<p>上面的代码的return中带了乘法表达式，所以不符合尾递归。<br>看了下廖老师的修改优化后的代码</p>
+<figure class="highlight maxima"><table><tr><td class="code"><pre><span class="line">def fact(n):</span><br><span class="line">    <span class="built_in">return</span> fact_iter(n, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">def fact_iter(<span class="built_in">num</span>, <span class="built_in">product</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">num</span> == <span class="number">1</span>:</span><br><span class="line">        <span class="built_in">return</span> <span class="built_in">product</span></span><br><span class="line">    <span class="built_in">return</span> fact_iter(<span class="built_in">num</span> - <span class="number">1</span>, <span class="built_in">num</span> * <span class="built_in">product</span>)</span><br></pre></td></tr></table></figure>
+<p>在这次的计算中，每次都会把<code>num - 1</code>和<code>producct</code>的结果计算出来后再进行调用<code>fact_iter</code>函数，所以栈不会增长。<br>廖老师给了两个方法的栈对比图，虽然懵逼中，但是还是学习到了。<br>希望自己写的时候可以顺顺利利。<br>未优化前↓</p>
+<p><img src="7.png" alt></p>
+<p>优化后↓</p>
+<p><img src="8.png" alt></p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/小李の放学后/">小李の放学后</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/认真学习の日常/">认真学习の日常</a></li></ul>
+
+      
+        
+	<div id="comment">
+	
+	<!-- 多说评论框 start -->
+	 <div class="ds-thread" data-thread-key="/2018/12/22/磨刀霍霍：python你慢点飞，我的脑子还在后面追/" data-title="磨刀霍霍：python你慢点飞，我的脑子还在后面追" data-url="http://yoursite.com/2018/12/22/磨刀霍霍：python你慢点飞，我的脑子还在后面追/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"iTimeTraveler"};
+	  (function() {
+	    var ds = document.createElement('script');
+	    ds.type = 'text/javascript';ds.async = true;
+	    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	    ds.charset = 'UTF-8';
+	    (document.getElementsByTagName('head')[0] 
+	     || document.getElementsByTagName('body')[0]).appendChild(ds);
+	  })();
+	  </script>
+	<!-- 多说公共JS代码 end -->
+	
+	</div>
+	<link rel="stylesheet" href="/css/comment.css">
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/12/24/磨刀霍霍：飞呀飞呀python的骄傲放纵/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          磨刀霍霍：飞呀飞呀python的骄傲放纵
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/12/19/磨刀霍霍：ppppppython是需要好好学习的/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">磨刀霍霍：ppppppython是需要好好学习的</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#总是在最前面的叨逼叨"><span class="nav-number">1.</span> <span class="nav-text">总是在最前面的叨逼叨</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#开始认真学习"><span class="nav-number">2.</span> <span class="nav-text">开始认真学习</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#函数的参数"><span class="nav-number">2.1.</span> <span class="nav-text">函数的参数</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#位置参数"><span class="nav-number">2.1.1.</span> <span class="nav-text">位置参数</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#默认参数"><span class="nav-number">2.1.2.</span> <span class="nav-text">默认参数</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#可变参数"><span class="nav-number">2.1.3.</span> <span class="nav-text">可变参数</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#关键字参数"><span class="nav-number">2.1.4.</span> <span class="nav-text">关键字参数</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#命名关键字参数"><span class="nav-number">2.1.5.</span> <span class="nav-text">命名关键字参数</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#参数组合"><span class="nav-number">2.1.6.</span> <span class="nav-text">参数组合</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#递归函数"><span class="nav-number">2.2.</span> <span class="nav-text">递归函数</span></a></li></ol></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">冲鸭❤</a>
+  
+    <a href="/archives" class="mobile-nav-link">archives❤</a>
+  
+    <a href="/categories" class="mobile-nav-link">碎碎念的基本法❤</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags❤</a>
+  
+    <a href="/about" class="mobile-nav-link">岁月如歌❤</a>
+  
+    <a href="/books" class="mobile-nav-link">阅❤</a>
+  
+    <a href="/movies" class="mobile-nav-link">影❤</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2019 Gaga酱の奇思妙想 All Rights Reserved.
+        
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script type="text/javascript" src="js/love.js"></script>
+  <script type="text/javascript" src="js/float.js"></script>
+  <script type="text/javascript" src="js/typewriter.js"></script>
+  <script type="text/javascript" color="0,104,183" opacity="1" zindex="-1" count="50" src="js/particle.js"></script>
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
