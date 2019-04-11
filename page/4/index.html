@@ -131,6 +131,100 @@
         
           <section id="main">
   
+    <article id="post-磨刀霍霍：ppppppython是需要好好学习的" class="article article-type-post" itemscope itemprop="blogPost">
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/12/19/磨刀霍霍：ppppppython是需要好好学习的/">磨刀霍霍：ppppppython是需要好好学习的</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2018/12/19/磨刀霍霍：ppppppython是需要好好学习的/" class="article-date">
+	  <time datetime="2018-12-18T16:29:18.000Z" itemprop="datePublished">December 19, 2018</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/小李の放学后/">小李の放学后</a>
+ 
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>持续学习的第三天了，持续学习是一个不容易培养的好习惯，但是坚持就是胜利嘛~<br><!-- less --></p>
+<h4 id="又是写在前面的乱七八糟"><a href="#又是写在前面的乱七八糟" class="headerlink" title="又是写在前面的乱七八糟"></a>又是写在前面的乱七八糟</h4><hr>
+<p>昨天因为一点点事情，所以没能学习很长时间，今天要补回来。<br>周末要搬家，估计也得耽搁点学习时间，都要努力补回来~<br>感觉其实学习编程是一种锻炼逻辑思维的好办法，我这个人本身挺没逻辑的，读书的时候算法就很弱。<br>前段时间因为一些原因吧选择参加国考，被行测狠狠的吊打，逻辑性真的很重要，贯穿生活啊。<br>然后学习python呢，其实是为了后续的转行，其实真的是转行，以前是前端来着，可能还是个伪的。<br>但是生活嘛，处处有惊喜啦~</p>
+<h4 id="关于职业选择"><a href="#关于职业选择" class="headerlink" title="关于职业选择"></a>关于职业选择</h4><hr>
+<p>知己知彼，百战不殆。<br>除了认真磨炼基础，还得了解对方的想法。<br>所以来分析下现在的招聘要点。<br>有厉害的朋友们自己爬了数据来贡献。<br><a href="https://blog.csdn.net/lbship/article/details/79452459" target="_blank" rel="noopener">python爬取前程无忧和拉勾数据分析岗位并分析</a><br><a href="https://www.jianshu.com/p/24913ef14750" target="_blank" rel="noopener">Python分析拉勾网数据分析岗位</a><br>感谢大神们的分享与分析，后续努力我也自己爬一个。<br>直接抄其中一份的结论吧~</p>
+<blockquote>
+<p><strong>1.各地区招聘公司数量和平均待遇。</strong><br>用tebleau生成地理图十分方便强大。可以看出不论是招聘公司的数据还是平均待遇水平主要都是北上广深杭州占优势。成都紧随其后。<br><strong>2.公司类型</strong><br>可以看出招聘的公司主要是民营企业和一些创业公司为主。<br><strong>3.公司规模和公司领域</strong><br>可以看出招聘公司的规模在50-500人规模为主，招聘的领域主要是互联网公司，金融紧随其后。<br><strong>4.经验和学历要求</strong><br>学历这里主要是大专本科为主，要求不算很高。<br><strong>5.岗位要求和岗位职责</strong></p>
+</blockquote>
+<p><strong>看词云结果</strong><br><img src="1.png" alt></p>
+<p>所以其实数据分析岗位还是对数学能力及技术有一定的要求，（想起了万恶之源高数，扶额）还是要好好学习啊，线代统计学都抓起来看。<br>我自己现在在的地区其实对于互联网行业并不是很友好，所以如果要继续在互联网行业深耕，还是要去搞更远的地方。之前年轻的时候觉得离家近好些，梦想“钱多事少离家近”。但事实证明，总是要有一些代价的。<br>如果愿意承受代价，那就只能努力，而且不抱怨。<br><strong>无论如何，希望自己，成为那个不抱怨的自己，成为心目中那个梦想的自己。</strong></p>
+<h4 id="学习开始啦，-希望今天可以开始刷leetcode"><a href="#学习开始啦，-希望今天可以开始刷leetcode" class="headerlink" title="学习开始啦， 希望今天可以开始刷leetcode~"></a>学习开始啦， 希望今天可以开始刷leetcode~</h4><h5 id="不可变对象"><a href="#不可变对象" class="headerlink" title="不可变对象"></a>不可变对象</h5><p>接着昨天的进度，之前不可变对象我们说的，有tuple,还有str。<br>如果对str进行操作，</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">a</span> = <span class="string">'abc'</span></span><br><span class="line"><span class="selector-tag">a</span>.replace(<span class="string">'a'</span>,<span class="string">'A'</span>)  #<span class="string">'Abc'</span></span><br></pre></td></tr></table></figure>
+<p>但是a还是’abc’，因为<strong>a是变量</strong>，<strong>‘abc’才是字符串对象</strong><br><code>replace</code>方法是作用在<strong>字符串对象</strong>上的</p>
+<blockquote>
+<p>对于不变对象来说，调用对象自身的任意方法，也不会改变该对象自身的内容。相反，这些方法会创建新的对象并返回，这样，就保证了不可变对象本身永远是不可变的。</p>
+</blockquote>
+<h6 id="来做作业"><a href="#来做作业" class="headerlink" title="来做作业"></a>来做作业</h6><p>练习：把(1, 2, 3)和(1, [2, 3])放入dict或set中，并解释结果<br><img src="2.png" alt></p>
+<ul>
+<li><code>函数函数！</code></li>
+</ul>
+<p>Python内置了很多有用的函数，我们可以直接调用。</p>
+<p>要调用一个函数，需要知道函数的名称和参数，比如求绝对值的函数abs，只有一个参数。可以直接从Python的官方网站查看文档：</p>
+<p><a href="http://docs.python.org/3/library/functions.html#abs" target="_blank" rel="noopener">http://docs.python.org/3/library/functions.html#abs</a></p>
+<p>也可以在交互式命令行通过help(abs)查看abs函数的帮助信息。</p>
+<p><strong>要学会看报错信息。</strong></p>
+<h5 id="定义函数（似乎看到函数有点小激动）"><a href="#定义函数（似乎看到函数有点小激动）" class="headerlink" title="定义函数（似乎看到函数有点小激动）"></a>定义函数（似乎看到函数有点小激动）</h5><p><strong>def</strong>很重要，遇到<strong>return</strong>就执行完毕<br><code>return none</code>可以简写成<code>return</code><br>在Python交互环境中定义函数时，注意Python会出现…的提示。函数定义结束后需要按两次回车重新回到&gt;&gt;&gt;提示符下。<br>来完成第一个函数定义，关于<code>my_abs</code>,文件名为<code>abstest.py</code></p>
+<p><img src="3.png" alt><br><img src="4.png" alt></p>
+<h5 id="空函数"><a href="#空函数" class="headerlink" title="空函数"></a>空函数</h5><p>什么都不想做的函数朋友，所以直接给pass了。</p>
+<figure class="highlight flix"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">nop</span></span>:</span><br><span class="line">    pass</span><br></pre></td></tr></table></figure>
+<p>pass语句什么都不做，那有什么用？实际上pass可以用来作为占位符，比如现在还没想好怎么写函数的代码，就可以先放一个pass，让代码能运行起来。<br><strong>pass似乎是个很随和的朋友（随口说说的）</strong></p>
+<ul>
+<li>参数检查<br>内置函数和自定义函数，在报错信息上有所差异。<br><code>TypeError</code>可以检查参数个数的问题，但是当参数类型不对时候，自定义函数无法检查。<br>所以，来修改下我们的<code>my_abs()</code></li>
+</ul>
+<p><img src="5.png" alt></p>
+<ul>
+<li>返回多个值</li>
+</ul>
+<p><img src="6.png" alt></p>
+<p>返回值为tuple</p>
+<blockquote>
+<p>在语法上，返回一个tuple可以省略括号，而多个变量可以同时接收一个tuple，按位置赋给对应的值，所以，Python的函数返回多值其实就是返回一个tuple，但写起来更方便。</p>
+</blockquote>
+<hr>
+<p>好哒，我已经可以开始刷leetcode啦，明天见。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/小李の放学后/">小李の放学后</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/认真学习の日常/">认真学习の日常</a></li></ul>
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-磨刀霍霍：向python" class="article article-type-post" itemscope itemprop="blogPost">
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -440,6 +534,18 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
+              <h6 style="margin: 0;"><a href="/2019/04/11/磨刀霍霍：新装备新气象！/">磨刀霍霍：新装备新气象</a></h6>
+              <span>April 11, 2019</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
               <h6 style="margin: 0;"><a href="/2019/04/07/Y想-190407/">Y想-190407</a></h6>
               <span>April 7, 2019</span>
             </div>
@@ -494,18 +600,6 @@
 
           </li>
         
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2019/03/19/小李飞刀：做题第九弹！/">小李飞刀：做题第九弹！</a></h6>
-              <span>March 19, 2019</span>
-            </div>
-
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -515,7 +609,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Gagaの重要日常/">Gagaの重要日常</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/小李の放学后/">小李の放学后</a><span class="category-list-count">21</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/小李の文艺日常/">小李の文艺日常</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/每周都有新发现/">每周都有新发现</a><span class="category-list-count">7</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Gagaの重要日常/">Gagaの重要日常</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/小李の放学后/">小李の放学后</a><span class="category-list-count">22</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/小李の文艺日常/">小李の文艺日常</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/每周都有新发现/">每周都有新发现</a><span class="category-list-count">7</span></li></ul>
     </div>
   </div>
 
@@ -525,7 +619,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL/">SQL</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/leetcode/">leetcode</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">19</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小李の胡说八道/">小李の胡说八道</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小李の观影/">小李の观影</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爬虫/">爬虫</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/认真学习の日常/">认真学习の日常</a><span class="tag-list-count">8</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL/">SQL</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/leetcode/">leetcode</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">19</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/一些奇奇怪怪の日常/">一些奇奇怪怪の日常</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小李の胡说八道/">小李の胡说八道</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小李の观影/">小李の观影</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爬虫/">爬虫</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/认真学习の日常/">认真学习の日常</a><span class="tag-list-count">8</span></li></ul>
     </div>
   </div>
 
@@ -535,7 +629,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/leetcode/" style="font-size: 17.5px;">leetcode</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/小李の胡说八道/" style="font-size: 15px;">小李の胡说八道</a> <a href="/tags/小李の观影/" style="font-size: 12.5px;">小李の观影</a> <a href="/tags/爬虫/" style="font-size: 10px;">爬虫</a> <a href="/tags/认真学习の日常/" style="font-size: 15px;">认真学习の日常</a>
+      <a href="/tags/SQL/" style="font-size: 12px;">SQL</a> <a href="/tags/leetcode/" style="font-size: 18px;">leetcode</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/一些奇奇怪怪の日常/" style="font-size: 10px;">一些奇奇怪怪の日常</a> <a href="/tags/小李の胡说八道/" style="font-size: 16px;">小李の胡说八道</a> <a href="/tags/小李の观影/" style="font-size: 14px;">小李の观影</a> <a href="/tags/爬虫/" style="font-size: 12px;">爬虫</a> <a href="/tags/认真学习の日常/" style="font-size: 16px;">认真学习の日常</a>
     </div>
   </div>
 
@@ -545,7 +639,7 @@
     <h3 class="widget-title">Archives</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">6</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">6</span></li></ul>
     </div>
   </div>
 

@@ -131,6 +131,74 @@
         
           <section id="main">
   
+    <article id="post-磨刀霍霍：新装备新气象！" class="article article-type-post" itemscope itemprop="blogPost">
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/04/11/磨刀霍霍：新装备新气象！/">磨刀霍霍：新装备新气象</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/04/11/磨刀霍霍：新装备新气象！/" class="article-date">
+	  <time datetime="2019-04-11T15:28:30.000Z" itemprop="datePublished">April 11, 2019</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/小李の放学后/">小李の放学后</a>
+ 
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>认真磨刀的小李!!!<br>苦练刀工!!!<br><!-- less --></p>
+<h4 id="写在前面的碎碎念"><a href="#写在前面的碎碎念" class="headerlink" title="写在前面的碎碎念"></a>写在前面的碎碎念</h4><p>蛰伏了好几天，小李又出现啦！！！<br>现在的小李，已经是<code>换了装备的</code>小李，新装备<strong>真香</strong>！<br>换了不一样的操作系统，还得折腾各种环境，终于有时间来写个小总结了！</p>
+<h4 id="配置的东动——陌生又熟悉的朋友们"><a href="#配置的东动——陌生又熟悉的朋友们" class="headerlink" title="配置的东动——陌生又熟悉的朋友们"></a>配置的东动——陌生又熟悉的朋友们</h4><p>其实算了下我需要配置的东西并不是很多，主要是一些常用的<code>python</code>和<code>node.js</code>，以及blog的迁移。</p>
+<p>和之前在windows下不一样，mac下有时候更依赖于<code>homebrew</code>这个我今天才认识的酷炫的小伙伴。<br>比如<code>git</code>我就是用<br><figure class="highlight mipsasm"><table><tr><td class="code"><pre><span class="line"><span class="keyword">brew </span><span class="keyword">install </span>git</span><br></pre></td></tr></table></figure></p>
+<p>就简单的安装好了~<br>还额外安装了<code>xcode</code>、<code>iterm</code>，虽然还没有摸索出适用的方案，但是我觉得很快就会熟悉起来的~</p>
+<h4 id="关于blog的迁移"><a href="#关于blog的迁移" class="headerlink" title="关于blog的迁移"></a>关于blog的迁移</h4><p>之前搭建blog的时候，并没有详细的记录下配置的过程。<br>刚好乘着迁移的机会，把一些关键的点记录下来。</p>
+<h5 id="安装node-js和git"><a href="#安装node-js和git" class="headerlink" title="安装node.js和git"></a>安装node.js和git</h5><p>这是一对好基友。node.js可以在官网进行下载，下载完npm这位朋友也跟着来啦~</p>
+<h5 id="需要拥有一个github账户"><a href="#需要拥有一个github账户" class="headerlink" title="需要拥有一个github账户"></a>需要拥有一个github账户</h5><p>居家必备的！</p>
+<h5 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装<code>hexo</code></h5><figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-<span class="keyword">cli</span></span><br></pre></td></tr></table></figure>
+<p>安装完之后呢，在命令行敲入 hexo，如果有出现一堆的代码，那么就恭喜安装成功了</p>
+<h5 id="新建文件夹，并初始化"><a href="#新建文件夹，并初始化" class="headerlink" title="新建文件夹，并初始化"></a>新建文件夹，并初始化</h5><p>新建一个文件夹,cd进入后，<br><figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">hexo init</span></span><br></pre></td></tr></table></figure></p>
+<p>然后<br><figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">hexo g</span></span><br><span class="line"><span class="attribute">hexo d</span></span><br></pre></td></tr></table></figure></p>
+<p>再打开 localhost:4000 如果能看到hexo的页面，那就很厉害啦！</p>
+<h5 id="github上新建一个仓库"><a href="#github上新建一个仓库" class="headerlink" title="github上新建一个仓库"></a>github上新建一个仓库</h5><p>仓库的名称必须是<strong>你的id</strong>.github.io!!!</p>
+<h5 id="配置ssh"><a href="#配置ssh" class="headerlink" title="配置ssh"></a>配置ssh</h5><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">git<span class="built_in"> config </span>--global user.name <span class="string">"yourname"</span></span><br><span class="line">git<span class="built_in"> config </span>--global user.email <span class="string">"youremail"</span></span><br><span class="line">ssh-keygen -t rsa -C <span class="string">"youremail"</span></span><br></pre></td></tr></table></figure>
+<p>如果密码为空，就一路空格吧！<br>然后在复制rsa的文件，并在github的setting的<code>SSH key</code>里面增加内容！然后测试一下！<br><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">ssh</span> <span class="selector-tag">-T</span> <span class="selector-tag">git</span>@<span class="keyword">github</span>.<span class="keyword">com</span></span><br></pre></td></tr></table></figure></p>
+<p>如果可以收到反馈：hello，xxx！那就太棒了！</p>
+<h5 id="开始写文章吧！"><a href="#开始写文章吧！" class="headerlink" title="开始写文章吧！"></a>开始写文章吧！</h5><p>我这次主要是迁移，所以简略记录一些重要的语句，文件夹我直接拷贝了一些重要的文件夹，没有全部拷贝。<br>另外要安装两个插件，一个是deplouyer，一个则是豆瓣影音，在此也记录一下<br><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> <span class="comment">--save hexo-deployer-git</span></span><br><span class="line"></span><br><span class="line">npm intall hexo-douban <span class="comment">--save</span></span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/小李の放学后/">小李の放学后</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/一些奇奇怪怪の日常/">一些奇奇怪怪の日常</a></li></ul>
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-Y想-190407" class="article article-type-post" itemscope itemprop="blogPost">
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -831,82 +899,6 @@
 <!-- Table of Contents -->
 
   
-    <article id="post-Y想-190310" class="article article-type-post" itemscope itemprop="blogPost">
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/03/10/Y想-190310/">Y想-190310</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2019/03/10/Y想-190310/" class="article-date">
-	  <time datetime="2019-03-10T14:04:04.000Z" itemprop="datePublished">March 10, 2019</time>
-	</a>
-
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/每周都有新发现/">每周都有新发现</a>
- 
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="一周小确幸"><a href="#一周小确幸" class="headerlink" title="一周小确幸"></a>一周小确幸</h4><ul>
-<li>二刷了《绿皮书》，和转转一起和在肯塔基吃肯德基的主角同步吃肯德基!!!</li>
-<li>和少棉一起看完了《驯龙高手3》，最后还是眼睛湿湿的，我们总会面对别离，只希望是为了更好的相见</li>
-<li>去了同一家咖啡馆，喝了甜甜的<code>焦糖玛奇朵</code>，顺便做了下一周的规划，觉得又充满了能量！</li>
-<li>在去咖啡馆的路上，看到了一位散步的朋友(笑<br><img src="1.jpg" alt></li>
-<li>在闲鱼上找到了便宜的<code>Kindle Unlimited</code>一年期，感觉可划算了!</li>
-<li>剪了喜欢的发型，年后以来第一次见Tony，幸好Tony水平见长~</li>
-<li>周日的晚上终于把鼻托换了，舒服!</li>
-</ul>
-<h4 id="好好学习，天天向上"><a href="#好好学习，天天向上" class="headerlink" title="好好学习，天天向上"></a>好好学习，天天向上</h4><ul>
-<li>leetcode刷题10题，有两题还需要再次提交，写了题解过程</li>
-<li>本周尤克里里偷懒了，演奏曲目有：</li>
-</ul>
-<ol>
-<li>《那些年》</li>
-<li>《爱笑的眼睛》</li>
-<li>《背对背拥抱》</li>
-</ol>
-<ul>
-<li>本周书单有：</li>
-</ul>
-<ol>
-<li><a href="https://book.douban.com/subject/25783654/" target="_blank" rel="noopener">《如何高效学习》</a>（已读完）</li>
-<li><a href="https://book.douban.com/subject/6434328/" target="_blank" rel="noopener">《谁说菜鸟不会数据分析》</a>（在读）</li>
-<li><a href="https://book.douban.com/subject/26979890/" target="_blank" rel="noopener">《算法图解》</a>（在读）</li>
-</ol>
-
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/每周都有新发现/">每周都有新发现</a>
-
-      
-  <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小李の胡说八道/">小李の胡说八道</a></li></ul>
-
-      
-    </footer>
-    <hr class="entry-footer-hr">
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
 
 
   <nav id="page-nav">
@@ -1011,6 +1003,18 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
+              <h6 style="margin: 0;"><a href="/2019/04/11/磨刀霍霍：新装备新气象！/">磨刀霍霍：新装备新气象</a></h6>
+              <span>April 11, 2019</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
               <h6 style="margin: 0;"><a href="/2019/04/07/Y想-190407/">Y想-190407</a></h6>
               <span>April 7, 2019</span>
             </div>
@@ -1065,18 +1069,6 @@
 
           </li>
         
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2019/03/19/小李飞刀：做题第九弹！/">小李飞刀：做题第九弹！</a></h6>
-              <span>March 19, 2019</span>
-            </div>
-
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -1086,7 +1078,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Gagaの重要日常/">Gagaの重要日常</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/小李の放学后/">小李の放学后</a><span class="category-list-count">21</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/小李の文艺日常/">小李の文艺日常</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/每周都有新发现/">每周都有新发现</a><span class="category-list-count">7</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Gagaの重要日常/">Gagaの重要日常</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/小李の放学后/">小李の放学后</a><span class="category-list-count">22</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/小李の文艺日常/">小李の文艺日常</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/每周都有新发现/">每周都有新发现</a><span class="category-list-count">7</span></li></ul>
     </div>
   </div>
 
@@ -1096,7 +1088,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL/">SQL</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/leetcode/">leetcode</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">19</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小李の胡说八道/">小李の胡说八道</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小李の观影/">小李の观影</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爬虫/">爬虫</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/认真学习の日常/">认真学习の日常</a><span class="tag-list-count">8</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL/">SQL</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/leetcode/">leetcode</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">19</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/一些奇奇怪怪の日常/">一些奇奇怪怪の日常</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小李の胡说八道/">小李の胡说八道</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小李の观影/">小李の观影</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爬虫/">爬虫</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/认真学习の日常/">认真学习の日常</a><span class="tag-list-count">8</span></li></ul>
     </div>
   </div>
 
@@ -1106,7 +1098,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/leetcode/" style="font-size: 17.5px;">leetcode</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/小李の胡说八道/" style="font-size: 15px;">小李の胡说八道</a> <a href="/tags/小李の观影/" style="font-size: 12.5px;">小李の观影</a> <a href="/tags/爬虫/" style="font-size: 10px;">爬虫</a> <a href="/tags/认真学习の日常/" style="font-size: 15px;">认真学习の日常</a>
+      <a href="/tags/SQL/" style="font-size: 12px;">SQL</a> <a href="/tags/leetcode/" style="font-size: 18px;">leetcode</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/一些奇奇怪怪の日常/" style="font-size: 10px;">一些奇奇怪怪の日常</a> <a href="/tags/小李の胡说八道/" style="font-size: 16px;">小李の胡说八道</a> <a href="/tags/小李の观影/" style="font-size: 14px;">小李の观影</a> <a href="/tags/爬虫/" style="font-size: 12px;">爬虫</a> <a href="/tags/认真学习の日常/" style="font-size: 16px;">认真学习の日常</a>
     </div>
   </div>
 
@@ -1116,7 +1108,7 @@
     <h3 class="widget-title">Archives</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">6</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">6</span></li></ul>
     </div>
   </div>
 
