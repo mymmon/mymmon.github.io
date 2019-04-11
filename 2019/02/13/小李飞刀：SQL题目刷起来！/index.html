@@ -11,18 +11,18 @@
   
   
   
-  <meta name="description" content="终于拥有博客的小李~ 随便说说好几天没有认真刷题了，这两天猛刷了一把SQL题目。 然后用hexo搭建了自己的BLOG，还在摸索中，后续渐渐的就会两边都同步文章。 SQL题集leetcode上对于数据库是有单独的19题的，我现在的进度是8/19，刷的还是有点慢，而且很多地方效率不高，还得做n刷处理。毕竟后续如果考虑到要说数据分析的话，取数上的效率也得保证。 第一题175. 组合两个表难度：简单 表1">
+  <meta name="description" content="终于拥有博客的小李~">
 <meta name="keywords" content="leetcode,SQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="小李飞刀：SQL题目刷起来！">
 <meta property="og:url" content="http://yoursite.com/2019/02/13/小李飞刀：SQL题目刷起来！/index.html">
 <meta property="og:site_name" content="Gaga酱の奇思妙想">
-<meta property="og:description" content="终于拥有博客的小李~ 随便说说好几天没有认真刷题了，这两天猛刷了一把SQL题目。 然后用hexo搭建了自己的BLOG，还在摸索中，后续渐渐的就会两边都同步文章。 SQL题集leetcode上对于数据库是有单独的19题的，我现在的进度是8/19，刷的还是有点慢，而且很多地方效率不高，还得做n刷处理。毕竟后续如果考虑到要说数据分析的话，取数上的效率也得保证。 第一题175. 组合两个表难度：简单 表1">
+<meta property="og:description" content="终于拥有博客的小李~">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-04-10T16:59:16.221Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小李飞刀：SQL题目刷起来！">
-<meta name="twitter:description" content="终于拥有博客的小李~ 随便说说好几天没有认真刷题了，这两天猛刷了一把SQL题目。 然后用hexo搭建了自己的BLOG，还在摸索中，后续渐渐的就会两边都同步文章。 SQL题集leetcode上对于数据库是有单独的19题的，我现在的进度是8/19，刷的还是有点慢，而且很多地方效率不高，还得做n刷处理。毕竟后续如果考虑到要说数据分析的话，取数上的效率也得保证。 第一题175. 组合两个表难度：简单 表1">
+<meta name="twitter:description" content="终于拥有博客的小李~">
   
   <link rel="icon" href="/css/images/favicon.png">
   
@@ -158,7 +158,7 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>终于拥有博客的小李~<br><!-- less --></p>
+        <p></p>
 <h2 id="随便说说"><a href="#随便说说" class="headerlink" title="随便说说"></a>随便说说</h2><p>好几天没有认真刷题了，这两天猛刷了一把SQL题目。</p>
 <p>然后用hexo搭建了自己的<a href="http://mymmon.github.io" target="_blank" rel="noopener">BLOG</a>，还在摸索中，后续渐渐的就会两边都同步文章。</p>
 <h2 id="SQL题集"><a href="#SQL题集" class="headerlink" title="SQL题集"></a>SQL题集</h2><p>leetcode上对于数据库是有单独的19题的，我现在的进度是8/19，刷的还是有点慢，而且很多地方效率不高，还得做n刷处理。<br>毕竟后续如果考虑到要说数据分析的话，取数上的效率也得保证。</p>
@@ -607,7 +607,6 @@
 <p><strong>我的题解：</strong><br><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">class</span> <span class="keyword">FROM</span> (<span class="keyword">select</span> <span class="keyword">distinct</span> * <span class="keyword">from</span> courses) <span class="keyword">as</span> <span class="keyword">new</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> <span class="keyword">class</span> <span class="keyword">HAVING</span> <span class="keyword">count</span>(*) &gt;= <span class="number">5</span></span><br></pre></td></tr></table></figure></p>
 <p><strong>解题思路：</strong><br>对课程进行分组，分组后记数大于等于5的就取出数值。</p>
 <p><strong>其他</strong><br>Null</p>
-
       
     </div>
     <footer class="entry-meta entry-footer">

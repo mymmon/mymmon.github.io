@@ -11,13 +11,13 @@
   
   
   
-  <meta name="description" content="我又来刷题啦，今天都是字符串相关的呢~ 写在前面的话好几天木有刷题啦，今天猛刷了一把，要梳理一个顺序好好的学习啦~一定要好好执行每天做题的计划！最近真的好忙碌啊，还要做视频。不过呢，看了高效学习的书，感觉其实不能说太分散的学习，应该考虑多方面的联系，形成整体性的学习，还得琢磨琢磨…小李加油呀！ 认真做题第一题58. 最后一个单词的长度难度：简单给定一个仅包含大小写字母和空格 ‘ ‘ 的字符串，返回">
+  <meta name="description" content="我又来刷题啦，今天都是字符串相关的呢~">
 <meta name="keywords" content="leetcode,python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="小李飞刀：刷题第五弹！">
 <meta property="og:url" content="http://yoursite.com/2019/03/06/小李飞刀：刷题第五弹！/index.html">
 <meta property="og:site_name" content="Gaga酱の奇思妙想">
-<meta property="og:description" content="我又来刷题啦，今天都是字符串相关的呢~ 写在前面的话好几天木有刷题啦，今天猛刷了一把，要梳理一个顺序好好的学习啦~一定要好好执行每天做题的计划！最近真的好忙碌啊，还要做视频。不过呢，看了高效学习的书，感觉其实不能说太分散的学习，应该考虑多方面的联系，形成整体性的学习，还得琢磨琢磨…小李加油呀！ 认真做题第一题58. 最后一个单词的长度难度：简单给定一个仅包含大小写字母和空格 ‘ ‘ 的字符串，返回">
+<meta property="og:description" content="我又来刷题啦，今天都是字符串相关的呢~">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/03/06/小李飞刀：刷题第五弹！/1.png">
 <meta property="og:image" content="http://yoursite.com/2019/03/06/小李飞刀：刷题第五弹！/2.png">
@@ -26,7 +26,7 @@
 <meta property="og:updated_time" content="2019-04-10T16:59:42.257Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小李飞刀：刷题第五弹！">
-<meta name="twitter:description" content="我又来刷题啦，今天都是字符串相关的呢~ 写在前面的话好几天木有刷题啦，今天猛刷了一把，要梳理一个顺序好好的学习啦~一定要好好执行每天做题的计划！最近真的好忙碌啊，还要做视频。不过呢，看了高效学习的书，感觉其实不能说太分散的学习，应该考虑多方面的联系，形成整体性的学习，还得琢磨琢磨…小李加油呀！ 认真做题第一题58. 最后一个单词的长度难度：简单给定一个仅包含大小写字母和空格 ‘ ‘ 的字符串，返回">
+<meta name="twitter:description" content="我又来刷题啦，今天都是字符串相关的呢~">
 <meta name="twitter:image" content="http://yoursite.com/2019/03/06/小李飞刀：刷题第五弹！/1.png">
   
   <link rel="icon" href="/css/images/favicon.png">
@@ -163,7 +163,7 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>我又来刷题啦，今天都是字符串相关的呢~<br><!-- less --></p>
+        <p></p>
 <h4 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话"></a>写在前面的话</h4><p>好几天木有刷题啦，今天猛刷了一把，要梳理一个顺序好好的学习啦~<br>一定要好好执行每天做题的计划！<br>最近真的好忙碌啊，还要做视频。<br>不过呢，看了高效学习的书，感觉其实不能说太分散的学习，应该考虑多方面的联系，形成整体性的学习，还得琢磨琢磨…<br>小李加油呀！</p>
 <h4 id="认真做题"><a href="#认真做题" class="headerlink" title="认真做题"></a>认真做题</h4><h5 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h5><p><strong><a href="https://leetcode-cn.com/problems/length-of-last-word/" target="_blank" rel="noopener">58. 最后一个单词的长度</a></strong><br><strong>难度：简单</strong><br>给定一个仅包含大小写字母和空格 ‘ ‘ 的字符串，返回其最后一个单词的长度。<br>如果不存在最后一个单词，请返回<code>0</code>。<br>说明：一个单词是指由字母组成，但不包含任何空格的字符串。<br><strong>我的题解：</strong><br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">lengthOfLastWord</span><span class="params">(self, s)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type s: str</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        lastindex = <span class="number">0</span></span><br><span class="line">        res = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> s:</span><br><span class="line">            <span class="keyword">if</span> i == <span class="string">' '</span>:</span><br><span class="line">                lastindex = <span class="number">0</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                lastindex = lastindex + <span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> lastindex &gt; <span class="number">0</span>:</span><br><span class="line">                res = lastindex</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure></p>
 <p><img src="1.png" alt><br>方法的效率不是太高。</p>
@@ -179,7 +179,6 @@
 <p>给定一个 haystack 字符串和一个 needle 字符串，在 haystack 字符串中找出 needle 字符串出现的第一个位置 (从0开始)。如果不存在，则返回  -1。<br><strong>我的题解：</strong><br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">strStr</span><span class="params">(self, haystack, needle)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type haystack: str</span></span><br><span class="line"><span class="string">        :type needle: str</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">if</span> needle == <span class="string">''</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        length_a = len(needle)</span><br><span class="line">        length_b = len(haystack)</span><br><span class="line">        <span class="keyword">if</span> length_b &lt; length_a:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(length_b):</span><br><span class="line">            <span class="keyword">if</span> haystack[i] == needle[<span class="number">0</span>]:</span><br><span class="line">                <span class="keyword">for</span> j <span class="keyword">in</span> range(length_a):</span><br><span class="line">                    <span class="keyword">if</span> i+j == length_b:</span><br><span class="line">                        <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line">                    <span class="keyword">if</span> haystack[i+j] != needle[j]:</span><br><span class="line">                        i = <span class="number">-1</span></span><br><span class="line">                <span class="keyword">if</span> j == length_a<span class="number">-1</span> <span class="keyword">and</span> i !=<span class="number">-1</span>:</span><br><span class="line">                    <span class="keyword">return</span> i </span><br><span class="line">        i = <span class="number">-1</span></span><br><span class="line">        <span class="keyword">return</span> i</span><br></pre></td></tr></table></figure></p>
 <p><img src="4.png" alt></p>
 <p><strong>解题思路：</strong><br>这串代码其实写的有点土，还得优化下，用的就是反复循环check，暴力破解。</p>
-
       
     </div>
     <footer class="entry-meta entry-footer">

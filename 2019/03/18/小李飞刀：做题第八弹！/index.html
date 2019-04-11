@@ -11,13 +11,13 @@
   
   
   
-  <meta name="description" content="小李今天的做题，是痛并快乐着的！ 写在前面的话慢慢转变思路，不再死磕不会做的题，思路可以先借鉴，但是一定要吃透透。上周末看完看完了《算法图解》，感觉对一些题目的思路有比较大的帮助，但是还是要在实践中理解。 认真做题的分割线第一题152. 乘积最大子序列难度：中等给定一个整数数组nums，找出一个序列中乘积最大的连续子序列（该序列至少包含一个数）。我的题解：class Solution(object">
+  <meta name="description" content="小李今天的做题，是痛并快乐着的！">
 <meta name="keywords" content="leetcode,python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="小李飞刀：做题第八弹！">
 <meta property="og:url" content="http://yoursite.com/2019/03/18/小李飞刀：做题第八弹！/index.html">
 <meta property="og:site_name" content="Gaga酱の奇思妙想">
-<meta property="og:description" content="小李今天的做题，是痛并快乐着的！ 写在前面的话慢慢转变思路，不再死磕不会做的题，思路可以先借鉴，但是一定要吃透透。上周末看完看完了《算法图解》，感觉对一些题目的思路有比较大的帮助，但是还是要在实践中理解。 认真做题的分割线第一题152. 乘积最大子序列难度：中等给定一个整数数组nums，找出一个序列中乘积最大的连续子序列（该序列至少包含一个数）。我的题解：class Solution(object">
+<meta property="og:description" content="小李今天的做题，是痛并快乐着的！">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/03/18/小李飞刀：做题第八弹！/1.png">
 <meta property="og:image" content="http://yoursite.com/2019/03/18/小李飞刀：做题第八弹！/2.png">
@@ -25,7 +25,7 @@
 <meta property="og:updated_time" content="2019-04-10T16:59:30.180Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小李飞刀：做题第八弹！">
-<meta name="twitter:description" content="小李今天的做题，是痛并快乐着的！ 写在前面的话慢慢转变思路，不再死磕不会做的题，思路可以先借鉴，但是一定要吃透透。上周末看完看完了《算法图解》，感觉对一些题目的思路有比较大的帮助，但是还是要在实践中理解。 认真做题的分割线第一题152. 乘积最大子序列难度：中等给定一个整数数组nums，找出一个序列中乘积最大的连续子序列（该序列至少包含一个数）。我的题解：class Solution(object">
+<meta name="twitter:description" content="小李今天的做题，是痛并快乐着的！">
 <meta name="twitter:image" content="http://yoursite.com/2019/03/18/小李飞刀：做题第八弹！/1.png">
   
   <link rel="icon" href="/css/images/favicon.png">
@@ -162,7 +162,7 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>小李今天的做题，是痛并快乐着的！<br><!-- less --></p>
+        <p></p>
 <h4 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话"></a>写在前面的话</h4><p>慢慢转变思路，不再死磕不会做的题，思路可以先借鉴，但是一定要吃透透。<br>上周末看完看完了《算法图解》，感觉对一些题目的思路有比较大的帮助，但是还是要在实践中理解。</p>
 <h4 id="认真做题的分割线"><a href="#认真做题的分割线" class="headerlink" title="认真做题的分割线"></a>认真做题的分割线</h4><h5 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h5><p><strong><a href="https://leetcode-cn.com/problems/maximum-product-subarray/" target="_blank" rel="noopener">152. 乘积最大子序列</a></strong><br><strong>难度：中等</strong><br>给定一个整数数组<code>nums</code>，找出一个序列中乘积最大的连续子序列（该序列至少包含一个数）。<br><strong>我的题解：</strong><br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">maxProduct</span><span class="params">(self, nums)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type nums: List[int]</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        length = len(nums)</span><br><span class="line">        maxsum = [<span class="number">0</span> <span class="keyword">for</span> _ <span class="keyword">in</span> range(length)]</span><br><span class="line">        minsum = [<span class="number">0</span> <span class="keyword">for</span> _ <span class="keyword">in</span> range(length)]</span><br><span class="line">        maxsum[<span class="number">0</span>] = minsum[<span class="number">0</span>] = nums[<span class="number">0</span>] <span class="comment"># 限定最大最小值</span></span><br><span class="line">        dp = nums[<span class="number">0</span>] <span class="comment">#当前状态</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,len(nums)):</span><br><span class="line">            maxsum[i] = max(maxsum[i<span class="number">-1</span>]*nums[i],minsum[i<span class="number">-1</span>]*nums[i],nums[i])</span><br><span class="line">            minsum[i] = min(maxsum[i<span class="number">-1</span>]*nums[i],minsum[i<span class="number">-1</span>]*nums[i],nums[i])</span><br><span class="line">            dp = max(dp,maxsum[i])</span><br><span class="line">        <span class="keyword">return</span> dp</span><br></pre></td></tr></table></figure></p>
 <p><img src="1.png" alt></p>
@@ -179,7 +179,6 @@
 </blockquote>
 <p>包括他的题解的写法也很有趣，但是我还没弄明白<br><code>output[i*i:n:i] = [0] * len(output[i*i:n:i])</code>这一句的意思，还要琢磨下，所以用的是循环的写法。<br><figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line">def countPrimes(self, n: <span class="keyword">int</span>) -&gt; <span class="keyword">int</span>:</span><br><span class="line">        <span class="keyword">if</span> n &lt; <span class="number">3</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>     </span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            # 首先生成了一个全部为<span class="number">1</span>的列表</span><br><span class="line">            <span class="keyword">output</span> = [<span class="number">1</span>] * n</span><br><span class="line">            # 因为<span class="number">0</span>和<span class="number">1</span>不是质数,所以列表的前两个位置赋值为<span class="number">0</span></span><br><span class="line">            <span class="keyword">output</span>[<span class="number">0</span>],<span class="keyword">output</span>[<span class="number">1</span>] = <span class="number">0</span>,<span class="number">0</span></span><br><span class="line">             # 此时从index = <span class="number">2</span>开始遍历,<span class="keyword">output</span>[<span class="number">2</span>]==<span class="number">1</span>,即表明第一个质数为<span class="number">2</span>,然后将<span class="number">2</span>的倍数对应的索引</span><br><span class="line">             # 全部赋值为<span class="number">0</span>. 此时<span class="keyword">output</span>[<span class="number">3</span>] == <span class="number">1</span>,即表明下一个质数为<span class="number">3</span>,同样划去<span class="number">3</span>的倍数.以此类推.</span><br><span class="line">            <span class="keyword">for</span> i in range(<span class="number">2</span>,<span class="keyword">int</span>(n**<span class="number">0</span><span class="variable">.5</span>)+<span class="number">1</span>): </span><br><span class="line">                <span class="keyword">if</span> <span class="keyword">output</span>[i] == <span class="number">1</span>:</span><br><span class="line">                    <span class="keyword">output</span>[i*i:n:i] = [<span class="number">0</span>] * len(<span class="keyword">output</span>[i*i:n:i])</span><br><span class="line">         # 最后<span class="keyword">output</span>中的数字<span class="number">1</span>表明该位置上的索引数为质数,然后求和即可.</span><br><span class="line">        <span class="keyword">return</span> sum(<span class="keyword">output</span>)</span><br></pre></td></tr></table></figure></p>
 <h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>小李今天的做题，是痛并快乐着的！</p>
-
       
     </div>
     <footer class="entry-meta entry-footer">

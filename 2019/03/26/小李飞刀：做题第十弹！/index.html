@@ -11,13 +11,13 @@
   
   
   
-  <meta name="description" content="终于从视频制作中被解救的小李！ 写在前面这几天断断续续做了题目，也在慢慢体会一些数据思维。终于不用边做视频边写题目啦~开心~把这几天的题解发一下~ 认真做题的分割线第一题977. 有序数组的平方难度：简单给定一个按非递减顺序排序的整数数组 A，返回每个数字的平方组成的新数组，要求也按非递减顺序排序。我的题解：class Solution(object):    def sortedSquares(">
+  <meta name="description" content="终于从视频制作中被解救的小李！">
 <meta name="keywords" content="leetcode,python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="小李飞刀：做题第十弹！">
 <meta property="og:url" content="http://yoursite.com/2019/03/26/小李飞刀：做题第十弹！/index.html">
 <meta property="og:site_name" content="Gaga酱の奇思妙想">
-<meta property="og:description" content="终于从视频制作中被解救的小李！ 写在前面这几天断断续续做了题目，也在慢慢体会一些数据思维。终于不用边做视频边写题目啦~开心~把这几天的题解发一下~ 认真做题的分割线第一题977. 有序数组的平方难度：简单给定一个按非递减顺序排序的整数数组 A，返回每个数字的平方组成的新数组，要求也按非递减顺序排序。我的题解：class Solution(object):    def sortedSquares(">
+<meta property="og:description" content="终于从视频制作中被解救的小李！">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/03/26/小李飞刀：做题第十弹！/1.png">
 <meta property="og:image" content="http://yoursite.com/2019/03/26/小李飞刀：做题第十弹！/2.png">
@@ -28,7 +28,7 @@
 <meta property="og:updated_time" content="2019-04-10T16:59:37.685Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小李飞刀：做题第十弹！">
-<meta name="twitter:description" content="终于从视频制作中被解救的小李！ 写在前面这几天断断续续做了题目，也在慢慢体会一些数据思维。终于不用边做视频边写题目啦~开心~把这几天的题解发一下~ 认真做题的分割线第一题977. 有序数组的平方难度：简单给定一个按非递减顺序排序的整数数组 A，返回每个数字的平方组成的新数组，要求也按非递减顺序排序。我的题解：class Solution(object):    def sortedSquares(">
+<meta name="twitter:description" content="终于从视频制作中被解救的小李！">
 <meta name="twitter:image" content="http://yoursite.com/2019/03/26/小李飞刀：做题第十弹！/1.png">
   
   <link rel="icon" href="/css/images/favicon.png">
@@ -165,7 +165,7 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>终于从视频制作中被解救的小李！<br><!-- less --></p>
+        <p></p>
 <h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>这几天断断续续做了题目，也在慢慢体会一些数据思维。<br>终于不用边做视频边写题目啦~<br>开心~<br>把这几天的题解发一下~</p>
 <h4 id="认真做题的分割线"><a href="#认真做题的分割线" class="headerlink" title="认真做题的分割线"></a>认真做题的分割线</h4><h5 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h5><p><strong><a href="https://leetcode-cn.com/problems/squares-of-a-sorted-array/" target="_blank" rel="noopener">977. 有序数组的平方</a></strong><br><strong>难度：简单</strong><br>给定一个按非递减顺序排序的整数数组 A，返回每个数字的平方组成的新数组，要求也按非递减顺序排序。<br><strong>我的题解：</strong><br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sortedSquares</span><span class="params">(self, A)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type A: List[int]</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        result = [<span class="number">0</span>]*len(A)</span><br><span class="line">        m = <span class="number">0</span> </span><br><span class="line">        n = k = len(A)<span class="number">-1</span> </span><br><span class="line">        <span class="keyword">while</span> m &lt;= n:</span><br><span class="line">            <span class="keyword">if</span> A[m]**<span class="number">2</span> &lt; A[n]**<span class="number">2</span>:</span><br><span class="line">                result[k] = A[n]**<span class="number">2</span></span><br><span class="line">                n = n <span class="number">-1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                result[k] = A[m]**<span class="number">2</span></span><br><span class="line">                m = m + <span class="number">1</span></span><br><span class="line">            k = k - <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> result</span><br></pre></td></tr></table></figure></p>
 <p><img src="1.png" alt></p>

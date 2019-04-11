@@ -11,13 +11,13 @@
   
   
   
-  <meta name="description" content="磨刀霍霍向动态规划！ 写在前面的话感觉做题越多遇到的写法越多，有种跃跃欲试的感觉~ 认真做题第一题70. 爬楼梯难度：简单假设你正在爬楼梯。需要 n 阶你才能到达楼顶。每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？注意：给定n是一个正整数。我的题解：class Solution(object):    def climbStairs(self, n):        &quot;&quot;&quot;">
+  <meta name="description" content="磨刀霍霍向动态规划！">
 <meta name="keywords" content="leetcode,python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="小李飞刀：做题第九弹！">
 <meta property="og:url" content="http://yoursite.com/2019/03/19/小李飞刀：做题第九弹！/index.html">
 <meta property="og:site_name" content="Gaga酱の奇思妙想">
-<meta property="og:description" content="磨刀霍霍向动态规划！ 写在前面的话感觉做题越多遇到的写法越多，有种跃跃欲试的感觉~ 认真做题第一题70. 爬楼梯难度：简单假设你正在爬楼梯。需要 n 阶你才能到达楼顶。每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？注意：给定n是一个正整数。我的题解：class Solution(object):    def climbStairs(self, n):        &quot;&quot;&quot;">
+<meta property="og:description" content="磨刀霍霍向动态规划！">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/03/19/小李飞刀：做题第九弹！/1.png">
 <meta property="og:image" content="http://yoursite.com/2019/03/19/小李飞刀：做题第九弹！/2.png">
@@ -26,7 +26,7 @@
 <meta property="og:updated_time" content="2019-04-10T16:59:27.921Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小李飞刀：做题第九弹！">
-<meta name="twitter:description" content="磨刀霍霍向动态规划！ 写在前面的话感觉做题越多遇到的写法越多，有种跃跃欲试的感觉~ 认真做题第一题70. 爬楼梯难度：简单假设你正在爬楼梯。需要 n 阶你才能到达楼顶。每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？注意：给定n是一个正整数。我的题解：class Solution(object):    def climbStairs(self, n):        &quot;&quot;&quot;">
+<meta name="twitter:description" content="磨刀霍霍向动态规划！">
 <meta name="twitter:image" content="http://yoursite.com/2019/03/19/小李飞刀：做题第九弹！/1.png">
   
   <link rel="icon" href="/css/images/favicon.png">
@@ -163,7 +163,7 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>磨刀霍霍向动态规划！<br><!-- less --></p>
+        <p></p>
 <h4 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话"></a>写在前面的话</h4><p>感觉做题越多遇到的写法越多，有种跃跃欲试的感觉~</p>
 <h4 id="认真做题"><a href="#认真做题" class="headerlink" title="认真做题"></a>认真做题</h4><h5 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h5><p><strong><a href="https://leetcode-cn.com/problems/climbing-stairs/" target="_blank" rel="noopener">70. 爬楼梯</a></strong><br><strong>难度：简单</strong><br>假设你正在爬楼梯。需要 n 阶你才能到达楼顶。<br>每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？<br><strong>注意</strong>：给定<code>n</code>是一个正整数。<br><strong>我的题解：</strong><br><figure class="highlight ceylon"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution(<span class="keyword">object</span>):</span><br><span class="line">    def climbStairs(self, n):</span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type n: int</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        old = <span class="number">1</span></span><br><span class="line">        <span class="keyword">new</span> = <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">2</span>,n+<span class="number">1</span>):</span><br><span class="line">            old,<span class="keyword">new</span> = <span class="keyword">new</span>,<span class="keyword">new</span>+old</span><br><span class="line">        <span class="keyword">return</span> newv</span><br></pre></td></tr></table></figure></p>
 <p><img src="1.png" alt></p>
@@ -185,7 +185,6 @@
 <li>每个单元格都是一个子问题，因为你需要考虑如何将问题分解为子问题。</li>
 </ul>
 </blockquote>
-
       
     </div>
     <footer class="entry-meta entry-footer">

@@ -235,23 +235,17 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天有两题没成功呢，但是明天一定会成功的~<br><!-- less --></p>
-<h4 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话"></a>写在前面的话</h4><p>今天持续做题ing，python有意思~<br>今天的题有点虐心…兴许是我太笨了…<br>会努力学习的！<br><strong>动态规划</strong>我来啦~</p>
-<h4 id="开始做题"><a href="#开始做题" class="headerlink" title="开始做题"></a>开始做题</h4><h5 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h5><p><strong><a href="https://leetcode-cn.com/problems/repeated-substring-pattern/" target="_blank" rel="noopener">459. 重复的子字符串</a></strong><br><strong>难度：简单</strong><br>给定一个非空的字符串，判断它是否可以由它的一个子串重复多次构成。给定的字符串只含有小写英文字母，并且长度不超过10000。<br><strong>我的题解：</strong><br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">repeatedSubstringPattern</span><span class="params">(self, s)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type s: str</span></span><br><span class="line"><span class="string">        :rtype: bool</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">if</span> len(s) &lt;= <span class="number">1</span> : <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        res = []</span><br><span class="line">        n = <span class="number">0</span></span><br><span class="line">        length = len(s)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,length):</span><br><span class="line">            <span class="keyword">if</span> s[i] == s[<span class="number">0</span>]:</span><br><span class="line">                res.append(i)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,length):</span><br><span class="line">            a = s[:i]</span><br><span class="line">            length_a = len(a)</span><br><span class="line">            n = length/length_a</span><br><span class="line">            <span class="keyword">if</span> a * n == s:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure></p>
-<p><img src="1.png" alt></p>
-<p><strong>我的思路：</strong><br>参考了小佳扬的思路后，重新写了一遍。<br>主要是因为如果存在重复的话，</p>
-<ul>
-<li>第一个字母开始就会形成重复</li>
-<li>最小字符串的长度可以被字符串长度给整除<br>那么就记录下第一个字母每次出现的地方，检查每次字符出现的前一段字符串是否可以形成重复。<br><strong>其他：</strong><br>写的时候遇到一个坑，一直遇到报错<br><code>integer division or modulo by zero</code><br>检查了一圈发现，是在第二个循环的时候，i从<code>0</code>开始作为除数，所以产生了报错。</li>
-</ul>
-<h5 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h5><p><strong><a href="https://leetcode-cn.com/problems/longest-palindromic-substring/" target="_blank" rel="noopener">5. 最长回文子串</a></strong>  —-超时需要再解答<br><strong>难度：中等</strong><br>给定一个字符串<code>s</code>，找到<code>s</code>中最长的回文子串。你可以假设<code>s</code>的最大长度为 1000。<br><strong>我的题解：</strong><br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">longestPalindrome</span><span class="params">(self, s)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type s: str</span></span><br><span class="line"><span class="string">        :rtype: str</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        l = len(s)</span><br><span class="line">        <span class="keyword">if</span> len(s) &lt;= <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> s</span><br><span class="line">        length = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,l):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(i+<span class="number">1</span>,l+<span class="number">1</span>):</span><br><span class="line">                res = s[i:j]</span><br><span class="line">                <span class="keyword">if</span> res == res[::<span class="number">-1</span>]: <span class="comment">#逆向相等</span></span><br><span class="line">                    <span class="keyword">if</span> (len(res) &gt; length):</span><br><span class="line">                        mark = res <span class="comment">#存储数据</span></span><br><span class="line">                        length = len(res)</span><br><span class="line">        <span class="keyword">return</span> mark</span><br></pre></td></tr></table></figure></p>
-<p><img src="2.png" alt></p>
-<p><strong>我的思路：</strong><br>用的是最暴力的解法，双重循环，逐个字段进行比较，复杂度应该是O(N²)<br>（这个复杂度超时很必然啊，被pia飞….<br><strong>其他：</strong><br>这题<strong>超时</strong>了，要重做!!!!<br>可以执行通过较短的字符串，但是超过一定长度之后就会超时。<br>建议使用<code>动态规划</code>，好好学习!!!重新做一次。</p>
-<h5 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h5><p><strong><a href="https://leetcode-cn.com/problems/sqrtx/" target="_blank" rel="noopener">69. x 的平方根</a></strong> —-超出内存需要再解答<br><strong>难度：简单</strong><br>实现<code>int sqrt(int x)</code>函数。<br>计算并返回<code>x</code>的平方根，其中<code>x</code>是非负整数。<br>由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。<br><strong>我的题解：</strong><br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">mySqrt</span><span class="params">(self, x)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type x: int</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(x):</span><br><span class="line">            <span class="keyword">if</span> i**<span class="number">2</span> &lt;= x <span class="keyword">and</span> (i+<span class="number">1</span>)**<span class="number">2</span> &gt;x:</span><br><span class="line">                <span class="keyword">return</span> i</span><br></pre></td></tr></table></figure></p>
-<p><img src="3.png" alt></p>
-<p><strong>我的思路：</strong><br>因为只取整数部分，所以值会介于i的平方及i+1的平方之间。<br><strong>其他：</strong><br>这题<strong>Memory Error</strong>了，要重做!!!!<br>看了其他的人的题解，使用的是<code>无限逼近中位值</code>的办法，理论基础应该是<code>泰勒公式</code>。<br>（万万没想到居然用到了泰勒公式….<br>手工执行了下算法，反而理解的更快，但是泰勒公式还得再复习下。</p>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>今天的做题就到这里啦，还有很多要学习的地方~<br>数据结构与算法要加油呀！</p>
+        
 
+          
+          <div class="entry-summary">
+          今天有两题没成功呢，但是明天一定会成功的~
+
+        
+          <p class="article-more-link">
+            <a href="/2019/03/07/小李飞刀：做题第六弹！/#more">Continue Reading →</a>
+          </p>
+        </div>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -301,23 +295,17 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>我又来刷题啦，今天都是字符串相关的呢~<br><!-- less --></p>
-<h4 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话"></a>写在前面的话</h4><p>好几天木有刷题啦，今天猛刷了一把，要梳理一个顺序好好的学习啦~<br>一定要好好执行每天做题的计划！<br>最近真的好忙碌啊，还要做视频。<br>不过呢，看了高效学习的书，感觉其实不能说太分散的学习，应该考虑多方面的联系，形成整体性的学习，还得琢磨琢磨…<br>小李加油呀！</p>
-<h4 id="认真做题"><a href="#认真做题" class="headerlink" title="认真做题"></a>认真做题</h4><h5 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h5><p><strong><a href="https://leetcode-cn.com/problems/length-of-last-word/" target="_blank" rel="noopener">58. 最后一个单词的长度</a></strong><br><strong>难度：简单</strong><br>给定一个仅包含大小写字母和空格 ‘ ‘ 的字符串，返回其最后一个单词的长度。<br>如果不存在最后一个单词，请返回<code>0</code>。<br>说明：一个单词是指由字母组成，但不包含任何空格的字符串。<br><strong>我的题解：</strong><br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">lengthOfLastWord</span><span class="params">(self, s)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type s: str</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        lastindex = <span class="number">0</span></span><br><span class="line">        res = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> s:</span><br><span class="line">            <span class="keyword">if</span> i == <span class="string">' '</span>:</span><br><span class="line">                lastindex = <span class="number">0</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                lastindex = lastindex + <span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> lastindex &gt; <span class="number">0</span>:</span><br><span class="line">                res = lastindex</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure></p>
-<p><img src="1.png" alt><br>方法的效率不是太高。</p>
-<p><strong>解题思路：</strong><br>每次遇到空格的时候，单词的长度就置空，不是的话就加1，然后用res记录上一次的lastindex长度。<br><strong>其他</strong><br>这题也要再多刷一次。</p>
-<h5 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h5><p><strong><a href="https://leetcode-cn.com/problems/maximum-subarray/" target="_blank" rel="noopener">53. 最大子序和</a></strong><br><strong>难度：简单</strong><br>给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。<br><strong>我的题解：</strong><br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">maxSubArray</span><span class="params">(self, nums)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type nums: List[int]</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        maxSum = nums[<span class="number">0</span>]</span><br><span class="line">        sum = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> nums:</span><br><span class="line">            sum = sum + i</span><br><span class="line">            <span class="keyword">if</span> sum &gt; maxSum:</span><br><span class="line">                maxSum = sum</span><br><span class="line">            <span class="keyword">if</span> sum &lt; <span class="number">0</span>:</span><br><span class="line">                sum = <span class="number">0</span></span><br><span class="line">        <span class="keyword">return</span> maxSum</span><br></pre></td></tr></table></figure></p>
-<p><img src="2.png" alt></p>
-<p><strong>解题思路：</strong><br>这题是参考了小佳扬的思路。<br>重点考虑什么时候会有最大的值。<br>maxSum其实相当于一个记住上次最大值的点，sum则是移动的点。<br>当遇到会导致总和小于0的值，那一定是要排除的，因为肯定会拉低总和大小。<br><strong>其他：</strong><br>这次还要多考虑情况，然后再刷一次。</p>
-<h5 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h5><p><strong><a href="https://leetcode-cn.com/problems/search-insert-position/" target="_blank" rel="noopener">35. 搜索插入位置</a></strong><br><strong>难度：简单</strong><br>给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。</p>
-<p>你可以假设数组中无重复元素。<br><strong>我的题解：</strong><br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">searchInsert</span><span class="params">(self, nums, target)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type nums: List[int]</span></span><br><span class="line"><span class="string">        :type target: int</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        length = len(nums)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(length):</span><br><span class="line">            <span class="keyword">if</span> nums[i] == target:</span><br><span class="line">                <span class="keyword">return</span> i </span><br><span class="line">            <span class="keyword">if</span> nums[i] &gt; target:</span><br><span class="line">                nums.insert(i,target)</span><br><span class="line">                <span class="keyword">return</span> i</span><br><span class="line">        nums.append(target)</span><br><span class="line">        <span class="keyword">return</span> length</span><br></pre></td></tr></table></figure></p>
-<p><img src="3.png" alt></p>
-<p><strong>解题思路：</strong><br>用了insert的办法，找到对应的Index之后插入即可。</p>
-<h5 id="第四题"><a href="#第四题" class="headerlink" title="第四题"></a>第四题</h5><p><strong><a href="https://leetcode-cn.com/problems/implement-strstr/" target="_blank" rel="noopener">28. 实现strStr()</a></strong><br><strong>难度：简单</strong><br>实现 strStr() 函数。</p>
-<p>给定一个 haystack 字符串和一个 needle 字符串，在 haystack 字符串中找出 needle 字符串出现的第一个位置 (从0开始)。如果不存在，则返回  -1。<br><strong>我的题解：</strong><br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">strStr</span><span class="params">(self, haystack, needle)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type haystack: str</span></span><br><span class="line"><span class="string">        :type needle: str</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">if</span> needle == <span class="string">''</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        length_a = len(needle)</span><br><span class="line">        length_b = len(haystack)</span><br><span class="line">        <span class="keyword">if</span> length_b &lt; length_a:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(length_b):</span><br><span class="line">            <span class="keyword">if</span> haystack[i] == needle[<span class="number">0</span>]:</span><br><span class="line">                <span class="keyword">for</span> j <span class="keyword">in</span> range(length_a):</span><br><span class="line">                    <span class="keyword">if</span> i+j == length_b:</span><br><span class="line">                        <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line">                    <span class="keyword">if</span> haystack[i+j] != needle[j]:</span><br><span class="line">                        i = <span class="number">-1</span></span><br><span class="line">                <span class="keyword">if</span> j == length_a<span class="number">-1</span> <span class="keyword">and</span> i !=<span class="number">-1</span>:</span><br><span class="line">                    <span class="keyword">return</span> i </span><br><span class="line">        i = <span class="number">-1</span></span><br><span class="line">        <span class="keyword">return</span> i</span><br></pre></td></tr></table></figure></p>
-<p><img src="4.png" alt></p>
-<p><strong>解题思路：</strong><br>这串代码其实写的有点土，还得优化下，用的就是反复循环check，暴力破解。</p>
+        
 
+          
+          <div class="entry-summary">
+          我又来刷题啦，今天都是字符串相关的呢~
+
+        
+          <p class="article-more-link">
+            <a href="/2019/03/06/小李飞刀：刷题第五弹！/#more">Continue Reading →</a>
+          </p>
+        </div>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -445,60 +433,17 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>随风潜入夜，润物细无声</p>
-<!-- less -->
-<h4 id="今晚看了绿皮书辣"><a href="#今晚看了绿皮书辣" class="headerlink" title="今晚看了绿皮书辣~"></a>今晚看了绿皮书辣~</h4><p>晚上和老罗一起看了《绿皮书》，说来也很巧合，本来昨晚说太累了想休息，今晚刚好她家属脱团，那我就自动补缺啦~</p>
-<p>看完回来的路上一直在想一句诗，</p>
-<p><code>随风潜入夜，润物细无声</code></p>
-<p>无论是从观念上的改变，还是行为上的改变，都是一种细腻的改变。</p>
-<p>这句诗以前读书的时候总是用在写作里面，没想到晚上无法直接言语的情感，就这样被一句诗给诠释了，妙啊~</p>
-<p><strong>这部电影是今年现有的观影最佳~</strong></p>
-<h4 id="关于《绿皮书》"><a href="#关于《绿皮书》" class="headerlink" title="关于《绿皮书》"></a>关于《绿皮书》</h4><p>看电影之前稍微了解了下背景，<code>《Green Book》</code>是真实存在的，是一本历史上真实存在的黑人出行指南。</p>
-<p><img src="1.jpg" alt="电影海报"></p>
-<p>电影里的两位男士就以这本小册子为指南，一路南下，完成一场特别的旅程。</p>
-<p>两位主角的配置也很有意思，一位是看似放荡不羁但是有着自己特别的为人处世之道的白人老炮儿，一位则是克制冷漠有礼节的黑人音乐家。</p>
-<p>就这样这样两个天南地北的人，走到了一起，白人<code>托尼</code>给黑人<code>唐</code>当起了司机，并帮他处理那些“奇怪的难题”，保证唐的巡回顺利演出。</p>
-<p>而在旅程中，托尼渐渐理解了这个克制无言的音乐家南下的执着，而唐也慢慢被托尼改变。</p>
-<p>虽然并没有大的剧情波动，但是还是感受到的平静下的波涛汹涌和克制的饱满情感。</p>
-<p>脸上不动声色，但情感都藏在了那些夜晚的酒、那些强烈的音符和想要说却又咽下的话。</p>
-<p>因为是黑人，所以被判定为吃炸鸡，做爵士乐，不能进入白人场所；</p>
-<p>也因为存在一半其他国家的血统，会被嘲笑出身。</p>
-<p>为什么世界上的人总是这样浅薄而不尊重呢？</p>
-<p>所以理解了唐最后的在演出前离去，也是在努力的推动平等的产生。</p>
-<p><strong>但，这需要很多的努力。</strong></p>
-<h4 id="那些让我记住的瞬间"><a href="#那些让我记住的瞬间" class="headerlink" title="那些让我记住的瞬间"></a>那些让我记住的瞬间</h4><ul>
-<li><p>在肯塔基，托尼买了肯德基（其实这是个谐音梗</p>
-<p>托尼强硬地把鸡腿塞给唐，唐无措地不知道怎么接受，最后在托尼的“威胁”下只好用手接过。</p>
-<p>这下可打开了新世界的大门，唐努力精致的吃鸡腿，完全没意识到自己已经被托尼“带跑偏”。</p>
-<p>后来托尼在休息站写信的时候，唐已经可以和他一起坐在休息站喝可乐了。</p>
-</li>
-<li><p>唐在伯明顿抛下演出，和托尼去了橘鸟酒吧。</p>
-<p>在服务员的期待下，身穿的燕尾服的唐走向酒吧的钢琴，这并不是他最熟悉的施坦威钢琴，甚至上面还放了杯威士忌（笑</p>
-<p>但是他开始弹肖邦的曲子，那是他最想做的事情，但是世俗并不认可的事情。</p>
-<p>昏暗的酒吧灯光，台下是穿着休闲的同胞，但唐的演奏依然出色，也获得了掌声————谁说他们不懂音乐！</p>
-<p>果然，不是所有人都能演奏好肖邦的啊~</p>
-</li>
-<li><p>圣诞节回家后，跟在老理查德夫妇身后，唐出现在了托尼家的门外。</p>
-<p>不同于之前看到黑人工人在家喝水后丢掉杯子的模样，托尼一下就拥抱了唐，这个改变了他行为和观念的人。</p>
-<p>而唐也跨出了自己的<code>第一步</code>，选择开始拥抱温暖~</p>
-<p>这是我最喜欢的结局~</p>
-</li>
-</ul>
-<h4 id="我们都在为彼此变好"><a href="#我们都在为彼此变好" class="headerlink" title="我们都在为彼此变好"></a>我们都在为彼此变好</h4><p>庆幸是和老罗一起看的电影，触动的点那么的相似~在回家路上的讨论也是互相Get到了彼此的点~</p>
-<p>而我们的相遇让我们彼此变得更好，虽然我们是如此的不同：</p>
-<p>我们肤色不同，出生地不同，</p>
-<p>但我可以学着和你一起吃炸鸡喝可乐，你可以学着用文雅的语法，</p>
-<p>我也可以为你打破刻板的礼仪，你也可以为我放下拳头。</p>
-<h4 id="有一点奇怪的感想"><a href="#有一点奇怪的感想" class="headerlink" title="有一点奇怪的感想"></a>有一点奇怪的感想</h4><p>我们在生活中也会遇到很多人，也经常会以貌取人，或者判断一个人的情况。</p>
-<p>其实我们都不曾在外表上看到一个人曾经走过的人生，曾经有过的心路历程，又何谈彻底的了解一个人。</p>
-<p>沟通是两个人逐渐认识彼此的一个桥梁，通过沟通逐渐熟悉脾性，了解经历，甚至惺惺相惜，彼此改变。</p>
-<blockquote>
-<p>世界上那么孤独的人，因为他们都没有有勇气迈出第一步。</p>
-</blockquote>
-<p><img src="2.jpg" alt></p>
-<p>但沟通的前提是接受，你愿意接收对方传递的讯息，而不是拒绝或是避开，我想这会是一个好的开始。</p>
-<p><strong>平等地对待每个人，你就能看到ta身上的闪光点。</strong></p>
+        
 
+          
+          <div class="entry-summary">
+          随风潜入夜，润物细无声
+
+        
+          <p class="article-more-link">
+            <a href="/2019/03/01/《绿皮书》影评/#more">Continue Reading →</a>
+          </p>
+        </div>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -548,59 +493,17 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近炒股开心的小李酱，“证券化率”是不是可以爬起来呢~<br><!-- less --></p>
-<h4 id="写在前面的叨叨"><a href="#写在前面的叨叨" class="headerlink" title="写在前面的叨叨"></a>写在前面的叨叨</h4><p>折腾了这么久，我终于在喝完一听快乐肥宅水后下定决心来学习写爬虫了。</p>
-<p>目标很简单，因为我想要爬一下“证券化率”，然后可视化输出结果。</p>
-<p>证券化率的基础就是上市公司的总市值，对于证券化率其实还蛮多说法的，比如雪球的这篇文。<br><a href="https://xueqiu.com/2846285364/78228727" target="_blank" rel="noopener">中国的真实证券化率是多少？</a></p>
-<p>爬虫对于证券类的分析来说，其实已经是司空见惯了，但是作为菜鸟小股民，希望自己在写完这个爬虫之后也对股票有更深的认识吧，然后能赚钱就更好啦~</p>
-<p>找了一个相对好入门的案例，来作为学习的范本。<br><a href="https://www.cnblogs.com/dennis-liucd/p/7669161.html" target="_blank" rel="noopener">Python爬虫抓取东方财富网股票数据并实现MySQL数据库存储</a></p>
-<h4 id="那就开工吧"><a href="#那就开工吧" class="headerlink" title="那就开工吧~"></a>那就开工吧~</h4><h5 id="准备动作"><a href="#准备动作" class="headerlink" title="准备动作"></a>准备动作</h5><p>主要使用的工具和模块包括：<code>Anaconda</code> <code>Pandas</code> <code>MySQL</code></p>
-<ul>
-<li><strong>Anaconda</strong>是之前就安装好了的，具体过程可以参考这个安装流程。<br>  <a href="https://www.jianshu.com/p/eaee1fadc1e9" target="_blank" rel="noopener">Anaconda完全入门指南</a></li>
-<li><p><strong>Pandas</strong>是在Anaconda中用命令安装好的，还得摸索下这个工具。</p>
-  <figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">pip <span class="keyword">install</span> pandas</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>MySQL</strong>以前写PHP的时候，都习惯直接用Wamp打包处理了，这会儿就来摸索下单独安装，安装教程参考这个。<br>  <a href="https://www.cnblogs.com/reyinever/p/8551977.html" target="_blank" rel="noopener">windows下安装Mysql—图文详解</a></p>
-</li>
-</ul>
-<h5 id="整理思路"><a href="#整理思路" class="headerlink" title="整理思路"></a>整理思路</h5><p>一共是四个步骤：</p>
-<ol>
-<li>用爬虫将数据抓取到本地csv文件中</li>
-<li>将csv文件内的数据导入到数据库中</li>
-<li>MySQL数据库内进行查询</li>
-</ol>
-<p>我们今天的目标是完成第一步—-因为MySQL还没部署完毕…明天继续~</p>
-<h5 id="爬虫启动"><a href="#爬虫启动" class="headerlink" title="爬虫启动"></a>爬虫启动</h5><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#导入需要使用到的模块</span></span><br><span class="line"><span class="keyword">import</span> urllib</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="comment">#爬虫抓取网页函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getHtml</span><span class="params">(url)</span>:</span></span><br><span class="line">    html = urllib.request.urlopen(url).read()</span><br><span class="line">    html = html.decode(<span class="string">'gbk'</span>)</span><br><span class="line">    <span class="keyword">return</span> html</span><br><span class="line"></span><br><span class="line"><span class="comment">#抓取网页股票代码函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getStackCode</span><span class="params">(html)</span>:</span></span><br><span class="line">    s = <span class="string">r'&lt;li&gt;&lt;a target="_blank" href="http://quote.eastmoney.com/\S\S(.*?).html"&gt;'</span></span><br><span class="line">    pat = re.compile(s)</span><br><span class="line">    code = pat.findall(html)</span><br><span class="line">    <span class="keyword">return</span> code</span><br><span class="line">Url = <span class="string">'http://quote.eastmoney.com/stocklist.html'</span><span class="comment">#东方财富网股票数据连接地址</span></span><br><span class="line">filepath = <span class="string">'D:\\data\\'</span><span class="comment">#定义数据文件保存路径</span></span><br><span class="line"><span class="comment">#实施抓取</span></span><br><span class="line">code = getStackCode(getHtml(Url)) </span><br><span class="line"><span class="comment">#获取所有股票代码（以6开头的，应该是沪市数据）集合</span></span><br><span class="line">CodeList = []</span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> code:</span><br><span class="line">    <span class="keyword">if</span> item[<span class="number">0</span>]==<span class="string">'6'</span>:</span><br><span class="line">        CodeList.append(item)</span><br><span class="line"><span class="comment">#抓取数据并保存到本地csv文件</span></span><br><span class="line"><span class="keyword">for</span> code <span class="keyword">in</span> CodeList:</span><br><span class="line">    print(<span class="string">'正在获取股票%s数据'</span>%code)</span><br><span class="line">    url = <span class="string">'http://quotes.money.163.com/service/chddata.html?code=0'</span>+code+\</span><br><span class="line">        <span class="string">'&amp;end=20161231&amp;fields=TCLOSE;HIGH;LOW;TOPEN;LCLOSE;CHG;PCHG;TURNOVER;VOTURNOVER;VATURNOVER;TCAP;MCAP'</span></span><br><span class="line">    urllib.request.urlretrieve(url, filepath+code+<span class="string">'.csv'</span>)</span><br></pre></td></tr></table></figure>
-<p>我们看一下源代码是这样的，注释写的很清楚，我们来拆解一下。</p>
-<ul>
-<li>引入模块，包括pandas和re等</li>
-<li>分模块写函数 <ul>
-<li><code>getHtml()</code>用于抓取网页，读取网页源码</li>
-<li><code>getStackCode()</code>对抓取到的源码读取，拆解出</li><li><a></a></li>结构里面的链接，打开Url对应的地址，看到对应的图形结构，红框就是需要命中的目标。</ul></li>
-</ul>
+        
 
+          
+          <div class="entry-summary">
+          最近炒股开心的小李酱，“证券化率”是不是可以爬起来呢~
 
-<p><img src="1.png" alt></p>
-<p>根据代码，原作者只截取了6开头的大盘股的list存储入数组。<br>然后用GET方法获取每个代码对应的股票的数据，对每组数据进行存储。</p>
-<h5 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h5><p>将代码放到本地跑一下，看下结果。<br>正常应该是会下载数据到文件夹下，但是报错了。</p>
-<p><img src="2.png" alt><br>应该是request模块下的<code>urlretrieve</code>函数报错。<br>关联语句是<br><figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">urllib<span class="selector-class">.request</span><span class="selector-class">.urlretrieve</span>(url, filepath+code+<span class="string">'.csv'</span>)</span><br></pre></td></tr></table></figure></p>
-<p>关于<code>urlretrieve()</code>这个方法，因为没有使用过，所以来看下详解。<br><a href="https://www.cnblogs.com/qqhfeng/p/5785373.html" target="_blank" rel="noopener">Python urllib模块urlopen()与urlretrieve()详解</a></p>
-<p><strong>urlretrieve()用于直接将远程数据下载到本地。</strong><br><figure class="highlight inform7"><table><tr><td class="code"><pre><span class="line">urllib.urlretrieve(url<span class="comment">[, filename<span class="comment">[, reporthook<span class="comment">[, data]</span>]</span>]</span>)</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p><strong>参数说明</strong>：<br><code>url</code>：外部或者本地url<br><code>filename</code>：指定了保存到本地的路径（如果未指定该参数，urllib会生成一个临时文件来保存数据）；<br><code>reporthook</code>：是一个回调函数，当连接上服务器、以及相应的数据块传输完毕的时候会触发该回调。我们可以利用这个回调函数来显示当前的下载进度。<br><code>data</code>：指post到服务器的数据。该方法返回一个包含两个元素的元组(filename, headers)，filename表示保存到本地的路径，header表示服务器的响应头。</p>
-</blockquote>
-<p>会过来看我们的函数语句↓<br><figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">urllib<span class="selector-class">.request</span><span class="selector-class">.urlretrieve</span>(url, filepath+code+<span class="string">'.csv'</span>)</span><br></pre></td></tr></table></figure></p>
-<p>指定了地址和文件名（保存到本地的路径），所以我试试在本地新建一个<code>600000.csv</code>来测试下结果。<br>然后发现并没有结果。<br>然后发现自己干了很蠢的事情…..<br>emmm….其实是我的路径写错了，然后实验结果是这样的~</p>
-<p><img src="3.png" alt></p>
-<p><img src="4.png" alt></p>
-<h5 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续~"></a>未完待续~</h5><p>现在就坐等爬完啦~然后安装MySQL,然后导入数据库。<br>明天来尝试下自己复写一下这个爬虫~<br>主要涉及的内容是网页结果和模块方法的使用。<br>包括了：</p>
-<ul>
-<li>request.urlopen() </li>
-<li>re.compile()</li>
-<li>request.urlretriev()</li>
-</ul>
-<p>要好好学习~</p>
-
+        
+          <p class="article-more-link">
+            <a href="/2019/02/28/磨刀霍霍：爬爬爬爬爬爬虫爬起来/#more">Continue Reading →</a>
+          </p>
+        </div>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -650,378 +553,17 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>沉迷搭建博客的小李回来刷题啦~<br><!-- less --></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>最近都在忙着折腾Blog的事情，好几天前就做了的题，今天重新刷一遍，有些题目又不太会做了，看来还要三刷才行。<br>主要刷的题目还是SQL相关的，最近感觉时间越来越紧迫了，要更加努力了呢！<br>后续搭建了Gitbook的话，就会单独把每一题的题解放上去。</p>
-<h4 id="认真做题的分割线"><a href="#认真做题的分割线" class="headerlink" title="认真做题的分割线"></a>认真做题的分割线</h4><h5 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h5><p><strong><a href="https://leetcode-cn.com/problems/big-countries/" target="_blank" rel="noopener">595. 大的国家</a></strong><br><strong>难度：简单</strong><br>这里有张<code>World</code>表</p>
-<table>
-<thead>
-<tr>
-<th>name</th>
-<th>continent</th>
-<th>area</th>
-<th>population</th>
-<th>gdp</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Afghanistan</td>
-<td>Asia</td>
-<td>652230</td>
-<td>25500100</td>
-<td>20343000</td>
-</tr>
-<tr>
-<td>Albania</td>
-<td>Europe</td>
-<td>28748</td>
-<td>2831741</td>
-<td>12960000</td>
-</tr>
-<tr>
-<td>Algeria</td>
-<td>Africa</td>
-<td>2381741</td>
-<td>37100000</td>
-<td>188681000</td>
-</tr>
-<tr>
-<td>Andorra</td>
-<td>Europe</td>
-<td>468</td>
-<td>78115</td>
-<td>3712000</td>
-</tr>
-<tr>
-<td>Angola</td>
-<td>Africa</td>
-<td>1246700</td>
-<td>20609294</td>
-<td>100990000</td>
-</tr>
-</tbody>
-</table>
-<p>如果一个国家的面积超过300万平方公里，或者人口超过2500万，那么这个国家就是大国家。</p>
-<p>编写一个SQL查询，输出表中所有大国家的名称、人口和面积。</p>
-<p>例如，根据上表，我们应该输出:</p>
-<table>
-<thead>
-<tr>
-<th>name</th>
-<th>population</th>
-<th>area</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Afghanistan</td>
-<td>25500100</td>
-<td>652230</td>
-</tr>
-<tr>
-<td>Algeria</td>
-<td>37100000</td>
-<td>2381741</td>
-</tr>
-</tbody>
-</table>
-<p><strong>我的题解：</strong><br><figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">select t<span class="selector-class">.name</span>,t<span class="selector-class">.population</span>,t<span class="selector-class">.area</span> from World t</span><br><span class="line">where t<span class="selector-class">.area</span> &gt;<span class="number">3000000</span> </span><br><span class="line">UNION</span><br><span class="line">select t<span class="selector-class">.name</span>,t<span class="selector-class">.population</span>,t<span class="selector-class">.area</span> from World t</span><br><span class="line">where t<span class="selector-class">.population</span> &gt;<span class="number">25000000</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>解题思路：</strong><br>分别查询面积超过300万平方公里，和人口超过2500万的结果，并用Union合并结果集。<br><strong>执行效率：</strong></p>
-<p><img src="1.png" alt></p>
-<p><strong>其他</strong><br>使用union的前提在于字段一致</p>
-<h5 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h5><p><strong><a href="https://leetcode-cn.com/problems/not-boring-movies/" target="_blank" rel="noopener">620. 有趣的电影</a></strong><br><strong>难度：简单</strong><br>某城市开了一家新的电影院，吸引了很多人过来看电影。该电影院特别注意用户体验，专门有个 LED显示板做电影推荐，上面公布着影评和相关电影描述。</p>
-<p>作为该电影院的信息部主管，您需要编写一个SQL查询，找出所有影片描述为非boring (不无聊) 的并且<code>id</code>为奇数的影片，结果请按等级<code>rating</code>排列。<br>例如，下表<code>cinema</code>:</p>
-<table>
-<thead>
-<tr>
-<th>id</th>
-<th>movie</th>
-<th>description</th>
-<th>rating</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>War</td>
-<td>great 3D</td>
-<td>8.9</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Science</td>
-<td>fiction</td>
-<td>8.5</td>
-</tr>
-<tr>
-<td>3</td>
-<td>irish</td>
-<td>boring</td>
-<td>6.2</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Ice song</td>
-<td>Fantacy</td>
-<td>8.6</td>
-</tr>
-<tr>
-<td>5</td>
-<td>House card</td>
-<td>Interesting</td>
-<td>9.1</td>
-</tr>
-</tbody>
-</table>
-<p>对于上面的例子，则正确的输出是为：</p>
-<table>
-<thead>
-<tr>
-<th>id</th>
-<th>movie</th>
-<th>description</th>
-<th>rating</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>5</td>
-<td>House card</td>
-<td>Interesting</td>
-<td>9.1</td>
-</tr>
-<tr>
-<td>1</td>
-<td>War</td>
-<td>great 3D</td>
-<td>8.9</td>
-</tr>
-</tbody>
-</table>
-<p><strong>我的题解：</strong><br><figure class="highlight livecodeserver"><table><tr><td class="code"><pre><span class="line">SELECT <span class="keyword">a</span>.id,<span class="keyword">a</span>.movie,<span class="keyword">a</span>.description,<span class="keyword">a</span>.rating FROM cinema AS <span class="keyword">a</span></span><br><span class="line">WHERE <span class="keyword">a</span>.id % <span class="number">2</span> =<span class="number">1</span></span><br><span class="line">AND <span class="keyword">a</span>.description &lt;&gt; <span class="string">'boring'</span></span><br><span class="line">ORDER BY <span class="keyword">a</span>.rating DESC</span><br></pre></td></tr></table></figure></p>
-<p><strong>解题思路：</strong><br>分别判断条件，id%2=1即为奇数，且不等于boring<br><strong>执行效率：</strong><br><img src="2.png" alt><br><strong>其他</strong><br><code>&lt;&gt;</code>即为不等于</p>
-<h5 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h5><p><strong><a href="https://leetcode-cn.com/problems/rank-scores/" target="_blank" rel="noopener">178. 分数排名</a></strong><br><strong>难度：中等</strong><br>编写一个 SQL 查询来实现分数排名。如果两个分数相同，则两个分数排名（Rank）相同。请注意，平分后的下一个名次应该是下一个连续的整数值。换句话说，名次之间不应该有“间隔”。</p>
-<table>
-<thead>
-<tr>
-<th>Id</th>
-<th>Score</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>3.50</td>
-</tr>
-<tr>
-<td>2</td>
-<td>3.65</td>
-</tr>
-<tr>
-<td>3</td>
-<td>4.00</td>
-</tr>
-<tr>
-<td>4</td>
-<td>3.85</td>
-</tr>
-<tr>
-<td>5</td>
-<td>4.00</td>
-</tr>
-<tr>
-<td>6</td>
-<td>3.65</td>
-</tr>
-</tbody>
-</table>
-<p>例如，根据上述给定的<code>Scores</code>表，你的查询应该返回（按分数从高到低排列）：</p>
-<table>
-<thead>
-<tr>
-<th>Score</th>
-<th>Rank</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>4.00</td>
-<td>1</td>
-</tr>
-<tr>
-<td>4.00</td>
-<td>1</td>
-</tr>
-<tr>
-<td>3.85</td>
-<td>2</td>
-</tr>
-<tr>
-<td>3.65</td>
-<td>3</td>
-</tr>
-<tr>
-<td>3.65</td>
-<td>3</td>
-</tr>
-<tr>
-<td>3.50</td>
-<td>4</td>
-</tr>
-</tbody>
-</table>
-<p><strong>我的题解：</strong><br><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> t.Score <span class="keyword">as</span> Score,(<span class="keyword">select</span> <span class="keyword">count</span>(<span class="keyword">distinct</span> score)<span class="keyword">from</span> Scores <span class="keyword">where</span> score &gt;= t.Score) <span class="keyword">as</span> <span class="keyword">Rank</span> <span class="keyword">from</span> Scores t <span class="keyword">order</span> <span class="keyword">by</span> t.Score <span class="keyword">desc</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>解题思路：</strong><br>排名位置应该等于只有唯一数的排名情况。<br>比如1,2,3，则3的排名为第三位。<br><strong>执行效率：</strong><br><img src="3.png" alt></p>
-<h5 id="第四题"><a href="#第四题" class="headerlink" title="第四题"></a>第四题</h5><p><strong><a href="https://leetcode-cn.com/problems/exchange-seats/" target="_blank" rel="noopener">626. 换座位</a></strong><br><strong>难度：中等</strong><br>小美是一所中学的信息科技老师，她有一张<code>seat</code>座位表，平时用来储存学生名字和与他们相对应的座位 id。</p>
-<p>其中纵列的<code>id</code>是连续递增的</p>
-<p>小美想改变相邻俩学生的座位。</p>
-<p>你能不能帮她写一个<code>SQL query</code>来输出小美想要的结果呢？</p>
-<p>示例：</p>
-<table>
-<thead>
-<tr>
-<th>id</th>
-<th>student</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Abbot</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Doris</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Emerson</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Green</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Jeames</td>
-</tr>
-</tbody>
-</table>
-<p>假如数据输入的是上表，则输出结果如下：</p>
-<table>
-<thead>
-<tr>
-<th>id</th>
-<th>student</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Doris</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Abbot</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Green</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Emerson</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Jeames</td>
-</tr>
-</tbody>
-</table>
-<p>注意：<br>如果学生人数是奇数，则不需要改变最后一个同学的座位。</p>
-<p><strong>我的题解：</strong><br><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> (</span><br><span class="line">    <span class="keyword">select</span> <span class="keyword">id</span><span class="number">-1</span> <span class="keyword">as</span> <span class="keyword">id</span>,student <span class="keyword">from</span> seat <span class="keyword">where</span> <span class="keyword">id</span>%<span class="number">2</span> = <span class="number">0</span></span><br><span class="line">    <span class="keyword">union</span></span><br><span class="line">    <span class="keyword">select</span> <span class="keyword">id</span>+<span class="number">1</span> <span class="keyword">as</span> <span class="keyword">id</span>,student <span class="keyword">from</span> seat <span class="keyword">where</span> <span class="keyword">id</span>%<span class="number">2</span> = <span class="number">1</span> <span class="keyword">and</span> (<span class="keyword">id</span>+<span class="number">1</span>) &lt;= (<span class="keyword">select</span> <span class="keyword">count</span>(*) <span class="keyword">from</span> seat)</span><br><span class="line">    <span class="keyword">union</span></span><br><span class="line">    <span class="keyword">select</span> <span class="keyword">id</span> <span class="keyword">as</span> <span class="keyword">id</span>,student <span class="keyword">from</span> seat <span class="keyword">where</span> <span class="keyword">id</span>%<span class="number">2</span> =<span class="number">1</span> <span class="keyword">and</span> (<span class="keyword">id</span>+<span class="number">1</span> )&gt;(<span class="keyword">select</span> <span class="keyword">count</span>(*) <span class="keyword">from</span> seat)) <span class="keyword">as</span> t</span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> <span class="keyword">id</span> <span class="keyword">asc</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>解题思路：</strong><br>交换位置的本质就是id互换，非末尾的奇数直接+1处理，偶数则-1处理，末尾的奇数则保持不变。<br><strong>执行效率：</strong><br><img src="4.png" alt></p>
-<h5 id="第五题"><a href="#第五题" class="headerlink" title="第五题"></a>第五题</h5><p><strong><a href="https://leetcode-cn.com/problems/swap-salary/" target="_blank" rel="noopener">627. 交换工资</a></strong><br><strong>难度：简单</strong><br>给定一个<code>salary</code>表，如下所示，有m=男性 和 f=女性的值 。交换所有的<code>f</code>和<code>m</code>值(例如，将所有<code>f</code>值更改为<code>m</code>，反之亦然)。要求使用一个更新查询，并且没有中间临时表。</p>
-<p>例如:</p>
-<table>
-<thead>
-<tr>
-<th>id</th>
-<th>name</th>
-<th>sex</th>
-<th>salary</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>A</td>
-<td>m</td>
-<td>2500</td>
-</tr>
-<tr>
-<td>2</td>
-<td>B</td>
-<td>f</td>
-<td>1500</td>
-</tr>
-<tr>
-<td>3</td>
-<td>C</td>
-<td>m</td>
-<td>5500</td>
-</tr>
-<tr>
-<td>4</td>
-<td>D</td>
-<td>f</td>
-<td>500</td>
-</tr>
-</tbody>
-</table>
-<p>运行你所编写的查询语句之后，将会得到以下表:</p>
-<table>
-<thead>
-<tr>
-<th>id</th>
-<th>name</th>
-<th>sex</th>
-<th>salary</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>A</td>
-<td>f</td>
-<td>2500</td>
-</tr>
-<tr>
-<td>2</td>
-<td>B</td>
-<td>m</td>
-<td>1500</td>
-</tr>
-<tr>
-<td>3</td>
-<td>C</td>
-<td>f</td>
-<td>5500</td>
-</tr>
-<tr>
-<td>4</td>
-<td>D</td>
-<td>m</td>
-<td>500</td>
-</tr>
-</tbody>
-</table>
-<p><strong>我的题解：</strong><br><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> salary </span><br><span class="line"><span class="keyword">SET</span> sex = </span><br><span class="line"><span class="keyword">CASE</span></span><br><span class="line">    <span class="keyword">WHEN</span> sex = <span class="string">'f'</span> <span class="keyword">THEN</span> <span class="string">'m'</span></span><br><span class="line">    <span class="keyword">WHEN</span> sex = <span class="string">'m'</span> <span class="keyword">THEN</span> <span class="string">'f'</span></span><br><span class="line"><span class="keyword">END</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>解题思路：</strong><br>本质就是交换f和m，用case判断值。<br><strong>执行效率：</strong></p>
-<p><img src="5.png" alt></p>
-<p><strong>其他</strong><br>修改内容<code>update</code>…<code>set</code><br>判断值<code>case</code>…<code>when</code>…<code>then</code></p>
-<h4 id="一点点小总结"><a href="#一点点小总结" class="headerlink" title="一点点小总结"></a>一点点小总结</h4><p>解题思路有了，很多时候因为语法不熟悉导致解题方案缺少。<br>另外就是执行效率较低，还需要优化SQL语句。</p>
+        
 
+          
+          <div class="entry-summary">
+          沉迷搭建博客的小李回来刷题啦~
+
+        
+          <p class="article-more-link">
+            <a href="/2019/02/26/小李飞刀：SQL题目第二弹！/#more">Continue Reading →</a>
+          </p>
+        </div>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -1146,29 +688,17 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>《恋爱使用说明书》<br><!-- less --></p>
-<h4 id="终于打卡成功啦"><a href="#终于打卡成功啦" class="headerlink" title="终于打卡成功啦~"></a>终于打卡成功啦~</h4><p>之前看过了吧花和闲闲的《有喜欢的人》了，一直想看这部漫改片。</p>
-<p>刚好循环到了西野加奈的《恋爱使用说明书》，就熬夜看完了这部少女心作品。</p>
-<p>PS:闲闲真的是漫改小王子，有他的地方就一定有烟花大会23333</p>
-<h4 id="谁是女主角"><a href="#谁是女主角" class="headerlink" title="谁是女主角?"></a>谁是女主角?</h4><p><img src="1.jpg" alt="电影海报"></p>
-<p>羽鸟一直认为自己是青梅竹马的利太的<code>女主角</code>，不曾动摇过自己的信念，直到杏子出现了，并和利太成为了男女朋友！</p>
-<p>然后羽鸟身边也出现了一个帅气的男子广佑，在动摇她的心。</p>
-<p>羽鸟坚定的认为利太一定会回来找她，但是事实证明，心软的利太在烟火大会认清自己的心之后，还是选择了守在杏子身边<br>(恋爱里的小心机让人不知道该怎么评价，毕竟装病也是为了留住利太，但是我很生气啊！！)<br><img src="3.jpg" alt="认清心意的花火大会"></p>
-<p>后来失意的羽鸟被广佑找到，这个男孩温暖了她，她努力成为他的女主角。<br>（这一段真的超甜啊，我单方面决定这就是结局了）<br><img src="4.jpg" alt="啊！小天使！"></p>
-<p>但是事实证明，其实青梅竹马的感情真的超深厚剪不开，利太早就不知不觉的喜欢上这个小时候曾经要保护他的女孩。</p>
-<p>最后的结局就是俩人在一起。</p>
-<h4 id="一些碎碎念"><a href="#一些碎碎念" class="headerlink" title="一些碎碎念"></a>一些碎碎念</h4><ul>
-<li><p>羡慕羽鸟有一个酷炫的闺蜜，在她痴迷于自己的世界的时候可以拉她一把，认清事实，做一个好助攻。</p>
-</li>
-<li><p>实名心疼坂口小天使!!!为什么吧花不选他，<strong>这部影片我站男二！</strong></p>
-<p><img src="2.jpg" alt="偷偷发小天使的美颜"></p>
-</li>
-<li><p>吧花真是好颜艺!!!后知后觉的发现她嫁给了三浦同学，就是《有喜欢的人》里面的男二~真好~</p>
-</li>
-<li><p>为甚闲闲总是演一些和自己性格差异很大的角色呢，明明和菅田将晖一起做综艺的时候很软萌的呀~</p>
-</li>
-</ul>
+        
 
+          
+          <div class="entry-summary">
+          《恋爱使用说明书》
+
+        
+          <p class="article-more-link">
+            <a href="/2019/02/20/《女主角失格》影评/#more">Continue Reading →</a>
+          </p>
+        </div>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -1218,18 +748,17 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>当你正视它，它会告诉你一个，关于热爱使人闪闪发光的故事。</p>
-<!-- less -->
-<p>2019年的春节假期，我宅在家里整整刷了三遍的《闪光少女》。</p>
-<p>这部从名字上来看，似乎有点小中二的电影却让我欲罢不能，甚至想安利给身边的所有朋友。</p>
-<p>同许多豆瓣热评说的那样，这部片的名字和二次元主题的宣发阻拦了许多朋友观看的脚步，明明片名和民乐半毛钱关系都没有嘛。</p>
-<p>但当你正视它，它会告诉你一个，关于热爱使人闪闪发光的故事。</p>
-<h4 id="关于乐器那些事儿"><a href="#关于乐器那些事儿" class="headerlink" title="关于乐器那些事儿"></a>关于乐器那些事儿</h4><p>看这部剧的契机，其实也非常的“二次元”。<br>当我在B站看央视爸爸出的《国家宝藏》第二季的山东博物馆中，国宝彩绘散乐浮雕的今生讲述请来了中国民族乐团的大神们。<br>当大神们奏响手中的乐器时，遥远华丽的大唐之音似乎也重现人间，奏毕仍余音袅袅不绝。弹幕里除了跪倒一片，还有人安利起了这部民乐主题的电影。<br>而在电影的高潮，就是西洋乐和民乐进行斗琴的环节，也上演了一段令人惊叹不已的音乐较量。<br>相较于打架等的武力较量，电影里采用的斗琴的方式虽然高大上但略显得有些幼稚。<br>但这种较量却有不输于拳拳到肉的痛快观感！<br>古筝清脆动听，竖琴叮咚作响。<br>二胡悠扬，小提琴沉郁。<br>钢琴声行云流水，扬琴声清脆明亮。<br>最后，以穿透力极强的唢呐惊艳全场，民乐获胜。<br>真是一场酣畅淋漓的对决！<br>在一来一往的对决中，你会发现，曾经以为因为地域因为历史而不同的乐器们，其实在表现力和音色甚至是演奏方式上都是异曲同工的！<br>可是当我们停下来思考，每当我们开始想要学习音乐的时候，我们首先会想到什么乐器呢？<br>是钢琴，是小提琴，还是其他的西洋乐器？<br>是否有一天，我们的首选项会变成了古筝，变成了扬琴。这时才是真正的拥有了文化自信。</p>
-<h4 id="音乐是无国界的语言。"><a href="#音乐是无国界的语言。" class="headerlink" title="音乐是无国界的语言。"></a>音乐是无国界的语言。</h4><p>音乐大概是全世界最不需要解释的语言了，无论是欢喜还是悲伤，同一首曲子可以让我们聆听一样的心情。<br>贯穿这部电影的主题，是关于西洋乐和民乐的地位高低之分。<br>但正如钢琴和扬琴其实为同宗兄弟一样，西洋乐器和民乐器都是为了呈现美好音乐的人们的智慧结晶。<br>而这部影片宣发时候主打的二次元，也并不是中二病青年的们的标志，它代表的ACG文化，也有很多优秀的音乐输出。<br>其实我想，这部电影想告诉我们的是：尊重。<br>尊重每一个乐器，尊重每一种文化。<br>每个乐器从诞生到流传，都曾经过历史的打磨；<br>每种文化从萌生到成型，都曾经过无数优秀思想的碰撞。<br>音乐的形态只是呈现的方式，并不影响它的娓娓动人；<br>文化的表现只是表达的方式，并不影响它深刻而隽永。<br>乐器没有高低之分，只要你认真聆听。<br>文化没有高低之分，只要你深入了解。<br>然后，你会发现因为自己的包容度，而打开了新世界的大门。</p>
-<h4 id="正确的青春片的打开方式"><a href="#正确的青春片的打开方式" class="headerlink" title="正确的青春片的打开方式"></a>正确的青春片的打开方式</h4><p>一开始我以为这是一部青春纯爱片，后来才发现是个不折不扣的青春热血番！<br>我们的青春从来都不是打架流产等狗血剧情，而是日复一日的学习，复习，向着目标，向着梦想不断前进。<br>台上十分钟，台下十年功。<br>学音乐的朋友们更是丝毫不敢耽搁自己的练习，茧子和变形的手指都是努力练习留下的勋章。<br>正是那么多练习的瞬间凝固成最后登台的十分钟的功夫。<br>成功的过程从来没有偷懒，无论是西洋乐还是民乐。<br>从开始接触乐器起，它就成了成长过程中如影随形的伙伴，从不允许别人轻易碰它，能对它的历史倒背如流，会捍卫它的音乐地位。<br>而当练琴疲惫的时候，想放弃的时候，想起最开始和它遇见的时候，那一份喜爱，到后来的热爱，还能咬咬牙继续练习。<br>大家都为了自己的音乐梦想而努力，也因为演奏的瞬间而闪闪发光。<br>在幼稚的青春期，可能因为文化观念的不同，对彼此不认可。<br>我认为你喜欢西洋乐是媚外，你认为我学民乐是老土。<br>你不明白我穿的lo裙，我也不理解你的晚礼服。<br>但不可否认，我们是最好的对手，值得彼此尊重的对手。<br>在电影的最后，汇报演奏上，追光灯打在演奏者的身上，是被音乐点亮的模样。无论你演奏的是西洋乐器，还是民乐乐器。<br>而令我们发光的是台上耀眼的灯光吗？</p>
-<p><strong>其实是我们眼中的，因为努力追寻自己的梦想的光芒。</strong></p>
-<p><strong>向所有为梦想努力奔跑的人致敬。</strong></p>
+        
 
+          
+          <div class="entry-summary">
+          当你正视它，它会告诉你一个，关于热爱使人闪闪发光的故事。
+
+        
+          <p class="article-more-link">
+            <a href="/2019/02/17/令你闪亮的，是你眼里的光-《闪光少女》影评/#more">Continue Reading →</a>
+          </p>
+        </div>
       
     </div>
     <footer class="entry-meta entry-footer">

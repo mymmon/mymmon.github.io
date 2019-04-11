@@ -11,13 +11,13 @@
   
   
   
-  <meta name="description" content="今天有两题没成功呢，但是明天一定会成功的~ 写在前面的话今天持续做题ing，python有意思~今天的题有点虐心…兴许是我太笨了…会努力学习的！动态规划我来啦~ 开始做题第一题459. 重复的子字符串难度：简单给定一个非空的字符串，判断它是否可以由它的一个子串重复多次构成。给定的字符串只含有小写英文字母，并且长度不超过10000。我的题解：class Solution(object):    de">
+  <meta name="description" content="今天有两题没成功呢，但是明天一定会成功的~">
 <meta name="keywords" content="leetcode,python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="小李飞刀：做题第六弹！">
 <meta property="og:url" content="http://yoursite.com/2019/03/07/小李飞刀：做题第六弹！/index.html">
 <meta property="og:site_name" content="Gaga酱の奇思妙想">
-<meta property="og:description" content="今天有两题没成功呢，但是明天一定会成功的~ 写在前面的话今天持续做题ing，python有意思~今天的题有点虐心…兴许是我太笨了…会努力学习的！动态规划我来啦~ 开始做题第一题459. 重复的子字符串难度：简单给定一个非空的字符串，判断它是否可以由它的一个子串重复多次构成。给定的字符串只含有小写英文字母，并且长度不超过10000。我的题解：class Solution(object):    de">
+<meta property="og:description" content="今天有两题没成功呢，但是明天一定会成功的~">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/03/07/小李飞刀：做题第六弹！/1.png">
 <meta property="og:image" content="http://yoursite.com/2019/03/07/小李飞刀：做题第六弹！/2.png">
@@ -25,7 +25,7 @@
 <meta property="og:updated_time" content="2019-04-10T16:59:34.107Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小李飞刀：做题第六弹！">
-<meta name="twitter:description" content="今天有两题没成功呢，但是明天一定会成功的~ 写在前面的话今天持续做题ing，python有意思~今天的题有点虐心…兴许是我太笨了…会努力学习的！动态规划我来啦~ 开始做题第一题459. 重复的子字符串难度：简单给定一个非空的字符串，判断它是否可以由它的一个子串重复多次构成。给定的字符串只含有小写英文字母，并且长度不超过10000。我的题解：class Solution(object):    de">
+<meta name="twitter:description" content="今天有两题没成功呢，但是明天一定会成功的~">
 <meta name="twitter:image" content="http://yoursite.com/2019/03/07/小李飞刀：做题第六弹！/1.png">
   
   <link rel="icon" href="/css/images/favicon.png">
@@ -162,7 +162,7 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天有两题没成功呢，但是明天一定会成功的~<br><!-- less --></p>
+        <p></p>
 <h4 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话"></a>写在前面的话</h4><p>今天持续做题ing，python有意思~<br>今天的题有点虐心…兴许是我太笨了…<br>会努力学习的！<br><strong>动态规划</strong>我来啦~</p>
 <h4 id="开始做题"><a href="#开始做题" class="headerlink" title="开始做题"></a>开始做题</h4><h5 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h5><p><strong><a href="https://leetcode-cn.com/problems/repeated-substring-pattern/" target="_blank" rel="noopener">459. 重复的子字符串</a></strong><br><strong>难度：简单</strong><br>给定一个非空的字符串，判断它是否可以由它的一个子串重复多次构成。给定的字符串只含有小写英文字母，并且长度不超过10000。<br><strong>我的题解：</strong><br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">repeatedSubstringPattern</span><span class="params">(self, s)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type s: str</span></span><br><span class="line"><span class="string">        :rtype: bool</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">if</span> len(s) &lt;= <span class="number">1</span> : <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        res = []</span><br><span class="line">        n = <span class="number">0</span></span><br><span class="line">        length = len(s)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,length):</span><br><span class="line">            <span class="keyword">if</span> s[i] == s[<span class="number">0</span>]:</span><br><span class="line">                res.append(i)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,length):</span><br><span class="line">            a = s[:i]</span><br><span class="line">            length_a = len(a)</span><br><span class="line">            n = length/length_a</span><br><span class="line">            <span class="keyword">if</span> a * n == s:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure></p>
 <p><img src="1.png" alt></p>
@@ -178,7 +178,6 @@
 <p><img src="3.png" alt></p>
 <p><strong>我的思路：</strong><br>因为只取整数部分，所以值会介于i的平方及i+1的平方之间。<br><strong>其他：</strong><br>这题<strong>Memory Error</strong>了，要重做!!!!<br>看了其他的人的题解，使用的是<code>无限逼近中位值</code>的办法，理论基础应该是<code>泰勒公式</code>。<br>（万万没想到居然用到了泰勒公式….<br>手工执行了下算法，反而理解的更快，但是泰勒公式还得再复习下。</p>
 <h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>今天的做题就到这里啦，还有很多要学习的地方~<br>数据结构与算法要加油呀！</p>
-
       
     </div>
     <footer class="entry-meta entry-footer">
