@@ -102,31 +102,9 @@
 
 
   
-  
-  <div class="site-header-image">
-    <img id="originBg" width="100%" alt="Hike News" src>
-  </div>
-
-  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
-    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src>
-  </div>
-
-  <script>
-        var imgUrls = "css/images/pic0.jpg,css/images/pic2.png,css/images/pic4.jpg".split(",");
-        var random = Math.floor((Math.random() * imgUrls.length ));
-        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
-          document.getElementById("originBg").src=imgUrls[random];
-          document.getElementById("blurBg").src=imgUrls[random];
-        } else {
-          document.getElementById("originBg").src='/' + imgUrls[random];
-          document.getElementById("blurBg").src='/' + imgUrls[random];
-        }
-    </script>
 
 
-
-
-<header id="allheader" class="site-header" role="banner" style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);">
+<header id="allheader" class="site-header" role="banner">
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -192,7 +170,7 @@
     <div class="article-meta">
       
 	<a href="/books/index.html" class="article-date">
-	  <time datetime="2019-04-17T14:59:45.043Z" itemprop="datePublished">April 17, 2019</time>
+	  <time datetime="2019-04-21T15:19:06.968Z" itemprop="datePublished">April 21, 2019</time>
 	</a>
 
        
@@ -284,34 +262,16 @@
 <div class="hexo-douban-tabs">
     <a class="hexo-douban-tab" id="hexo-douban-tab1" href="javascript:;" rel="external">
         在读
-        (5)</a>
+        (4)</a>
     <a class="hexo-douban-tab" id="hexo-douban-tab2" href="javascript:;" rel="external">
         想读
         (29)</a>
     <a class="hexo-douban-tab" id="hexo-douban-tab3" href="javascript:;" rel="external">
         已读
-        (11)</a>
+        (12)</a>
 </div>
 <div>
     <div id="hexo-douban-item1">
-        
-        <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/subject/m/public/s3510074.jpg" referrerpolicy="no-referrer"></div>
-    <div class="hexo-douban-info">
-        <div class="hexo-douban-title"><a target="_blank" href="https://book.douban.com/subject/3389984/"> 俗世奇人</a></div>
-        <div class="hexo-douban-meta">
-        
-  
-  冯骥才 / 作家出版社 / 2008-12 / 18.00元
-
-        </div>
-        <div class="hexo-douban-meta">2019-04-10
-      在读 /  民间 冯骥才 民俗 俗世奇人 天津</div>
-        <div class="hexo-douban-comments">
-  </div>
-    </div>
-</div>
-
         
         <div class="hexo-douban-item">
     <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/subject/m/public/s1070959.jpg" referrerpolicy="no-referrer"></div>
@@ -976,6 +936,28 @@
     <div id="hexo-douban-item3">
         
         <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/subject/m/public/s3510074.jpg" referrerpolicy="no-referrer"></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title"><a target="_blank" href="https://book.douban.com/subject/3389984/"> 俗世奇人</a></div>
+        <div class="hexo-douban-meta">
+        
+  
+  冯骥才 / 作家出版社 / 2008-12 / 18.00元
+
+      </div>
+        <div class="hexo-douban-meta">2019-04-19
+      读过 /  民间 冯骥才 民俗 俗世奇人 天津 / ★★★★★ 力荐</div>
+        <div class="hexo-douban-comments">
+      天津卫是个很厉害的地方，最近看了这本书和河神，各种介绍风俗，一方水土一方人，遇到的天津朋友也都如此的有趣
+      
+  
+
+  </div>
+    </div>
+</div>
+
+        
+        <div class="hexo-douban-item">
     <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/subject/m/public/s3248016.jpg" referrerpolicy="no-referrer"></div>
     <div class="hexo-douban-info">
         <div class="hexo-douban-title"><a target="_blank" href="https://book.douban.com/subject/1085860/"> 基督山伯爵</a></div>
@@ -1605,9 +1587,6 @@ for (var i = 0; i < firstpages.length; i++) {
 
 
     <!-- headerblur min height -->
-    
-      var headerblur = document.getElementById("header-blur");
-      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>
