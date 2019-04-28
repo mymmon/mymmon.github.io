@@ -56,31 +56,9 @@
 
 
   
-  
-  <div class="site-header-image">
-    <img id="originBg" width="100%" alt="Hike News" src>
-  </div>
-
-  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
-    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src>
-  </div>
-
-  <script>
-        var imgUrls = "css/images/pic0.jpg,css/images/pic2.png,css/images/pic4.jpg".split(",");
-        var random = Math.floor((Math.random() * imgUrls.length ));
-        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
-          document.getElementById("originBg").src=imgUrls[random];
-          document.getElementById("blurBg").src=imgUrls[random];
-        } else {
-          document.getElementById("originBg").src='/' + imgUrls[random];
-          document.getElementById("blurBg").src='/' + imgUrls[random];
-        }
-    </script>
 
 
-
-
-<header id="allheader" class="site-header" role="banner" style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);">
+<header id="allheader" class="site-header" role="banner">
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -167,7 +145,7 @@
 <li>加入了小佳扬的知乎专栏和github仓库，（再次被cue的小佳扬存在感好强！），会好好学习做好输出的！（破音</li>
 </ul>
 <h4 id="好好学习，天天向上"><a href="#好好学习，天天向上" class="headerlink" title="好好学习，天天向上"></a>好好学习，天天向上</h4><ul>
-<li>leetcode刷题9题，还没有写题解，主要刷的tag是<code>二叉搜索树</code>，在此感谢[小佳扬][5]的作业和思路~</li>
+<li>leetcode刷题9题，还没有写题解，主要刷的tag是<code>二叉搜索树</code>，在此感谢<a href="http://jalan.space" target="_blank" rel="noopener">小佳扬</a>的作业和思路~</li>
 <li>本周尤克演奏曲目有：</li>
 </ul>
 <ol>
@@ -1065,9 +1043,6 @@
 
 
     <!-- headerblur min height -->
-    
-      var headerblur = document.getElementById("header-blur");
-      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>
