@@ -166,6 +166,8 @@
 <meta property="og:image" content="http://yoursite.com/assets/douban-loading.gif">
 <meta property="og:image" content="http://yoursite.com/assets/douban-loading.gif">
 <meta property="og:image" content="http://yoursite.com/assets/douban-loading.gif">
+<meta property="og:image" content="http://yoursite.com/assets/douban-loading.gif">
+<meta property="og:image" content="http://yoursite.com/assets/douban-loading.gif">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="影">
 <meta name="twitter:description" content="电影就是每秒24格的真实。——戈达尔         .hexo-douban-tabs {     margin-bottom: 15px;     margin-top: 15px; }  .hexo-douban-tab {     padding: 5px; }  .hexo-douban-active {     background: #657">
@@ -204,31 +206,9 @@
 
 
   
-  
-  <div class="site-header-image">
-    <img id="originBg" width="100%" alt="Hike News" src>
-  </div>
-
-  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
-    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src>
-  </div>
-
-  <script>
-        var imgUrls = "css/images/pic0.jpg,css/images/pic2.png,css/images/pic4.jpg".split(",");
-        var random = Math.floor((Math.random() * imgUrls.length ));
-        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
-          document.getElementById("originBg").src=imgUrls[random];
-          document.getElementById("blurBg").src=imgUrls[random];
-        } else {
-          document.getElementById("originBg").src='/' + imgUrls[random];
-          document.getElementById("blurBg").src='/' + imgUrls[random];
-        }
-    </script>
 
 
-
-
-<header id="allheader" class="site-header" role="banner" style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);">
+<header id="allheader" class="site-header" role="banner">
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -294,7 +274,7 @@
     <div class="article-meta">
       
 	<a href="/movies/index.html" class="article-date">
-	  <time datetime="2019-05-12T15:32:54.277Z" itemprop="datePublished">May 12, 2019</time>
+	  <time datetime="2019-05-19T06:05:25.475Z" itemprop="datePublished">May 19, 2019</time>
 	</a>
 
        
@@ -386,7 +366,7 @@
 <div class="hexo-douban-tabs">
     <a class="hexo-douban-tab" id="hexo-douban-tab1" href="javascript:;" rel="external">
         在看
-        (1)</a>
+        (3)</a>
     <a class="hexo-douban-tab" id="hexo-douban-tab2" href="javascript:;" rel="external">
         想看
         (15)</a>
@@ -396,6 +376,30 @@
 </div>
 <div>
     <div id="hexo-douban-item1">
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2553399755.jpg" referrerpolicy="no-referrer"></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/33408040/">宠物医院</a>
+        </div>
+        <div class="hexo-douban-meta">2019-05-07(中国大陆) / 中国大陆 / 35分钟 / 真人秀 / 汉语普通话</div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2553087801.jpg" referrerpolicy="no-referrer"></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/30482651/">拜托了冰箱 第五季</a>
+        </div>
+        <div class="hexo-douban-meta">2019-04-10(中国大陆) / 何炅 / 王嘉尔 / 中国大陆 / 胡悦 / 90分钟 / 真人秀 / 汉语普通话</div>
+    </div>
+</div>
+
+
         
         <div class="hexo-douban-item">
     <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1703904586.jpg" referrerpolicy="no-referrer"></div>
@@ -2722,9 +2726,6 @@ for (var i = 0; i < firstpages.length; i++) {
 
 
     <!-- headerblur min height -->
-    
-      var headerblur = document.getElementById("header-blur");
-      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>
