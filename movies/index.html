@@ -208,31 +208,9 @@
 
 
   
-  
-  <div class="site-header-image">
-    <img id="originBg" width="100%" alt="Hike News" src>
-  </div>
-
-  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
-    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src>
-  </div>
-
-  <script>
-        var imgUrls = "css/images/pic0.jpg,css/images/pic2.png,css/images/pic4.jpg".split(",");
-        var random = Math.floor((Math.random() * imgUrls.length ));
-        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
-          document.getElementById("originBg").src=imgUrls[random];
-          document.getElementById("blurBg").src=imgUrls[random];
-        } else {
-          document.getElementById("originBg").src='/' + imgUrls[random];
-          document.getElementById("blurBg").src='/' + imgUrls[random];
-        }
-    </script>
 
 
-
-
-<header id="allheader" class="site-header" role="banner" style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);">
+<header id="allheader" class="site-header" role="banner">
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -298,7 +276,7 @@
     <div class="article-meta">
       
 	<a href="/movies/index.html" class="article-date">
-	  <time datetime="2019-05-22T16:10:13.043Z" itemprop="datePublished">May 23, 2019</time>
+	  <time datetime="2019-05-23T03:04:46.314Z" itemprop="datePublished">May 23, 2019</time>
 	</a>
 
        
@@ -1015,7 +993,7 @@
 
         
         <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p506963235.jpg" referrerpolicy="no-referrer"></div>
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2346651192.jpg" referrerpolicy="no-referrer"></div>
     <div class="hexo-douban-info">
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/3158990/">海角七号 / 海角七號</a>
@@ -2776,9 +2754,6 @@ for (var i = 0; i < firstpages.length; i++) {
 
 
     <!-- headerblur min height -->
-    
-      var headerblur = document.getElementById("header-blur");
-      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>

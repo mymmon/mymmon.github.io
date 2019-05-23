@@ -1,4 +1,4 @@
-<div align=center><img src='./布丁.png' /></div>
+<div align=center><img src='./甜甜圈.png' /></div>
 
 # DONUTS
 
