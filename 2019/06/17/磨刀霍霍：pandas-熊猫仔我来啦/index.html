@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Aloha | Gaga酱的奇思妙想</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="萌萌の嘎嘎">
+  
+  
+  
+  
+  <meta name="description" content="今天的文章结构有点小小的不同~是 pandas 的学习笔记！">
+<meta name="keywords" content="python,认真学习の日常,pandas">
+<meta property="og:type" content="article">
+<meta property="og:title" content="磨刀霍霍：pandas 熊猫仔我来啦~">
+<meta property="og:url" content="http://yoursite.com/2019/06/17/磨刀霍霍：pandas-熊猫仔我来啦/index.html">
+<meta property="og:site_name" content="Gaga酱の奇思妙想">
+<meta property="og:description" content="今天的文章结构有点小小的不同~是 pandas 的学习笔记！">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-06-17T14:43:36.368Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="磨刀霍霍：pandas 熊猫仔我来啦~">
+<meta name="twitter:description" content="今天的文章结构有点小小的不同~是 pandas 的学习笔记！">
+  
+  <link rel="icon" href="/css/images/favicon.png">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/fashion.css">
+  <link rel="stylesheet" href="/css/glyphs.css">
+
+</head>
+</html>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h3 class="site-title">
+            
+              <a href="/" title="Gaga酱の奇思妙想" rel="home"> Gaga酱の奇思妙想 </a>
+            
+          </h3>
+          
+          
+            <div class="site-description">深水静流</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/">冲鸭❤</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/archives">archives❤</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/categories">碎碎念的基本法❤</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/tags">tags❤</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/about">岁月如歌❤</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/books">阅❤</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/movies">影❤</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-磨刀霍霍：pandas-熊猫仔我来啦" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost">
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      磨刀霍霍：pandas 熊猫仔我来啦~
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/06/17/磨刀霍霍：pandas-熊猫仔我来啦/" class="article-date">
+	  <time datetime="2019-06-17T14:40:21.000Z" itemprop="datePublished">June 17, 2019</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/小李の放学后/">小李の放学后</a>
+ 
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p></p>
+<p>#许久不见的叨逼叨</p>
+<p>目前最大的心愿就是所有的目标都达成！</p>
+<h1 id="开始认真学习"><a href="#开始认真学习" class="headerlink" title="开始认真学习"></a>开始认真学习</h1><h2 id="数据结构简介"><a href="#数据结构简介" class="headerlink" title="数据结构简介"></a>数据结构简介</h2><p>在 pandas 中有两类非常重要的数据结构，即序列 Series 和数据框 DataFrame。</p>
+<p>导入 pandas 之前，我们都会先导入 numpy 库。这是一对好基友。</p>
+<ul>
+<li><strong>Series</strong> 类似于 numpy 中的一维数组。</li>
+<li><strong>DataFrame</strong> 则类似于 numpy 中的二维数组。</li>
+</ul>
+<h3 id="Series-的创建"><a href="#Series-的创建" class="headerlink" title="Series 的创建"></a>Series 的创建</h3><p>主要为三种方式：</p>
+<ol>
+<li><p>通过一维数据方式创建序列</p>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np, pandas <span class="keyword">as</span> pd</span><br><span class="line">arr1 = np.arange(<span class="number">10</span>)</span><br><span class="line">s1 = pd.Series(arr1)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过字典方式创建序列</p>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">dic1 = &#123;<span class="string">'a'</span>:<span class="number">10</span>,<span class="string">'b'</span>:<span class="number">20</span>,<span class="string">'c'</span>:<span class="number">9</span>&#125;</span><br><span class="line">s2 = pd.Series(dic1)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过 DataFrame 中的某一行某一列创建序列</p>
+</li>
+<li><p>官方案例</p>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">In [<span class="number">1</span>]: index = pd.date_range(<span class="string">'1/1/2000'</span>, periods=<span class="number">8</span>)</span><br><span class="line"></span><br><span class="line">In [<span class="number">2</span>]: s = pd.Series(np.random.randn(<span class="number">5</span>), index=[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>, <span class="string">'e'</span>])</span><br><span class="line"></span><br><span class="line">In [<span class="number">3</span>]: df = pd.DataFrame(np.random.randn(<span class="number">8</span>, <span class="number">3</span>), index=index,</span><br><span class="line">...:                   columns=[<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>])</span><br><span class="line">...: </span><br><span class="line"></span><br><span class="line">In [<span class="number">4</span>]: wp = pd.Panel(np.random.randn(<span class="number">2</span>, <span class="number">5</span>, <span class="number">4</span>), items=[<span class="string">'Item1'</span>, <span class="string">'Item2'</span>],</span><br><span class="line">...:               major_axis=pd.date_range(<span class="string">'1/1/2000'</span>, periods=<span class="number">5</span>),</span><br><span class="line">...:               minor_axis=[<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'D'</span>])</span><br><span class="line">...:</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="DataFrame-的创建"><a href="#DataFrame-的创建" class="headerlink" title="DataFrame 的创建"></a>DataFrame 的创建</h3><p>主要为三种方式：</p>
+<ol>
+<li><p>通过二维数据创建数据框</p>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">arr2 = np.array(np.range(<span class="number">12</span>)).reshape(<span class="number">4</span>,<span class="number">3</span>)</span><br><span class="line">df1 = pd.DataFrame(arr2)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过字典的方式创建数据框</p>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">dic2 = &#123;<span class="string">'a'</span>:[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>], <span class="string">'b'</span>:[<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]&#125;</span><br><span class="line">df2 = pd.DataFrae(dic2)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过 DataFrame 的方式创建数据框</p>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">dic3 = &#123;<span class="string">'one'</span>:&#123;<span class="string">'a'</span>:<span class="number">1</span>, <span class="string">'b'</span>:<span class="number">2</span>, <span class="string">'c'</span>:<span class="number">3</span>&#125;,</span><br><span class="line">        <span class="string">'two'</span>:&#123;<span class="string">'d'</span>:<span class="number">4</span>, <span class="string">'e'</span>:<span class="number">5</span>, <span class="string">'f'</span>:<span class="number">6</span>&#125;,</span><br><span class="line">        <span class="string">'three'</span>:&#123;<span class="string">'g'</span>:<span class="number">7</span>, <span class="string">'h'</span>:<span class="number">8</span>, <span class="string">'i'</span>:<span class="number">9</span>&#125;&#125;</span><br><span class="line"></span><br><span class="line">df3 = pd.DataFrame(dic3)</span><br><span class="line"></span><br><span class="line"><span class="comment">#用 DataFrame 的方式创建数据框</span></span><br><span class="line">df4 = df3[[<span class="string">'one'</span>, <span class="string">'two'</span>]] </span><br><span class="line"></span><br><span class="line"><span class="comment">#用 DataFrame 的方式创建序列</span></span><br><span class="line">s3 = df3[<span class="string">'three'</span>]</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="数据索引-Index"><a href="#数据索引-Index" class="headerlink" title="数据索引 Index"></a>数据索引 Index</h2><h3 id="通过索引值或者索引标签获取数据"><a href="#通过索引值或者索引标签获取数据" class="headerlink" title="通过索引值或者索引标签获取数据"></a>通过索引值或者索引标签获取数据</h3><p>默认情况下会自动分配一个从 <code>0</code> 开始的数字索引</p>
+<p>现在我们可以主动分配索引：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">s1.index = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>]</span><br></pre></td></tr></table></figure>
+<p>并可以通过索引值或者索引标签进行数据的获取，类似一维数组的操作</p>
+<h3 id="自动化对齐"><a href="#自动化对齐" class="headerlink" title="自动化对齐"></a>自动化对齐</h3><p>当多个序列存在需要算术运算的时候，通过标签就可以索引的自动化对齐，并进行运算</p>
+<p>而对于数据框，不仅对齐<strong>行索引</strong>，也对齐<strong>列索引</strong></p>
+<p>序列间如果存在不对齐的索引，则计算结果会出现<strong>缺失值</strong> NaN</p>
+<p>序列具有<code>广播能力</code>，虽然形式上类似于一维数组，但不同于列表。</p>
+<p>序列可以同标量进行运算，又可以进行元素函数级的计算。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#列表无法和标量进行计算</span></span><br><span class="line">l1 = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>]</span><br><span class="line">l1 + <span class="number">10</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#列表转换为序列后就可以对标量进行计算</span></span><br><span class="line">s1 = pd.Series(l1)</span><br><span class="line">s1 + <span class="number">10</span></span><br></pre></td></tr></table></figure>
+<h3 id="布尔索引"><a href="#布尔索引" class="headerlink" title="布尔索引"></a>布尔索引</h3><p>在实际工作中其实很少使用直接索引来进行取数，序列提供了另一种索引的办法：布尔索引</p>
+<blockquote>
+<p>如果是多个条件的查询，必须在 &amp;（且）或者 |（或）的两端条件用括号括起来</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">s = pd.Series(np.random(size=<span class="number">5</span>, low=<span class="number">1</span>, high = <span class="number">100</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">#取出大于等于 70 的数</span></span><br><span class="line">s[s&gt;=<span class="number">70</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#取出大于 40 小于 50 的数</span></span><br><span class="line">s[s&gt;<span class="number">40</span>][s&lt;<span class="number">50</span>]</span><br></pre></td></tr></table></figure>
+<h2 id="利用-pandas-查询数据"><a href="#利用-pandas-查询数据" class="headerlink" title="利用 pandas 查询数据"></a>利用 pandas 查询数据</h2><h3 id="导入数据"><a href="#导入数据" class="headerlink" title="导入数据"></a>导入数据</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#从CSV文件导入数据</span></span><br><span class="line">pd.read_csv(filename)</span><br><span class="line"><span class="comment">#从Excel文件导入数据</span></span><br><span class="line">pd.read_excel(filename)</span><br><span class="line"><span class="comment">#从SQL表/库导入数据</span></span><br><span class="line">pd.read_sql(query, connection_object)</span><br><span class="line"><span class="comment">#从限定分隔符的文本文件导入数据</span></span><br><span class="line">pd.read_table(filename)</span><br><span class="line"></span><br><span class="line"><span class="comment">#参数 chunksize 指定分块大小来读取文件，返回的是一个可迭代的对象 TextFileReader</span></span><br><span class="line">pd.read_table(<span class="string">'tmp.sv'</span>, sep = <span class="string">'|'</span>, chunksize = <span class="number">4</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#指定 iterator = True 也可以返回一个可迭代的对象 TextFileReader</span></span><br><span class="line">pd.read_table(<span class="string">'tmp.sv'</span>, sep = <span class="string">'|'</span>, iterator = <span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="查询数据的前-5-行或者末尾-5-行"><a href="#查询数据的前-5-行或者末尾-5-行" class="headerlink" title="查询数据的前 5 行或者末尾 5 行"></a>查询数据的前 5 行或者末尾 5 行</h3><p>一般当我们无法确认数据情况，可以先查看前 5 行数据观察数据的类型及列标签等</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">chunks = pd.read_csv(<span class="string">'train.csv'</span>,iterator = <span class="literal">True</span>)</span><br><span class="line"><span class="comment">#前 5 行数据方法1</span></span><br><span class="line">chunk = chunks.get_chunk(<span class="number">5</span>)</span><br><span class="line"><span class="comment">#前 5  行数据方法2</span></span><br><span class="line">chunks.head()</span><br><span class="line"></span><br><span class="line"><span class="comment">#后 5 行数据方法</span></span><br><span class="line">chunks.tail()</span><br></pre></td></tr></table></figure>
+<h3 id="查询指定的行或者列"><a href="#查询指定的行或者列" class="headerlink" title="查询指定的行或者列"></a>查询指定的行或者列</h3><ol>
+<li><p><code>ix</code> : 混合索引，同时通过<strong>标签</strong>和<strong>行号</strong>选取数据，有两个参数，按顺序控制行列</p>
+<blockquote>
+<p>注意：<strong>ix</strong> 的两个参数中，每个参数在索引时必须保持只使用标签或行号进行数据选取，否则会返回一部分控制结果</p>
+</blockquote>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#选取 1 行</span></span><br><span class="line">df.ix[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#错误的混合索引(选取 1 行和 'e' 行),会输出 NaN</span></span><br><span class="line">df.ix[<span class="number">1</span>, <span class="string">'e'</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#选取区域('e' 行的前 2 列)</span></span><br><span class="line">df.ix[<span class="string">'e'</span>:, :<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>loc</code> : 通过<strong>标签</strong>选取数据，即通过 index 和 columns 的值进行选取，有两个参数，按顺序控制行列，前提为两个参数都很好输入，或者你知道 index 或者 columns</p>
+<blockquote>
+<p>注意：如果索引的标签不在index或columns范围则会报错</p>
+</blockquote>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#直接索引行</span></span><br><span class="line">df.loc[<span class="string">'d'</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#索引多行(‘d' 和 'e' 行)</span></span><br><span class="line">df.loc[<span class="string">'d'</span>, <span class="string">'e'</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#索引多列</span></span><br><span class="line">df.loc[:, :<span class="string">'b'</span>]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>iloc</code> : 通过<strong>行号</strong>选取数据,<code>i</code> 可以理解为 <code>index</code>，即通过数据所在的自然行列数进行选取，有两个参数，按顺序控制行列，如果两个参数不太好输入的前提下可以使用</p>
+<blockquote>
+<p>注意：行号和索引有所差异，进行筛选后的数据行号会根据新的DataFrame变化，而索引不会发生变化</p>
+</blockquote>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#选取 1 行</span></span><br><span class="line"><span class="comment">#行号从 0 开始</span></span><br><span class="line">df.iloc[<span class="number">0</span>] </span><br><span class="line"></span><br><span class="line"><span class="comment">#选取多行</span></span><br><span class="line">df.iloc[<span class="number">0</span>:<span class="number">2</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#选取 1 列或者多列</span></span><br><span class="line">df.iloc[:, <span class="number">2</span>:<span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>at \ iat</code> : 通过<strong>标签</strong>或者<strong>行号</strong>获取某个数值的具体位置</p>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#获取第 2 行，第 3 列位置的数据</span></span><br><span class="line">df.iat[<span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#获取第 'f' 行，第 'a' 列位置的数据</span></span><br><span class="line">df.at[<span class="string">'f'</span>, <span class="string">'a'</span>]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>df[]</code> 直接索引 : 只能进行列选择或者行选择，不能同时进行选择</p>
+<ul>
+<li><p>列选择只能是列名</p>
+</li>
+<li><p>行号和区间选择只能是行选择</p>
+</li>
+<li><p>当存在 index 和 columns 重复的时候，标签优先返回行数据</p>
+</li>
+<li><p><strong>df.</strong> 只能用来选择列</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">df</span><br><span class="line">Out[<span class="number">208</span>]: </span><br><span class="line">a   b   c</span><br><span class="line">d  <span class="number">0</span>   <span class="number">1</span>   <span class="number">2</span></span><br><span class="line">e  <span class="number">3</span>   <span class="number">4</span>   <span class="number">5</span></span><br><span class="line">f  <span class="number">6</span>   <span class="number">7</span>   <span class="number">8</span></span><br><span class="line">g  <span class="number">9</span>  <span class="number">10</span>  <span class="number">11</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#选取行</span></span><br><span class="line">df[<span class="number">0</span>:<span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#选取列</span></span><br><span class="line">df[<span class="string">'a'</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#选取多列</span></span><br><span class="line">df[<span class="string">'a'</span>, <span class="string">'b'</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#选取行</span></span><br><span class="line">df[<span class="string">'a'</span>:]</span><br><span class="line"></span><br><span class="line"><span class="comment">#选取列</span></span><br><span class="line">df.a</span><br></pre></td></tr></table></figure>
+<h2 id="统计分析"><a href="#统计分析" class="headerlink" title="统计分析"></a>统计分析</h2><p>pandas 提供了非常多有用的统计分析的指标函数</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#非空元素计算</span></span><br><span class="line">s1.count()</span><br><span class="line"></span><br><span class="line"><span class="comment">#最小值</span></span><br><span class="line">s1.min()</span><br><span class="line"></span><br><span class="line"><span class="comment">#最大值</span></span><br><span class="line">s1.max()</span><br><span class="line"></span><br><span class="line"><span class="comment">#最小值的位置</span></span><br><span class="line">s1.idxmin()</span><br><span class="line"></span><br><span class="line"><span class="comment">#最大值的位置</span></span><br><span class="line">s1.idxmax()</span><br><span class="line"></span><br><span class="line"><span class="comment">#10 % 分位数</span></span><br><span class="line">s1.quantile(<span class="number">0.1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#求和 </span></span><br><span class="line">s1.sum()</span><br><span class="line"></span><br><span class="line"><span class="comment">#平均值</span></span><br><span class="line">s1.mean()</span><br><span class="line"></span><br><span class="line"><span class="comment">#中位数</span></span><br><span class="line">s1.median()</span><br><span class="line"></span><br><span class="line"><span class="comment">#众数</span></span><br><span class="line">s1.mode()</span><br><span class="line"></span><br><span class="line"><span class="comment">#方差</span></span><br><span class="line">s1.var()</span><br><span class="line"></span><br><span class="line"><span class="comment">#标准差</span></span><br><span class="line">s1.std()</span><br><span class="line"></span><br><span class="line"><span class="comment">#平均绝对偏差</span></span><br><span class="line">s1.mad()</span><br><span class="line"></span><br><span class="line"><span class="comment">#偏度</span></span><br><span class="line">s1.skew()</span><br><span class="line"></span><br><span class="line"><span class="comment">#峰度</span></span><br><span class="line">s1.kurt()</span><br><span class="line"></span><br><span class="line"><span class="comment">#一次性输出多个描述性统计指标，只能使用在序列及数据框上</span></span><br><span class="line">s1.descrie()</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="类-SQL-操作"><a href="#类-SQL-操作" class="headerlink" title="类 SQL 操作"></a>类 SQL 操作</h2><p>常用的 SQL 操作为<strong>增删改查</strong>，在 pandas 中同样可以实现</p>
+<h3 id="增"><a href="#增" class="headerlink" title="增"></a>增</h3><p>增加新行或者增加新列，完成 SQL 中 UNION 的功能</p>
+<ul>
+<li>增加新行可以通过<code>concat</code>函数，会自动对齐两个数据框的变量</li>
+<li>增加新列的话，会因为无初始值而显示NaN</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#新增加行</span></span><br><span class="line">df3 = pd.concat(df1, df2)</span><br><span class="line"><span class="comment">#新增加列</span></span><br><span class="line">pd.DataFrame(df2,columns = [col1, col2, col3, new col])</span><br></pre></td></tr></table></figure>
+<h3 id="删"><a href="#删" class="headerlink" title="删"></a>删</h3><ul>
+<li>删除数据框可以通过 <code>del</code> 来实现，这个命令可以删除 Python 的所有对象</li>
+<li>删除行或者删除列可以通过 <code>drop</code> 来实现，默认参数 <strong>axis = 0</strong>，用于删除行变量，删除列变量则需要修改参数为 <strong>axis = 1</strong></li>
+<li><code>drop</code>支持布尔索引</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#删除行</span></span><br><span class="line">df.drop([df.[col] &gt;= num])</span><br><span class="line"><span class="comment">#删除列</span></span><br><span class="line">df.drop([col1, col2], axis = <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="改"><a href="#改" class="headerlink" title="改"></a>改</h3><p>可以结合布尔索引和赋值来完成</p>
+<h3 id="查"><a href="#查" class="headerlink" title="查"></a>查</h3><ul>
+<li><strong>SELECT</strong><br>如果 DataFrame 数据结构中不提供列名，则默认选择全部，等同于 <strong>SELECT *</strong></li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> A, B, C <span class="keyword">FROM</span> D1</span><br><span class="line"><span class="keyword">LIMIT</span> <span class="number">5</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">D1.[<span class="string">'A'</span>,<span class="string">'B'</span>,<span class="string">'C'</span>].head(<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>WHERE</strong></li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> D1</span><br><span class="line"><span class="keyword">WHERE</span> A = <span class="number">1</span></span><br><span class="line"><span class="keyword">LIMIT</span> <span class="number">5</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">D1.[D1[<span class="string">'A'</span>]=<span class="number">1</span>].head(<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>value_counts()</strong><br>用于统计行数</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">is_A = D1[<span class="string">'A'</span>] == <span class="number">1</span></span><br><span class="line">is_A.value_count()</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>AND &amp; OR |</strong><br>用于实现多条件查询</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> D1</span><br><span class="line"><span class="keyword">WHERE</span> A = <span class="number">1</span> <span class="keyword">AND</span> B &lt; <span class="number">5</span></span><br><span class="line"><span class="keyword">LIMIT</span> <span class="number">5</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">D1.[(D1[<span class="string">'A'</span>] = <span class="number">1</span>)&amp;(D1[<span class="string">'B'</span>]&lt; <span class="number">5</span> )].head(<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>非空检查</strong><br>Pandas 提供了 <strong>notna()</strong> 和 <strong>isna()</strong> 方法来判断字段是否为空</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> D1</span><br><span class="line"><span class="keyword">WHERE</span> A <span class="keyword">is</span> <span class="literal">NULL</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">D1.[D1[<span class="string">'A'</span>].isna()]</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>Group by</strong></li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> A, <span class="keyword">count</span>(*)</span><br><span class="line"><span class="keyword">FROM</span> D1</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> A</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">D1.groupby(<span class="string">'A'</span>).size()</span><br></pre></td></tr></table></figure>
+<p><code>size()</code> 仅对选取列生效，<code>count()</code> 则是对所有列生效</p>
+<p>Pandas可以对Group By分组之后的数据实现多种统计方法，通过使用 <code>agg()</code> 方法</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">day</span>, <span class="keyword">AVG</span>(tip), <span class="keyword">COUNT</span>(*)</span><br><span class="line"><span class="keyword">FROM</span> tips</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> <span class="keyword">day</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">D1.groupby(<span class="string">'A'</span>).agg(&#123;<span class="string">'A'</span>: np.mean, <span class="string">'B'</span>: np.size&#125;)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>JOIN</strong><br>pandas 使用 <code>join()</code> 和 <code>merge()</code> 来实现 SQL 的多表连接<br>pandas 默认使用 <strong>inner join</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#merge函数实现</span></span><br><span class="line">pandas.merge(left, right, how=<span class="string">'inner'</span>, on=<span class="literal">None</span>, left_on=<span class="literal">None</span>, right_on=<span class="literal">None</span>, left_index=<span class="literal">False</span>, right_index=<span class="literal">False</span>, sort=<span class="literal">False</span>, suffixes=(<span class="string">'_x'</span>, <span class="string">'_y'</span>), copy=<span class="literal">True</span>, indicator=<span class="literal">False</span>, validate=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>参数解释：<br>left，right：表示要合并的两个 DataFrame 对象；<br>how：表示如何合并连接，默认为 inner，还有outer、left、right；<br>on：指定进行连接的标签或列表，注意此生的标签必须同时存在两个 DataFrame 对象中；<br>left_on：左侧DataFrame对象中参与连接的标签或列表；<br>right_on：右侧dataFrame对象中参与连接的标签或列表；<br>left_index：是否使用左侧DataFrame对象中的索引作为连接的主键；<br>right_idnex：是否使用右侧dataFrame对象中的索引作为连接的主键；<br>sort：是否对连接结果根据连接关键字进行排序；<br>suffixes：后缀名分别用于左右数据对象中的重叠名称；<br>copy：是否复制结果；<br>indicator：<br>validate：默认为None，检查merge的连接匹配类型，“one_to_one” or “1:1”:检查合并所用关键字在连个数据对象中的唯一性；“one_to_many” or “1:m”: 检查合并关键字在左侧数据中的唯一性；“many_to_one” or “m:1”: 检查合并所用关键字在右侧数据中的唯一性；“many_to_many” or “m:m”:允许此种形式但不起作用</p>
+</blockquote>
+<ul>
+<li><strong>排序</strong></li>
+</ul>
+<p>使用 order, sort_index, sort_values 实现序列和数据框的排序工作</p>
+<h2 id="缺失值处理"><a href="#缺失值处理" class="headerlink" title="缺失值处理"></a>缺失值处理</h2><h3 id="删除法"><a href="#删除法" class="headerlink" title="删除法"></a>删除法</h3><ul>
+<li>如果数据中某个变量大部分都是缺失值，可以考虑删除变量</li>
+<li>如果缺失值是随机分布的，且缺失的数量并不是很多，可以考虑删除这些缺失的观测值</li>
+</ul>
+<h3 id="替补法"><a href="#替补法" class="headerlink" title="替补法"></a>替补法</h3><ul>
+<li>对于连续型变量，如果变量的分布近似或就是正态分布的话，可以用<code>均值</code>替代那些缺失值</li>
+<li>如果变量是有偏的，可以使用<code>中位数</code>来代替那些缺失值</li>
+<li>对于离散型变量，我们一般用<code>众数</code>去替换那些存在缺失的观测</li>
+</ul>
+<h3 id="插补法"><a href="#插补法" class="headerlink" title="插补法"></a>插补法</h3><ul>
+<li>插补法是基于蒙特卡洛模拟法，结合线性模型、广义线性模型、决策树等方法计算出来的预测值替换缺失值</li>
+</ul>
+<p>通过 <code>sum</code> 和 <code>isnull</code> 函数来检测有多少缺失值<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">sum(pd.isnull(s))</span><br></pre></td></tr></table></figure></p>
+<p>通过 <code>dropna</code> 直接删除缺失值，默认情况下 dropna 会删除任何含有缺失值的行<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">s.dropna()</span><br><span class="line"></span><br><span class="line"><span class="comment">#增加参数 how = all，表示值删除所有列都为缺失值的行</span></span><br><span class="line">s.dropna(how = <span class="string">'all'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>通过 <code>fillna</code> 函数来实现填补工作</p>
+<ul>
+<li><p>用 0 来填补所有缺失值</p>
+  <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">df.fillna(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>采用前项填充或者后项填充</p>
+  <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#用前项填充</span></span><br><span class="line">df.fillna(method = <span class="string">'ffill'</span>)</span><br><span class="line"><span class="comment">#用后项填充</span></span><br><span class="line">df.fillna(method = <span class="string">'bfill'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用常量填充不同的列</p>
+  <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">df.fillna(<span class="string">'A'</span>:<span class="number">1</span>,<span class="string">'B'</span>:<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用均值或中位数填充各自的列</p>
+  <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x_median = df[<span class="string">'A'</span>].median()</span><br><span class="line">x_mean = df[<span class="string">'A'</span>].mean()</span><br><span class="line">df.fillna(<span class="string">'A'</span>:x_median,<span class="string">'B'</span>:x_mean)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="数据透视表"><a href="#数据透视表" class="headerlink" title="数据透视表"></a>数据透视表</h2><p>pandas 提供了 <code>pivot_table()</code> 来实现数据透视表功能</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://www.cnblogs.com/nxld/p/6058591.html" target="_blank" rel="noopener">Python 数据分析之 pandas 学习</a></li>
+<li><a href="http://pandas.pydata.org/" target="_blank" rel="noopener">Python Data Analysis Library</a></li>
+<li><a href="https://www.jianshu.com/p/f197c50e889c" target="_blank" rel="noopener">从零开始学Python数据分析【5】– pandas(序列部分)</a></li>
+<li><a href="https://www.jianshu.com/p/199a653e9668" target="_blank" rel="noopener">Pandas DataFrame的loc、iloc、ix和at/iat浅析</a></li>
+</ul>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/小李の放学后/">小李の放学后</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pandas/">pandas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/认真学习の日常/">认真学习の日常</a></li></ul>
+
+      
+        
+	<div id="comment">
+	
+	<!-- 多说评论框 start -->
+	 <div class="ds-thread" data-thread-key="/2019/06/17/磨刀霍霍：pandas-熊猫仔我来啦/" data-title="磨刀霍霍：pandas 熊猫仔我来啦~" data-url="http://yoursite.com/2019/06/17/磨刀霍霍：pandas-熊猫仔我来啦/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"iTimeTraveler"};
+	  (function() {
+	    var ds = document.createElement('script');
+	    ds.type = 'text/javascript';ds.async = true;
+	    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	    ds.charset = 'UTF-8';
+	    (document.getElementsByTagName('head')[0] 
+	     || document.getElementsByTagName('body')[0]).appendChild(ds);
+	  })();
+	  </script>
+	<!-- 多说公共JS代码 end -->
+	
+	</div>
+	<link rel="stylesheet" href="/css/comment.css">
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/06/16/Y想-190616/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Y想-190616</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#开始认真学习"><span class="nav-number">1.</span> <span class="nav-text">开始认真学习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据结构简介"><span class="nav-number">1.1.</span> <span class="nav-text">数据结构简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Series-的创建"><span class="nav-number">1.1.1.</span> <span class="nav-text">Series 的创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DataFrame-的创建"><span class="nav-number">1.1.2.</span> <span class="nav-text">DataFrame 的创建</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据索引-Index"><span class="nav-number">1.2.</span> <span class="nav-text">数据索引 Index</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#通过索引值或者索引标签获取数据"><span class="nav-number">1.2.1.</span> <span class="nav-text">通过索引值或者索引标签获取数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自动化对齐"><span class="nav-number">1.2.2.</span> <span class="nav-text">自动化对齐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#布尔索引"><span class="nav-number">1.2.3.</span> <span class="nav-text">布尔索引</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利用-pandas-查询数据"><span class="nav-number">1.3.</span> <span class="nav-text">利用 pandas 查询数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#导入数据"><span class="nav-number">1.3.1.</span> <span class="nav-text">导入数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查询数据的前-5-行或者末尾-5-行"><span class="nav-number">1.3.2.</span> <span class="nav-text">查询数据的前 5 行或者末尾 5 行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查询指定的行或者列"><span class="nav-number">1.3.3.</span> <span class="nav-text">查询指定的行或者列</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#统计分析"><span class="nav-number">1.4.</span> <span class="nav-text">统计分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类-SQL-操作"><span class="nav-number">1.5.</span> <span class="nav-text">类 SQL 操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#增"><span class="nav-number">1.5.1.</span> <span class="nav-text">增</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删"><span class="nav-number">1.5.2.</span> <span class="nav-text">删</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#改"><span class="nav-number">1.5.3.</span> <span class="nav-text">改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查"><span class="nav-number">1.5.4.</span> <span class="nav-text">查</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缺失值处理"><span class="nav-number">1.6.</span> <span class="nav-text">缺失值处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#删除法"><span class="nav-number">1.6.1.</span> <span class="nav-text">删除法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#替补法"><span class="nav-number">1.6.2.</span> <span class="nav-text">替补法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插补法"><span class="nav-number">1.6.3.</span> <span class="nav-text">插补法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据透视表"><span class="nav-number">1.7.</span> <span class="nav-text">数据透视表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">1.8.</span> <span class="nav-text">参考资料</span></a></li></ol></li></ol>
+    
+    </div>
+  </aside>
+
+
+
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">冲鸭❤</a>
+  
+    <a href="/archives" class="mobile-nav-link">archives❤</a>
+  
+    <a href="/categories" class="mobile-nav-link">碎碎念的基本法❤</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags❤</a>
+  
+    <a href="/about" class="mobile-nav-link">岁月如歌❤</a>
+  
+    <a href="/books" class="mobile-nav-link">阅❤</a>
+  
+    <a href="/movies" class="mobile-nav-link">影❤</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2019 Gaga酱の奇思妙想 All Rights Reserved.
+        
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script type="text/javascript" src="js/love.js"></script>
+  <script type="text/javascript" src="js/float.js"></script>
+  <script type="text/javascript" src="js/typewriter.js"></script>
+  <script type="text/javascript" color="0,104,183" opacity="1" zindex="-1" count="50" src="js/particle.js"></script>
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
