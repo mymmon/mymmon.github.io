@@ -75,6 +75,7 @@
 <meta property="og:image" content="http://yoursite.com/assets/douban-loading.gif">
 <meta property="og:image" content="http://yoursite.com/assets/douban-loading.gif">
 <meta property="og:image" content="http://yoursite.com/assets/douban-loading.gif">
+<meta property="og:image" content="http://yoursite.com/assets/douban-loading.gif">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="阅">
 <meta name="twitter:description" content="文学的真正的使命就是使感情成为可见的东西。——泰纳         .hexo-douban-tabs {     margin-bottom: 15px;     margin-top: 15px; }  .hexo-douban-tab {     padding: 5px; }  .hexo-douban-active {     backgroun">
@@ -113,9 +114,31 @@
 
 
   
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src>
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src>
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pic0.jpg,css/images/pic2.png,css/images/pic4.jpg".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
 
 
-<header id="allheader" class="site-header" role="banner">
+
+
+<header id="allheader" class="site-header" role="banner" style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);">
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -181,7 +204,7 @@
     <div class="article-meta">
       
 	<a href="/books/index.html" class="article-date">
-	  <time datetime="2019-06-18T16:21:26.933Z" itemprop="datePublished">June 19, 2019</time>
+	  <time datetime="2019-06-18T16:25:54.336Z" itemprop="datePublished">June 19, 2019</time>
 	</a>
 
        
@@ -279,7 +302,7 @@
         (32)</a>
     <a class="hexo-douban-tab" id="hexo-douban-tab3" href="javascript:;" rel="external">
         已读
-        (19)</a>
+        (20)</a>
 </div>
 <div>
     <div id="hexo-douban-item1">
@@ -1020,6 +1043,28 @@
 
     </div>
     <div id="hexo-douban-item3">
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/subject/m/public/s27220774.jpg" referrerpolicy="no-referrer"></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title"><a target="_blank" href="https://book.douban.com/subject/25829434/"> 暗恋·橘生淮南</a></div>
+        <div class="hexo-douban-meta">
+        
+  
+  八月长安 / 湖南文艺出版社 / 2014-7-25 / 58
+
+      </div>
+        <div class="hexo-douban-meta">2019-06-18
+      读过 /  八月长安 青春 暗恋 / ★★★★★ 力荐</div>
+        <div class="hexo-douban-comments">
+      熬夜看完第二遍，还是很心疼把心意藏起来的那些时间。抱着一腔的固执，等着迎接黎明，但不知道黎明会不会来。
+      
+  
+
+  </div>
+    </div>
+</div>
+
         
         <div class="hexo-douban-item">
     <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/subject/m/public/s28369176.jpg" referrerpolicy="no-referrer"></div>
@@ -1831,6 +1876,9 @@ for (var i = 0; i < firstpages.length; i++) {
 
 
     <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>
