@@ -11,18 +11,18 @@
   
   
   
-  <meta name="description" content="SQL 中的 HAVING 与 WHERE 的区别使用情况 需要使用聚合函数的时候，WHERE 无法与聚合函数一同使用 HAVING 通常是在 SQL 语句的最后 含有 HAVING 子句的 SQL 不一定包含 GROUP BY 子句 WHERE 在 GROUP BY 之前，在分组之前进行计算 HAVING 在 GROUP BY 之后，在分组之后对小组进行计算  练习题原题地址：182. 查找重复">
+  <meta name="description" content="查缺补漏！">
 <meta name="keywords" content="leetcode,SQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="磨刀霍霍：SQL 中的 HAVING 与 WHERE 的区别">
 <meta property="og:url" content="http://yoursite.com/2019/06/24/磨刀霍霍：SQL中的HAVING与WHERE的区别/index.html">
 <meta property="og:site_name" content="Gaga酱の奇思妙想">
-<meta property="og:description" content="SQL 中的 HAVING 与 WHERE 的区别使用情况 需要使用聚合函数的时候，WHERE 无法与聚合函数一同使用 HAVING 通常是在 SQL 语句的最后 含有 HAVING 子句的 SQL 不一定包含 GROUP BY 子句 WHERE 在 GROUP BY 之前，在分组之前进行计算 HAVING 在 GROUP BY 之后，在分组之后对小组进行计算  练习题原题地址：182. 查找重复">
+<meta property="og:description" content="查缺补漏！">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-24T13:50:46.592Z">
+<meta property="og:updated_time" content="2019-06-24T15:19:38.052Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="磨刀霍霍：SQL 中的 HAVING 与 WHERE 的区别">
-<meta name="twitter:description" content="SQL 中的 HAVING 与 WHERE 的区别使用情况 需要使用聚合函数的时候，WHERE 无法与聚合函数一同使用 HAVING 通常是在 SQL 语句的最后 含有 HAVING 子句的 SQL 不一定包含 GROUP BY 子句 WHERE 在 GROUP BY 之前，在分组之前进行计算 HAVING 在 GROUP BY 之后，在分组之后对小组进行计算  练习题原题地址：182. 查找重复">
+<meta name="twitter:description" content="查缺补漏！">
   
   <link rel="icon" href="/css/images/favicon.png">
   
@@ -57,9 +57,31 @@
 
 
   
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src>
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src>
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pic0.jpg,css/images/pic2.png,css/images/pic4.jpg".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
 
 
-<header id="allheader" class="site-header" role="banner">
+
+
+<header id="allheader" class="site-header" role="banner" style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);">
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -136,7 +158,8 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="SQL-中的-HAVING-与-WHERE-的区别"><a href="#SQL-中的-HAVING-与-WHERE-的区别" class="headerlink" title="SQL 中的 HAVING 与 WHERE 的区别"></a>SQL 中的 HAVING 与 WHERE 的区别</h1><h2 id="使用情况"><a href="#使用情况" class="headerlink" title="使用情况"></a>使用情况</h2><ul>
+        <p></p>
+<h1 id="SQL-中的-HAVING-与-WHERE-的区别"><a href="#SQL-中的-HAVING-与-WHERE-的区别" class="headerlink" title="SQL 中的 HAVING 与 WHERE 的区别"></a>SQL 中的 HAVING 与 WHERE 的区别</h1><h2 id="使用情况"><a href="#使用情况" class="headerlink" title="使用情况"></a>使用情况</h2><ul>
 <li>需要使用<strong>聚合函数</strong>的时候，<code>WHERE</code> 无法与<strong>聚合函数</strong>一同使用</li>
 <li><code>HAVING</code> 通常是在 SQL 语句的最后</li>
 <li>含有 <code>HAVING</code> 子句的 SQL 不一定包含 <code>GROUP BY</code> 子句</li>
@@ -149,7 +172,6 @@
 <p>题解 2：</p>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> t.Email <span class="keyword">from</span> Person t </span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> t.Email</span><br><span class="line"><span class="keyword">having</span> <span class="keyword">count</span>(t.Email) &gt; <span class="number">1</span></span><br></pre></td></tr></table></figure>
 <p>两种方法差异了 39 ms ，但第二种看起来更为直观，且效率更高</p>
-
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -276,6 +298,9 @@
 
 
     <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>
