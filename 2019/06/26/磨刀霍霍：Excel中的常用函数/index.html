@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Aloha | Gaga酱的奇思妙想</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="萌萌の嘎嘎">
+  
+  
+  
+  
+  <meta name="description" content="人生成就= 思维方式× 热情× 能力">
+<meta name="keywords" content="Excel">
+<meta property="og:type" content="article">
+<meta property="og:title" content="磨刀霍霍：Excel中的常用函数">
+<meta property="og:url" content="http://yoursite.com/2019/06/26/磨刀霍霍：Excel中的常用函数/index.html">
+<meta property="og:site_name" content="Gaga酱の奇思妙想">
+<meta property="og:description" content="人生成就= 思维方式× 热情× 能力">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-06-26T14:46:41.393Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="磨刀霍霍：Excel中的常用函数">
+<meta name="twitter:description" content="人生成就= 思维方式× 热情× 能力">
+  
+  <link rel="icon" href="/css/images/favicon.png">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/fashion.css">
+  <link rel="stylesheet" href="/css/glyphs.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142486934-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-142486934-1');
+  </script>
+
+
+</head>
+</html>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src>
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src>
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pic0.jpg,css/images/pic2.png,css/images/pic4.jpg".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
+
+
+
+
+<header id="allheader" class="site-header" role="banner" style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h3 class="site-title">
+            
+              <a href="/" title="Gaga酱の奇思妙想" rel="home"> Gaga酱の奇思妙想 </a>
+            
+          </h3>
+          
+          
+            <div class="site-description">深水静流</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/">冲鸭❤</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/archives">archives❤</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/categories">碎碎念的基本法❤</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/tags">tags❤</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/about">岁月如歌❤</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/books">阅❤</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/movies">影❤</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-磨刀霍霍：Excel中的常用函数" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost">
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      磨刀霍霍：Excel中的常用函数
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/06/26/磨刀霍霍：Excel中的常用函数/" class="article-date">
+	  <time datetime="2019-06-26T14:45:38.000Z" itemprop="datePublished">June 26, 2019</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/小李の放学后/">小李の放学后</a>
+ 
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p></p>
+
+<h2 id="日期函数"><a href="#日期函数" class="headerlink" title="日期函数"></a>日期函数</h2><h3 id="DAY"><a href="#DAY" class="headerlink" title="DAY"></a><code>DAY</code></h3><ul>
+<li>返回以序列号表示的某日期的天数  </li>
+<li><code>DAY(serial_number)</code></li>
+</ul>
+<h3 id="MONTH"><a href="#MONTH" class="headerlink" title="MONTH"></a><code>MONTH</code></h3><ul>
+<li>返回以序列号表示的某日期的月数  </li>
+<li><code>MONTH(serial_number)</code></li>
+</ul>
+<h3 id="YEAR"><a href="#YEAR" class="headerlink" title="YEAR"></a><code>YEAR</code></h3><ul>
+<li>返回以序列号表示的某日期的年数  </li>
+<li><code>YEAR(serial_number)</code></li>
+</ul>
+<h3 id="DATE"><a href="#DATE" class="headerlink" title="DATE"></a><code>DATE</code></h3><ul>
+<li>将提取的数字变为日期格式进行显示  </li>
+<li><code>DATE(year, month, day)</code></li>
+</ul>
+<h3 id="WEEKDAY"><a href="#WEEKDAY" class="headerlink" title="WEEKDAY"></a><code>WEEKDAY</code></h3><ul>
+<li>返回某日期的星期数</li>
+<li>在默认情况下，它的值为1(星期天)到7(星期六)之间的一个整数，并从<strong>星期日</strong>起计</li>
+<li><code>WEEKDAY(date, type)</code> <code>date</code> 必填，表示日期；<code>type</code> 可选填，表示返回值是从 1 到 7 还是 从 0 到 6</li>
+</ul>
+<h3 id="WEEKNUM"><a href="#WEEKNUM" class="headerlink" title="WEEKNUM"></a><code>WEEKNUM</code></h3><ul>
+<li>返回代表该日期在一年中的第几周</li>
+<li><code>WEEKNUM(serial_num，return_type)</code> <code>seria_num</code> 必填，代表要确定它位于一年中的几周的特定日期；<code>return_type</code> 可选填，确定星期计算从哪一天开始，其默认值为 1，且存在两种系统</li>
+</ul>
+<h2 id="数学函数"><a href="#数学函数" class="headerlink" title="数学函数"></a>数学函数</h2><h3 id="PRODUCT"><a href="#PRODUCT" class="headerlink" title="PRODUCT"></a><code>PRODUCT</code></h3><ul>
+<li>用于计算给出的数字的乘积</li>
+<li><code>PRODUCT(number1, number2.....))</code></li>
+<li>也可以用来<strong>求除</strong>  <code>PRODUCT(number1, number2^(-1))</code></li>
+</ul>
+<h3 id="RAND"><a href="#RAND" class="headerlink" title="RAND"></a><code>RAND</code></h3><ul>
+<li>生成<strong>大于等于 0</strong>，<strong>小于 1</strong> 的随机数</li>
+<li><code>RAND()</code> </li>
+</ul>
+<h3 id="RANDBETWEEN"><a href="#RANDBETWEEN" class="headerlink" title="RANDBETWEEN"></a><code>RANDBETWEEN</code></h3><ul>
+<li>返回位于两个指定数之间的一个随机整数,每次计算工作表时都将返回一个新的随机整数</li>
+<li><code>RANDBETWEEN(bottom, top)</code></li>
+</ul>
+<h3 id="ROUND"><a href="#ROUND" class="headerlink" title="ROUND"></a><code>ROUND</code></h3><ul>
+<li>返回按照指定的小数位数进行<strong>四舍五入</strong>运算的数值结果</li>
+<li><code>ROUND(number, digits)</code> 默认 <code>digits</code> 为 0</li>
+<li>如果 digits 大于 0，则四舍五入到指定的小数位</li>
+<li>如果 digits 等于 0，则四舍五入到最接近的整数</li>
+<li>如果 digits 小于 0，则在小数点左侧进行四舍五入</li>
+</ul>
+<h3 id="SUM"><a href="#SUM" class="headerlink" title="SUM"></a><code>SUM</code></h3><p>-返回某一单元格区域中数字、逻辑值及数字的文本表达式之和</p>
+<ul>
+<li><code>SUM(number1, number2,...)</code></li>
+</ul>
+<h3 id="SUMIF"><a href="#SUMIF" class="headerlink" title="SUMIF"></a><code>SUMIF</code></h3><ul>
+<li>可以对报表范围中<strong>符合指定条件</strong>的值求和</li>
+<li><code>SUMIF(range, criteria, sum_range)</code></li>
+<li><code>range</code> 为条件区域，用于条件判断的单元格区域</li>
+<li><code>criteria</code> 是求和条件，由数字、逻辑表达式等组成的判定条件</li>
+<li><code>sum_range</code> 为实际求和区域，需要求和的单元格、区域或引用</li>
+<li>当省略第三个参数时，则条件区域就是实际求和区域</li>
+</ul>
+<h3 id="SUMIFS"><a href="#SUMIFS" class="headerlink" title="SUMIFS"></a><code>SUMIFS</code></h3><ul>
+<li>快速对<strong>多条件</strong>单元格求和，最多允许 127 个区域，条件对</li>
+<li><code>SUMIFS(sum_range, criteria_range1, criteria1, [criteria_range2, criteria2], ...)</code></li>
+</ul>
+<h3 id="SUMPRODUCT"><a href="#SUMPRODUCT" class="headerlink" title="SUMPRODUCT"></a><code>SUMPRODUCT</code></h3><ul>
+<li>在给定的几组数组中，将数组间对应的元素相乘，并返回乘积之和</li>
+<li>数组参数必须具有<strong>相同</strong>的维数,并将非数值型的数组元素作为 0 处理</li>
+<li><code>SUMPRODUCT(array1, [array2], [array3], ...)</code></li>
+</ul>
+<h2 id="统计函数"><a href="#统计函数" class="headerlink" title="统计函数"></a>统计函数</h2><h3 id="LARGE"><a href="#LARGE" class="headerlink" title="LARGE"></a><code>LARGE</code></h3><ul>
+<li>返回数据集中的第 K 个<strong>最大</strong>值</li>
+<li><code>LARGE(array, k)</code></li>
+</ul>
+<h3 id="SMALL"><a href="#SMALL" class="headerlink" title="SMALL"></a><code>SMALL</code></h3><ul>
+<li>返回数据集中的第 K 个<strong>最小</strong>值</li>
+<li><code>SMALL(array, k)</code></li>
+</ul>
+<h3 id="MAX"><a href="#MAX" class="headerlink" title="MAX"></a><code>MAX</code></h3><ul>
+<li>用于求向量或者矩阵的最大元素，或几个指定值中的最大值</li>
+<li><code>max(A)  max(A,B)   max(A,[],dim)</code></li>
+</ul>
+<h3 id="MIN"><a href="#MIN" class="headerlink" title="MIN"></a><code>MIN</code></h3><ul>
+<li>用于求向量或者矩阵的最小元素，或几个指定值中的最小值</li>
+<li><code>min(A)  min(A,B)   min(A,[],dim)</code></li>
+</ul>
+<h3 id="MEDIAN"><a href="#MEDIAN" class="headerlink" title="MEDIAN"></a><code>MEDIAN</code></h3><ul>
+<li>返回给定数值的中值</li>
+<li><code>MEDIAN(number1, number2, ...)</code></li>
+</ul>
+<h3 id="MODE"><a href="#MODE" class="headerlink" title="MODE"></a><code>MODE</code></h3><ul>
+<li>返回在某一数组或数据区域中出现频率最多的数值</li>
+<li><code>MODE(number1, number2, ...)</code></li>
+</ul>
+<h3 id="RANK"><a href="#RANK" class="headerlink" title="RANK"></a><code>RANK</code></h3><ul>
+<li>返回一个数字在数字列表中的排位</li>
+<li>公式中的参数0（零）或省略，Excel 对数字的排位是把数据从大到小的<strong>降序</strong>排列</li>
+<li><code>RANK(number, ref, [order])</code></li>
+</ul>
+<h3 id="COUNT"><a href="#COUNT" class="headerlink" title="COUNT"></a><code>COUNT</code></h3><ul>
+<li>用于计算Excel参数列表中<strong>非空单元格</strong>中数字项的个数</li>
+<li><code>COUNT(value1,value2, ...)</code></li>
+</ul>
+<h3 id="COUNTIF"><a href="#COUNTIF" class="headerlink" title="COUNTIF"></a><code>COUNTIF</code></h3><ul>
+<li>对指定区域中符合指定条件的单元格计数</li>
+<li><code>COUNTIF(range, criteria)</code></li>
+</ul>
+<h3 id="COUNTIFS"><a href="#COUNTIFS" class="headerlink" title="COUNTIFS"></a><code>COUNTIFS</code></h3><ul>
+<li>用来计算多个区域中满足给定的多个条件的单元格的个数</li>
+<li><code>COUNTIFS(criteria_range1, criteria1, criteria_range2, criteria2,…)</code></li>
+</ul>
+<h3 id="AVERAGE"><a href="#AVERAGE" class="headerlink" title="AVERAGE"></a><code>AVERAGE</code></h3><ul>
+<li>计算平均值</li>
+<li><code>AVERAGE(number1, number2,…)</code></li>
+</ul>
+<h3 id="AVERAGEIF"><a href="#AVERAGEIF" class="headerlink" title="AVERAGEIF"></a><code>AVERAGEIF</code></h3><ul>
+<li>返回某个区域内满足给定条件的所有单元格的平均值（算术平均值）</li>
+<li><code>AVERAGEIF(range, criteria, [average_range])</code></li>
+</ul>
+<h3 id="AVERAGEIFS"><a href="#AVERAGEIFS" class="headerlink" title="AVERAGEIFS"></a><code>AVERAGEIFS</code></h3><ul>
+<li>返回多重条件所有单元格的平均值</li>
+<li><code>AVERAGEIFS(average_range, criteria_range1, criteria1, criteria_range2, criteria2,...)</code></li>
+</ul>
+<h2 id="查找与引用函数"><a href="#查找与引用函数" class="headerlink" title="查找与引用函数"></a>查找与引用函数</h2><h3 id="CHOOSE"><a href="#CHOOSE" class="headerlink" title="CHOOSE"></a><code>CHOOSE</code></h3><ul>
+<li>从参数列表中选择并返回一个值</li>
+<li><code>CHOOSE(index_num, value1, [value2], ...)</code></li>
+</ul>
+<h3 id="MATCH"><a href="#MATCH" class="headerlink" title="MATCH"></a><code>MATCH</code></h3><ul>
+<li>返回指定数值在指定数组区域中的位置</li>
+<li><code>MATCH(lookup_value, lookup_array, [match_type])</code></li>
+<li><code>lookup_value</code> 是必需参数，需要在 <code>lookup_array</code> 中查找的值</li>
+<li><code>lookup_array</code> 是必需参数，要搜索的单元格区域</li>
+<li><code>match_type</code> 是可选参数，数字 -1、0 或 1，默认为 1</li>
+</ul>
+<h3 id="INDEX"><a href="#INDEX" class="headerlink" title="INDEX"></a><code>INDEX</code></h3><ul>
+<li>返回表或区域中的值或值的引用</li>
+<li><code>INDEX(array, row_num, [column_num])</code></li>
+</ul>
+<h3 id="INDIRECT"><a href="#INDIRECT" class="headerlink" title="INDIRECT"></a><code>INDIRECT</code></h3><ul>
+<li>对引用进行计算，并显示其内容</li>
+<li><code>INDIRECT(ref_text, [a1])</code></li>
+</ul>
+<h3 id="COLUMN"><a href="#COLUMN" class="headerlink" title="COLUMN"></a><code>COLUMN</code></h3><ul>
+<li>返回列标</li>
+<li><code>COLUMN(reference)</code></li>
+</ul>
+<h3 id="ROW"><a href="#ROW" class="headerlink" title="ROW"></a><code>ROW</code></h3><ul>
+<li>返回行标</li>
+<li><code>ROW(reference)</code></li>
+</ul>
+<h3 id="VLOOKUP"><a href="#VLOOKUP" class="headerlink" title="VLOOKUP"></a><code>VLOOKUP</code></h3><ul>
+<li>按列查找，返回该列所需查询序列所对应的值</li>
+<li>VLOOKUP(lookup_value, table_array, col_index_num, range_lookup)</li>
+</ul>
+<h3 id="HLOOKUP"><a href="#HLOOKUP" class="headerlink" title="HLOOKUP"></a><code>HLOOKUP</code></h3><ul>
+<li>按行查找，返回该行所需查询序列所对应的值</li>
+<li>HLOOKUP(lookup_value, table_array, col_index_num, range_lookup)</li>
+</ul>
+<h3 id="LOOKUP"><a href="#LOOKUP" class="headerlink" title="LOOKUP"></a><code>LOOKUP</code></h3><ul>
+<li>返回向量或数组中的数值</li>
+<li>向量形式 <code>LOOKUP(lookup_value,lookup_vector,result_vector)</code></li>
+<li>数组形式 <code>LOOKUP(lookup_value,array)</code></li>
+<li><code>lookup_vector</code> 的数值必须按<strong>升序</strong>排序</li>
+</ul>
+<h3 id="OFFSET"><a href="#OFFSET" class="headerlink" title="OFFSET"></a><code>OFFSET</code></h3><ul>
+<li>以指定的引用为参照系，通过给定偏移量得到新的引用</li>
+<li><code>OFFSET(reference, rows, cols, height, width)</code></li>
+</ul>
+<h3 id="GETPIVOTDATA"><a href="#GETPIVOTDATA" class="headerlink" title="GETPIVOTDATA"></a><code>GETPIVOTDATA</code></h3><ul>
+<li>返回存储在<strong>数据透视表</strong>中的数据</li>
+<li><code>GETPIVOTDATA(data_field, pivot_table, field1, item1, field2, item2,...)</code></li>
+</ul>
+<h2 id="文本函数"><a href="#文本函数" class="headerlink" title="文本函数"></a>文本函数</h2><h3 id="FIND"><a href="#FIND" class="headerlink" title="FIND"></a><code>FIND</code></h3><ul>
+<li>对原始数据中某个字符串进行定位，以确定其<strong>位置</strong></li>
+<li><code>FIND(find_text, within_text, start_num)</code></li>
+</ul>
+<h3 id="SEARCH"><a href="#SEARCH" class="headerlink" title="SEARCH"></a><code>SEARCH</code></h3><ul>
+<li>在第二个文本字符串中查找第一个文本字符串，并返回第一个文本字符串的起始位置的编号，该编号从第二个文本字符串的第一个字符算起</li>
+<li><code>SEARCH(find_text,within_text,[start_num])</code></li>
+</ul>
+<h3 id="TEXT"><a href="#TEXT" class="headerlink" title="TEXT"></a><code>TEXT</code></h3><ul>
+<li>可通过格式代码向数字应用格式，进而更改数字的显示方式</li>
+<li><code>TEXT(value, format_text)</code></li>
+</ul>
+<h3 id="VALUE"><a href="#VALUE" class="headerlink" title="VALUE"></a><code>VALUE</code></h3><ul>
+<li>将代表数字的文本字符串转换成数字</li>
+<li><code>VALUE(text)</code></li>
+</ul>
+<h3 id="CONCATENATE"><a href="#CONCATENATE" class="headerlink" title="CONCATENATE"></a><code>CONCATENATE</code></h3><ul>
+<li>将最多 255 个文本字符串联接成一个文本字符串</li>
+<li>也可以使用连接符号 (<strong>&amp;</strong>) 计算运算符代替 <code>CONCATENATE</code> 函数来连接文本项</li>
+<li><code>CONCATENATE(text1, [text2], ...)</code></li>
+</ul>
+<h3 id="LEFT"><a href="#LEFT" class="headerlink" title="LEFT"></a><code>LEFT</code></h3><ul>
+<li>用于从一个文本字符串的第一个字符开始返回指定个数的字符</li>
+<li><code>LEFT(string, n)</code></li>
+</ul>
+<h3 id="RIGHT"><a href="#RIGHT" class="headerlink" title="RIGHT"></a><code>RIGHT</code></h3><ul>
+<li>从字符串<strong>右端</strong>取指定个数字符</li>
+<li><code>RIGHT(string, length)</code></li>
+</ul>
+<h3 id="MID"><a href="#MID" class="headerlink" title="MID"></a><code>MID</code></h3><ul>
+<li>从一个字符串中截取出指定数量的字符</li>
+<li><code>MID(text, start_num, num_chars)</code></li>
+</ul>
+<h3 id="LEN"><a href="#LEN" class="headerlink" title="LEN"></a><code>LEN</code></h3><ul>
+<li>返回文本字符串中的字符数</li>
+<li><code>LEN(text)</code></li>
+</ul>
+<h2 id="逻辑函数"><a href="#逻辑函数" class="headerlink" title="逻辑函数"></a>逻辑函数</h2><h3 id="AND"><a href="#AND" class="headerlink" title="AND"></a><code>AND</code></h3><ul>
+<li>所有参数的逻辑值为<strong>真</strong>时，返回 TRUE</li>
+<li>只要有一个参数的逻辑值为<strong>假</strong>，即返回 FALSE</li>
+<li><code>AND(logical1,  logical2, ...)</code></li>
+</ul>
+<h3 id="OR"><a href="#OR" class="headerlink" title="OR"></a><code>OR</code></h3><ul>
+<li>在其参数组中，任何一个参数逻辑值为 TRUE，即返回 TRUE</li>
+<li>所有参数的逻辑值为 FALSE，才返回 FALSE</li>
+<li><code>OR(logical1, logical2, ...)</code></li>
+</ul>
+<h3 id="IF"><a href="#IF" class="headerlink" title="IF"></a><code>IF</code></h3><ul>
+<li>如果指定条件的计算结果为 TRUE，<code>IF</code> 函数将返回某个值</li>
+<li>如果该条件的计算结果为 FALSE，则返回另一个值</li>
+<li><code>IF(logical_test,value_if_true,value_if_false)</code></li>
+</ul>
+<h3 id="IFERROR"><a href="#IFERROR" class="headerlink" title="IFERROR"></a><code>IFERROR</code></h3><ul>
+<li>如果公式的计算结果为<strong>错误</strong>，则返回指定的值,否则将返回公式的结果</li>
+<li><code>IFERROR(value, value_if_error)</code></li>
+</ul>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/小李の放学后/">小李の放学后</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Excel/">Excel</a></li></ul>
+
+      
+        
+	<div id="comment">
+	
+	<!-- 多说评论框 start -->
+	 <div class="ds-thread" data-thread-key="/2019/06/26/磨刀霍霍：Excel中的常用函数/" data-title="磨刀霍霍：Excel中的常用函数" data-url="http://yoursite.com/2019/06/26/磨刀霍霍：Excel中的常用函数/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"iTimeTraveler"};
+	  (function() {
+	    var ds = document.createElement('script');
+	    ds.type = 'text/javascript';ds.async = true;
+	    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	    ds.charset = 'UTF-8';
+	    (document.getElementsByTagName('head')[0] 
+	     || document.getElementsByTagName('body')[0]).appendChild(ds);
+	  })();
+	  </script>
+	<!-- 多说公共JS代码 end -->
+	
+	</div>
+	<link rel="stylesheet" href="/css/comment.css">
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/06/25/磨刀霍霍：Excel中的引用/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">磨刀霍霍：Excel中的引用</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#日期函数"><span class="nav-number">1.</span> <span class="nav-text">日期函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DAY"><span class="nav-number">1.1.</span> <span class="nav-text">DAY</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MONTH"><span class="nav-number">1.2.</span> <span class="nav-text">MONTH</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#YEAR"><span class="nav-number">1.3.</span> <span class="nav-text">YEAR</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DATE"><span class="nav-number">1.4.</span> <span class="nav-text">DATE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WEEKDAY"><span class="nav-number">1.5.</span> <span class="nav-text">WEEKDAY</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WEEKNUM"><span class="nav-number">1.6.</span> <span class="nav-text">WEEKNUM</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数学函数"><span class="nav-number">2.</span> <span class="nav-text">数学函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PRODUCT"><span class="nav-number">2.1.</span> <span class="nav-text">PRODUCT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RAND"><span class="nav-number">2.2.</span> <span class="nav-text">RAND</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RANDBETWEEN"><span class="nav-number">2.3.</span> <span class="nav-text">RANDBETWEEN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ROUND"><span class="nav-number">2.4.</span> <span class="nav-text">ROUND</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SUM"><span class="nav-number">2.5.</span> <span class="nav-text">SUM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SUMIF"><span class="nav-number">2.6.</span> <span class="nav-text">SUMIF</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SUMIFS"><span class="nav-number">2.7.</span> <span class="nav-text">SUMIFS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SUMPRODUCT"><span class="nav-number">2.8.</span> <span class="nav-text">SUMPRODUCT</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#统计函数"><span class="nav-number">3.</span> <span class="nav-text">统计函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#LARGE"><span class="nav-number">3.1.</span> <span class="nav-text">LARGE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SMALL"><span class="nav-number">3.2.</span> <span class="nav-text">SMALL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MAX"><span class="nav-number">3.3.</span> <span class="nav-text">MAX</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MIN"><span class="nav-number">3.4.</span> <span class="nav-text">MIN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MEDIAN"><span class="nav-number">3.5.</span> <span class="nav-text">MEDIAN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MODE"><span class="nav-number">3.6.</span> <span class="nav-text">MODE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RANK"><span class="nav-number">3.7.</span> <span class="nav-text">RANK</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#COUNT"><span class="nav-number">3.8.</span> <span class="nav-text">COUNT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#COUNTIF"><span class="nav-number">3.9.</span> <span class="nav-text">COUNTIF</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#COUNTIFS"><span class="nav-number">3.10.</span> <span class="nav-text">COUNTIFS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AVERAGE"><span class="nav-number">3.11.</span> <span class="nav-text">AVERAGE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AVERAGEIF"><span class="nav-number">3.12.</span> <span class="nav-text">AVERAGEIF</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AVERAGEIFS"><span class="nav-number">3.13.</span> <span class="nav-text">AVERAGEIFS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查找与引用函数"><span class="nav-number">4.</span> <span class="nav-text">查找与引用函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CHOOSE"><span class="nav-number">4.1.</span> <span class="nav-text">CHOOSE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MATCH"><span class="nav-number">4.2.</span> <span class="nav-text">MATCH</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#INDEX"><span class="nav-number">4.3.</span> <span class="nav-text">INDEX</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#INDIRECT"><span class="nav-number">4.4.</span> <span class="nav-text">INDIRECT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#COLUMN"><span class="nav-number">4.5.</span> <span class="nav-text">COLUMN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ROW"><span class="nav-number">4.6.</span> <span class="nav-text">ROW</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VLOOKUP"><span class="nav-number">4.7.</span> <span class="nav-text">VLOOKUP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HLOOKUP"><span class="nav-number">4.8.</span> <span class="nav-text">HLOOKUP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LOOKUP"><span class="nav-number">4.9.</span> <span class="nav-text">LOOKUP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OFFSET"><span class="nav-number">4.10.</span> <span class="nav-text">OFFSET</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GETPIVOTDATA"><span class="nav-number">4.11.</span> <span class="nav-text">GETPIVOTDATA</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文本函数"><span class="nav-number">5.</span> <span class="nav-text">文本函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#FIND"><span class="nav-number">5.1.</span> <span class="nav-text">FIND</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SEARCH"><span class="nav-number">5.2.</span> <span class="nav-text">SEARCH</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TEXT"><span class="nav-number">5.3.</span> <span class="nav-text">TEXT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VALUE"><span class="nav-number">5.4.</span> <span class="nav-text">VALUE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CONCATENATE"><span class="nav-number">5.5.</span> <span class="nav-text">CONCATENATE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LEFT"><span class="nav-number">5.6.</span> <span class="nav-text">LEFT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RIGHT"><span class="nav-number">5.7.</span> <span class="nav-text">RIGHT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MID"><span class="nav-number">5.8.</span> <span class="nav-text">MID</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LEN"><span class="nav-number">5.9.</span> <span class="nav-text">LEN</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#逻辑函数"><span class="nav-number">6.</span> <span class="nav-text">逻辑函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#AND"><span class="nav-number">6.1.</span> <span class="nav-text">AND</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OR"><span class="nav-number">6.2.</span> <span class="nav-text">OR</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IF"><span class="nav-number">6.3.</span> <span class="nav-text">IF</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IFERROR"><span class="nav-number">6.4.</span> <span class="nav-text">IFERROR</span></a></li></ol></li></ol>
+    
+    </div>
+  </aside>
+
+
+
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">冲鸭❤</a>
+  
+    <a href="/archives" class="mobile-nav-link">archives❤</a>
+  
+    <a href="/categories" class="mobile-nav-link">碎碎念的基本法❤</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags❤</a>
+  
+    <a href="/about" class="mobile-nav-link">岁月如歌❤</a>
+  
+    <a href="/books" class="mobile-nav-link">阅❤</a>
+  
+    <a href="/movies" class="mobile-nav-link">影❤</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2019 Gaga酱の奇思妙想 All Rights Reserved.
+        
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script type="text/javascript" src="js/love.js"></script>
+  <script type="text/javascript" src="js/float.js"></script>
+  <script type="text/javascript" src="js/typewriter.js"></script>
+  <script type="text/javascript" color="0,104,183" opacity="1" zindex="-1" count="50" src="js/particle.js"></script>
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

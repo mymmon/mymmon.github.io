@@ -66,9 +66,31 @@
 
 
   
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src>
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src>
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pic0.jpg,css/images/pic2.png,css/images/pic4.jpg".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
 
 
-<header id="allheader" class="site-header" role="banner">
+
+
+<header id="allheader" class="site-header" role="banner" style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);">
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -118,6 +140,85 @@
       <div id="content" class="outer">
         
           <section id="main">
+  
+    <article id="post-Y想-190310" class="article article-type-post" itemscope itemprop="blogPost">
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/03/10/Y想-190310/">Y想-190310</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2019/03/10/Y想-190310/" class="article-date">
+	  <time datetime="2019-03-10T14:04:04.000Z" itemprop="datePublished">March 10, 2019</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/每周都有新发现/">每周都有新发现</a>
+ 
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="一周小确幸"><a href="#一周小确幸" class="headerlink" title="一周小确幸"></a>一周小确幸</h4><ul>
+<li>二刷了《绿皮书》，和转转一起和在肯塔基吃肯德基的主角同步吃肯德基!!!</li>
+<li>和少棉一起看完了《驯龙高手3》，最后还是眼睛湿湿的，我们总会面对别离，只希望是为了更好的相见</li>
+<li>去了同一家咖啡馆，喝了甜甜的<code>焦糖玛奇朵</code>，顺便做了下一周的规划，觉得又充满了能量！</li>
+<li>在去咖啡馆的路上，看到了一位散步的朋友(笑<br><img src="1.jpg" alt></li>
+<li>在闲鱼上找到了便宜的<code>Kindle Unlimited</code>一年期，感觉可划算了!</li>
+<li>剪了喜欢的发型，年后以来第一次见Tony，幸好Tony水平见长~</li>
+<li>周日的晚上终于把鼻托换了，舒服!</li>
+</ul>
+<h4 id="好好学习，天天向上"><a href="#好好学习，天天向上" class="headerlink" title="好好学习，天天向上"></a>好好学习，天天向上</h4><ul>
+<li>leetcode刷题10题，有两题还需要再次提交，写了题解过程</li>
+<li>本周尤克里里偷懒了，演奏曲目有：</li>
+</ul>
+<ol>
+<li>《那些年》</li>
+<li>《爱笑的眼睛》</li>
+<li>《背对背拥抱》</li>
+</ol>
+<ul>
+<li>本周书单有：</li>
+</ul>
+<ol>
+<li><a href="https://book.douban.com/subject/25783654/" target="_blank" rel="noopener">《如何高效学习》</a>（已读完）</li>
+<li><a href="https://book.douban.com/subject/6434328/" target="_blank" rel="noopener">《谁说菜鸟不会数据分析》</a>（在读）</li>
+<li><a href="https://book.douban.com/subject/26979890/" target="_blank" rel="noopener">《算法图解》</a>（在读）</li>
+</ol>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/每周都有新发现/">每周都有新发现</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小李の胡说八道/">小李の胡说八道</a></li></ul>
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+</article>
+
+
+<!-- Table of Contents -->
+
+
+
   
     <article id="post-小李飞刀：做题第六弹！" class="article article-type-post" itemscope itemprop="blogPost">
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
@@ -719,69 +820,6 @@
 
 
   
-    <article id="post-小李飞刀：SQL题目刷起来！" class="article article-type-post" itemscope itemprop="blogPost">
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/02/13/小李飞刀：SQL题目刷起来！/">小李飞刀：SQL题目刷起来！</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2019/02/13/小李飞刀：SQL题目刷起来！/" class="article-date">
-	  <time datetime="2019-02-13T15:51:40.000Z" itemprop="datePublished">February 13, 2019</time>
-	</a>
-
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/小李の放学后/">小李の放学后</a>
- 
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-
-          
-          <div class="entry-summary">
-          终于拥有博客的小李~
-
-        
-          <p class="article-more-link">
-            <a href="/2019/02/13/小李飞刀：SQL题目刷起来！/#more">Continue Reading →</a>
-          </p>
-        </div>
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/小李の放学后/">小李の放学后</a>
-
-      
-  <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SQL/">SQL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode/">leetcode</a></li></ul>
-
-      
-    </footer>
-    <hr class="entry-footer-hr">
-  </div>
-  
-</article>
-
-
-<!-- Table of Contents -->
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -886,6 +924,18 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
+              <h6 style="margin: 0;"><a href="/2019/06/26/磨刀霍霍：Excel中的常用函数/">磨刀霍霍：Excel中的常用函数</a></h6>
+              <span>June 26, 2019</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
               <h6 style="margin: 0;"><a href="/2019/06/25/磨刀霍霍：Excel中的引用/">磨刀霍霍：Excel中的引用</a></h6>
               <span>June 25, 2019</span>
             </div>
@@ -940,18 +990,6 @@
 
           </li>
         
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2019/06/17/磨刀霍霍：pandas-熊猫仔我来啦/">磨刀霍霍：pandas 熊猫仔我来啦~</a></h6>
-              <span>June 17, 2019</span>
-            </div>
-
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -961,7 +999,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Gagaの重要日常/">Gagaの重要日常</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/小李の放学后/">小李の放学后</a><span class="category-list-count">30</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/小李の文艺日常/">小李の文艺日常</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/每周都有新发现/">每周都有新发现</a><span class="category-list-count">18</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Gagaの重要日常/">Gagaの重要日常</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/小李の放学后/">小李の放学后</a><span class="category-list-count">31</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/小李の文艺日常/">小李の文艺日常</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/每周都有新发现/">每周都有新发现</a><span class="category-list-count">18</span></li></ul>
     </div>
   </div>
 
@@ -971,7 +1009,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL/">SQL</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/leetcode/">leetcode</a><span class="tag-list-count">18</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pandas/">pandas</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">23</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/一些奇奇怪怪の日常/">一些奇奇怪怪の日常</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/做题笔记/">做题笔记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小李の胡说八道/">小李の胡说八道</a><span class="tag-list-count">19</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小李の观影/">小李の观影</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爬虫/">爬虫</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/统计学/">统计学</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/认真学习の日常/">认真学习の日常</a><span class="tag-list-count">10</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL/">SQL</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/leetcode/">leetcode</a><span class="tag-list-count">18</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pandas/">pandas</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">23</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/一些奇奇怪怪の日常/">一些奇奇怪怪の日常</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/做题笔记/">做题笔记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小李の胡说八道/">小李の胡说八道</a><span class="tag-list-count">19</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小李の观影/">小李の观影</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爬虫/">爬虫</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/统计学/">统计学</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/认真学习の日常/">认真学习の日常</a><span class="tag-list-count">10</span></li></ul>
     </div>
   </div>
 
@@ -981,7 +1019,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/tags/SQL/" style="font-size: 14.29px;">SQL</a> <a href="/tags/leetcode/" style="font-size: 17.14px;">leetcode</a> <a href="/tags/pandas/" style="font-size: 10px;">pandas</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/一些奇奇怪怪の日常/" style="font-size: 10px;">一些奇奇怪怪の日常</a> <a href="/tags/做题笔记/" style="font-size: 10px;">做题笔记</a> <a href="/tags/小李の胡说八道/" style="font-size: 18.57px;">小李の胡说八道</a> <a href="/tags/小李の观影/" style="font-size: 12.86px;">小李の观影</a> <a href="/tags/爬虫/" style="font-size: 11.43px;">爬虫</a> <a href="/tags/统计学/" style="font-size: 10px;">统计学</a> <a href="/tags/认真学习の日常/" style="font-size: 15.71px;">认真学习の日常</a>
+      <a href="/tags/Excel/" style="font-size: 11.43px;">Excel</a> <a href="/tags/SQL/" style="font-size: 14.29px;">SQL</a> <a href="/tags/leetcode/" style="font-size: 17.14px;">leetcode</a> <a href="/tags/pandas/" style="font-size: 10px;">pandas</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/一些奇奇怪怪の日常/" style="font-size: 10px;">一些奇奇怪怪の日常</a> <a href="/tags/做题笔记/" style="font-size: 10px;">做题笔记</a> <a href="/tags/小李の胡说八道/" style="font-size: 18.57px;">小李の胡说八道</a> <a href="/tags/小李の观影/" style="font-size: 12.86px;">小李の观影</a> <a href="/tags/爬虫/" style="font-size: 11.43px;">爬虫</a> <a href="/tags/统计学/" style="font-size: 10px;">统计学</a> <a href="/tags/认真学习の日常/" style="font-size: 15.71px;">认真学习の日常</a>
     </div>
   </div>
 
@@ -991,7 +1029,7 @@
     <h3 class="widget-title">Archives</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">6</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">6</span></li></ul>
     </div>
   </div>
 
@@ -1057,6 +1095,9 @@
 
 
     <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>
