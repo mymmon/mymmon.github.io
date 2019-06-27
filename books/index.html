@@ -80,6 +80,9 @@
 <meta property="og:image" content="http://yoursite.com/assets/douban-loading.gif">
 <meta property="og:image" content="http://yoursite.com/assets/douban-loading.gif">
 <meta property="og:image" content="http://yoursite.com/assets/douban-loading.gif">
+<meta property="og:image" content="http://yoursite.com/assets/douban-loading.gif">
+<meta property="og:image" content="http://yoursite.com/assets/douban-loading.gif">
+<meta property="og:image" content="http://yoursite.com/assets/douban-loading.gif">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="阅">
 <meta name="twitter:description" content="文学的真正的使命就是使感情成为可见的东西。——泰纳         .hexo-douban-tabs {     margin-bottom: 15px;     margin-top: 15px; }  .hexo-douban-tab {     padding: 5px; }  .hexo-douban-active {     backgroun">
@@ -128,9 +131,31 @@
 
 
   
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src>
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src>
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pic0.jpg,css/images/pic2.png,css/images/pic4.jpg".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
 
 
-<header id="allheader" class="site-header" role="banner">
+
+
+<header id="allheader" class="site-header" role="banner" style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);">
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -196,7 +221,7 @@
     <div class="article-meta">
       
 	<a href="/books/index.html" class="article-date">
-	  <time datetime="2019-06-26T15:03:18.793Z" itemprop="datePublished">June 26, 2019</time>
+	  <time datetime="2019-06-27T14:28:10.326Z" itemprop="datePublished">June 27, 2019</time>
 	</a>
 
        
@@ -288,16 +313,52 @@
 <div class="hexo-douban-tabs">
     <a class="hexo-douban-tab" id="hexo-douban-tab1" href="javascript:;" rel="external">
         在读
-        (5)</a>
+        (6)</a>
     <a class="hexo-douban-tab" id="hexo-douban-tab2" href="javascript:;" rel="external">
         想读
         (36)</a>
     <a class="hexo-douban-tab" id="hexo-douban-tab3" href="javascript:;" rel="external">
         已读
-        (20)</a>
+        (22)</a>
 </div>
 <div>
     <div id="hexo-douban-item1">
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/subject/m/public/s28031189.jpg" referrerpolicy="no-referrer"></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title"><a target="_blank" href="https://book.douban.com/subject/26348921/"> 集体智慧编程</a></div>
+        <div class="hexo-douban-meta">
+        
+  
+  Toby Segaran / 莫映、王开福 / 电子工业出版社 / 2015-3 / 79.00元
+
+        </div>
+        <div class="hexo-douban-meta">2019-06-27
+      在读 /  Python 机器学习 数据挖掘 数据分析</div>
+        <div class="hexo-douban-comments">
+  </div>
+    </div>
+</div>
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/subject/m/public/s28948815.jpg" referrerpolicy="no-referrer"></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title"><a target="_blank" href="https://book.douban.com/subject/26849245/"> 子不语</a></div>
+        <div class="hexo-douban-meta">
+        
+  
+  [清] 袁枚 / 天津人民出版社 / 2016-9 / 39.80元
+
+        </div>
+        <div class="hexo-douban-meta">2019-06-27
+      在读 /  奇幻</div>
+        <div class="hexo-douban-comments">
+  </div>
+    </div>
+</div>
+
         
         <div class="hexo-douban-item">
     <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/subject/m/public/s4542951.jpg" referrerpolicy="no-referrer"></div>
@@ -312,28 +373,6 @@
         <div class="hexo-douban-meta">2019-06-01
       在读 / </div>
         <div class="hexo-douban-comments">
-  </div>
-    </div>
-</div>
-
-        
-        <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/subject/m/public/s1070959.jpg" referrerpolicy="no-referrer"></div>
-    <div class="hexo-douban-info">
-        <div class="hexo-douban-title"><a target="_blank" href="https://book.douban.com/subject/1007305/"> 红楼梦</a></div>
-        <div class="hexo-douban-meta">
-        
-  
-  [清] 曹雪芹 著、高鹗 续 / 人民文学出版社 / 1996-12 / 59.70元
-
-        </div>
-        <div class="hexo-douban-meta">2019-04-08
-      在读 /  经典</div>
-        <div class="hexo-douban-comments">
-      多年前没看完的书，重新再来一遍
-      
-  
-
   </div>
     </div>
 </div>
@@ -1111,6 +1150,46 @@
 
     </div>
     <div id="hexo-douban-item3">
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/subject/m/public/s1070959.jpg" referrerpolicy="no-referrer"></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title"><a target="_blank" href="https://book.douban.com/subject/1007305/"> 红楼梦</a></div>
+        <div class="hexo-douban-meta">
+        
+  
+  [清] 曹雪芹 著、高鹗 续 / 人民文学出版社 / 1996-12 / 59.70元
+
+      </div>
+        <div class="hexo-douban-meta">2019-06-27
+      读过 /  经典 / ★★★★★ 力荐</div>
+        <div class="hexo-douban-comments">
+      多年前没看完的书，重新再来一遍
+      
+  
+
+  </div>
+    </div>
+</div>
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/subject/m/public/s27099242.jpg" referrerpolicy="no-referrer"></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title"><a target="_blank" href="https://book.douban.com/subject/25717332/"> 看穿一切数字的统计学</a></div>
+        <div class="hexo-douban-meta">
+        
+  
+  [日]西内启 / 朱悦玮 / 中信出版社 / 2013-9 / 36.00元
+
+      </div>
+        <div class="hexo-douban-meta">2019-06-27
+      读过 /  数据分析 / ★★★★☆ 推荐</div>
+        <div class="hexo-douban-comments">
+  </div>
+    </div>
+</div>
+
         
         <div class="hexo-douban-item">
     <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/subject/m/public/s27220774.jpg" referrerpolicy="no-referrer"></div>
@@ -1944,6 +2023,9 @@ for (var i = 0; i < firstpages.length; i++) {
 
 
     <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>
