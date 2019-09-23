@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="Gaga酱の奇思妙想">
 <meta property="og:description" content="查缺补漏！">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-23T15:26:21.599Z">
+<meta property="og:updated_time" content="2019-09-23T15:28:48.133Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="磨刀霍霍：SQL 中的 CASE WHEN">
 <meta name="twitter:description" content="查缺补漏！">
@@ -182,10 +182,11 @@
 <h3 id="列转行"><a href="#列转行" class="headerlink" title="列转行"></a>列转行</h3><h1 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h1><p>原题地址：<a href="https://leetcode-cn.com/problems/swap-salary/submissions/" target="_blank" rel="noopener">627. 交换工资</a></p>
 <h2 id="题解-1"><a href="#题解-1" class="headerlink" title="题解 1"></a>题解 1</h2><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">update</span> salary </span><br><span class="line"><span class="keyword">set</span> </span><br><span class="line">    sex = <span class="keyword">case</span> sex</span><br><span class="line">    <span class="keyword">when</span> <span class="string">'m'</span> <span class="keyword">then</span> <span class="string">'f'</span></span><br><span class="line">    <span class="keyword">else</span> <span class="string">'m'</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
 <h2 id="题解-2"><a href="#题解-2" class="headerlink" title="题解 2"></a>题解 2</h2><blockquote>
-<p>个人觉得非常骚气的解法~<br>参考<a href="https://leetcode-cn.com/problems/swap-salary/solution/yi-huo-by-li-yuan-ge-u5fsvgl2pj/" target="_blank" rel="noopener">题解</a></p>
+<p>个人觉得非常骚气的解法~ </p>
 </blockquote>
+<p>参考<a href="https://leetcode-cn.com/problems/swap-salary/solution/yi-huo-by-li-yuan-ge-u5fsvgl2pj/" target="_blank" rel="noopener">题解</a></p>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">update</span> salary <span class="keyword">set</span> sex = <span class="built_in">char</span>(<span class="keyword">ASCII</span>(sex) ^ <span class="keyword">ASCII</span>(<span class="string">'m'</span>) ^ <span class="keyword">ASCII</span>(<span class="string">'f'</span>) )</span><br></pre></td></tr></table></figure>
-<p>==异或== 和 ==ASCII 码== 的用法很特别~</p>
+<p><code>异或</code> 和 <code>ASCII 码</code> 的用法很特别~</p>
 <p>参考资料：</p>
 <ul>
 <li><a href="https://blog.csdn.net/changxiangyangy/article/details/86718551" target="_blank" rel="noopener">case when使用的总结</a></li>
