@@ -66,9 +66,31 @@
 
 
   
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src>
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src>
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pic0.jpg,css/images/pic2.png,css/images/pic4.jpg".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
 
 
-<header id="allheader" class="site-header" role="banner">
+
+
+<header id="allheader" class="site-header" role="banner" style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);">
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -127,7 +149,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/02/26/小李飞刀：SQL题目第二弹！/">小李飞刀:SQL题目第二弹！</a>
+      <a class="article-title" href="/p/fc4.html">小李飞刀:SQL题目第二弹！</a>
     </h1>
   
 
@@ -135,7 +157,7 @@
     
     <div class="article-meta">
       
-	<a href="/2019/02/26/小李飞刀：SQL题目第二弹！/" class="article-date">
+	<a href="/p/fc4.html" class="article-date">
 	  <time datetime="2019-02-26T14:12:39.000Z" itemprop="datePublished">February 26, 2019</time>
 	</a>
 
@@ -155,7 +177,7 @@
 
         
           <p class="article-more-link">
-            <a href="/2019/02/26/小李飞刀：SQL题目第二弹！/#more">Continue Reading →</a>
+            <a href="/p/fc4.html#more">Continue Reading →</a>
           </p>
         </div>
       
@@ -190,7 +212,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/02/24/Y想-190224/">Y想 190224</a>
+      <a class="article-title" href="/p/undefined.html">Y想 190224</a>
     </h1>
   
 
@@ -198,7 +220,7 @@
     
     <div class="article-meta">
       
-	<a href="/2019/02/24/Y想-190224/" class="article-date">
+	<a href="/p/undefined.html" class="article-date">
 	  <time datetime="2019-02-24T14:06:31.000Z" itemprop="datePublished">February 24, 2019</time>
 	</a>
 
@@ -268,7 +290,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/02/20/《女主角失格》影评/">实名心疼坂口小天使的日常——《女主角失格》影评</a>
+      <a class="article-title" href="/p/undefined.html">实名心疼坂口小天使的日常——《女主角失格》影评</a>
     </h1>
   
 
@@ -276,7 +298,7 @@
     
     <div class="article-meta">
       
-	<a href="/2019/02/20/《女主角失格》影评/" class="article-date">
+	<a href="/p/undefined.html" class="article-date">
 	  <time datetime="2019-02-20T14:32:54.000Z" itemprop="datePublished">February 20, 2019</time>
 	</a>
 
@@ -296,7 +318,7 @@
 
         
           <p class="article-more-link">
-            <a href="/2019/02/20/《女主角失格》影评/#more">Continue Reading →</a>
+            <a href="/p/undefined.html#more">Continue Reading →</a>
           </p>
         </div>
       
@@ -331,7 +353,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/02/17/令你闪亮的，是你眼里的光-《闪光少女》影评/">令你闪亮的，是你眼里的光——《闪光少女》影评</a>
+      <a class="article-title" href="/p/3369.html">令你闪亮的，是你眼里的光——《闪光少女》影评</a>
     </h1>
   
 
@@ -339,7 +361,7 @@
     
     <div class="article-meta">
       
-	<a href="/2019/02/17/令你闪亮的，是你眼里的光-《闪光少女》影评/" class="article-date">
+	<a href="/p/3369.html" class="article-date">
 	  <time datetime="2019-02-17T15:15:50.000Z" itemprop="datePublished">February 17, 2019</time>
 	</a>
 
@@ -359,7 +381,7 @@
 
         
           <p class="article-more-link">
-            <a href="/2019/02/17/令你闪亮的，是你眼里的光-《闪光少女》影评/#more">Continue Reading →</a>
+            <a href="/p/3369.html#more">Continue Reading →</a>
           </p>
         </div>
       
@@ -394,7 +416,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/02/13/小李飞刀：SQL题目刷起来！/">小李飞刀：SQL题目刷起来！</a>
+      <a class="article-title" href="/p/a18f.html">小李飞刀：SQL题目刷起来！</a>
     </h1>
   
 
@@ -402,7 +424,7 @@
     
     <div class="article-meta">
       
-	<a href="/2019/02/13/小李飞刀：SQL题目刷起来！/" class="article-date">
+	<a href="/p/a18f.html" class="article-date">
 	  <time datetime="2019-02-13T15:51:40.000Z" itemprop="datePublished">February 13, 2019</time>
 	</a>
 
@@ -422,7 +444,7 @@
 
         
           <p class="article-more-link">
-            <a href="/2019/02/13/小李飞刀：SQL题目刷起来！/#more">Continue Reading →</a>
+            <a href="/p/a18f.html#more">Continue Reading →</a>
           </p>
         </div>
       
@@ -457,7 +479,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/02/13/Hello-World/">Hello World</a>
+      <a class="article-title" href="/p/3eeb.html">Hello World</a>
     </h1>
   
 
@@ -465,7 +487,7 @@
     
     <div class="article-meta">
       
-	<a href="/2019/02/13/Hello-World/" class="article-date">
+	<a href="/p/3eeb.html" class="article-date">
 	  <time datetime="2019-02-13T11:16:51.000Z" itemprop="datePublished">February 13, 2019</time>
 	</a>
 
@@ -516,7 +538,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/02/02/小李飞刀：leetcode我又来啦/">小李飞刀：leetcode我又来啦~</a>
+      <a class="article-title" href="/p/41ad.html">小李飞刀：leetcode我又来啦~</a>
     </h1>
   
 
@@ -524,7 +546,7 @@
     
     <div class="article-meta">
       
-	<a href="/2019/02/02/小李飞刀：leetcode我又来啦/" class="article-date">
+	<a href="/p/41ad.html" class="article-date">
 	  <time datetime="2019-02-02T14:02:43.000Z" itemprop="datePublished">February 2, 2019</time>
 	</a>
 
@@ -544,7 +566,7 @@
 
         
           <p class="article-more-link">
-            <a href="/2019/02/02/小李飞刀：leetcode我又来啦/#more">Continue Reading →</a>
+            <a href="/p/41ad.html#more">Continue Reading →</a>
           </p>
         </div>
       
@@ -579,7 +601,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/02/01/小李飞刀：刷题第四弹！/">小李飞刀：刷题第四弹！</a>
+      <a class="article-title" href="/p/85a5.html">小李飞刀：刷题第四弹！</a>
     </h1>
   
 
@@ -587,7 +609,7 @@
     
     <div class="article-meta">
       
-	<a href="/2019/02/01/小李飞刀：刷题第四弹！/" class="article-date">
+	<a href="/p/85a5.html" class="article-date">
 	  <time datetime="2019-02-01T14:04:37.000Z" itemprop="datePublished">February 1, 2019</time>
 	</a>
 
@@ -607,7 +629,7 @@
 
         
           <p class="article-more-link">
-            <a href="/2019/02/01/小李飞刀：刷题第四弹！/#more">Continue Reading →</a>
+            <a href="/p/85a5.html#more">Continue Reading →</a>
           </p>
         </div>
       
@@ -642,7 +664,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/01/30/小李飞刀：刷题第三弹！/">小李飞刀：刷题第三弹！</a>
+      <a class="article-title" href="/p/undefined.html">小李飞刀：刷题第三弹！</a>
     </h1>
   
 
@@ -650,7 +672,7 @@
     
     <div class="article-meta">
       
-	<a href="/2019/01/30/小李飞刀：刷题第三弹！/" class="article-date">
+	<a href="/p/undefined.html" class="article-date">
 	  <time datetime="2019-01-29T16:18:46.000Z" itemprop="datePublished">January 30, 2019</time>
 	</a>
 
@@ -670,7 +692,7 @@
 
         
           <p class="article-more-link">
-            <a href="/2019/01/30/小李飞刀：刷题第三弹！/#more">Continue Reading →</a>
+            <a href="/p/undefined.html#more">Continue Reading →</a>
           </p>
         </div>
       
@@ -705,7 +727,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/01/29/小李飞刀：用python刷题ing/">小李飞刀：用python刷题ing....</a>
+      <a class="article-title" href="/p/undefined.html">小李飞刀：用python刷题ing....</a>
     </h1>
   
 
@@ -713,7 +735,7 @@
     
     <div class="article-meta">
       
-	<a href="/2019/01/29/小李飞刀：用python刷题ing/" class="article-date">
+	<a href="/p/undefined.html" class="article-date">
 	  <time datetime="2019-01-28T16:21:25.000Z" itemprop="datePublished">January 29, 2019</time>
 	</a>
 
@@ -733,7 +755,7 @@
 
         
           <p class="article-more-link">
-            <a href="/2019/01/29/小李飞刀：用python刷题ing/#more">Continue Reading →</a>
+            <a href="/p/undefined.html#more">Continue Reading →</a>
           </p>
         </div>
       
@@ -864,7 +886,7 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2019/09/24/磨刀霍霍：数据分析模型笔记/">磨刀霍霍：数据分析模型笔记</a></h6>
+              <h6 style="margin: 0;"><a href="/p/96bf.html">磨刀霍霍：数据分析模型笔记</a></h6>
               <span>September 24, 2019</span>
             </div>
 
@@ -876,7 +898,7 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2019/09/23/磨刀霍霍：SQL中的-CASE-WHEN/">磨刀霍霍：SQL 中的 CASE WHEN</a></h6>
+              <h6 style="margin: 0;"><a href="/p/53f8.html">磨刀霍霍：SQL 中的 CASE WHEN</a></h6>
               <span>September 23, 2019</span>
             </div>
 
@@ -888,7 +910,7 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2019/08/29/Y想-190829/">Y想-190829</a></h6>
+              <h6 style="margin: 0;"><a href="/p/1acb.html">Y想-190829</a></h6>
               <span>August 29, 2019</span>
             </div>
 
@@ -900,7 +922,7 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2019/06/30/Y想-190630/">Y想-190630</a></h6>
+              <h6 style="margin: 0;"><a href="/p/4f6b.html">Y想-190630</a></h6>
               <span>June 30, 2019</span>
             </div>
 
@@ -912,7 +934,7 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2019/06/26/磨刀霍霍：Excel中的常用函数/">磨刀霍霍：Excel中的常用函数</a></h6>
+              <h6 style="margin: 0;"><a href="/p/e5cc.html">磨刀霍霍：Excel中的常用函数</a></h6>
               <span>June 26, 2019</span>
             </div>
 
@@ -924,7 +946,7 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2019/06/25/磨刀霍霍：Excel中的引用/">磨刀霍霍：Excel中的引用</a></h6>
+              <h6 style="margin: 0;"><a href="/p/6998.html">磨刀霍霍：Excel中的引用</a></h6>
               <span>June 25, 2019</span>
             </div>
 
@@ -1035,6 +1057,9 @@
 
 
     <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>

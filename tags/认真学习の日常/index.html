@@ -66,9 +66,31 @@
 
 
   
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src>
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src>
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pic0.jpg,css/images/pic2.png,css/images/pic4.jpg".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
 
 
-<header id="allheader" class="site-header" role="banner">
+
+
+<header id="allheader" class="site-header" role="banner" style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);">
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -135,13 +157,13 @@
   <div class="archive-article-inner">
     <header class="archive-article-header">
 
-      <a href="/2019/09/24/磨刀霍霍：数据分析模型笔记/" class="archive-article-date">
+      <a href="/p/96bf.html" class="archive-article-date">
 		  <time datetime="2019-09-24T14:31:40.000Z" itemprop="datePublished">Sep 24, 2019</time>
 	  </a>
       
   
     <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2019/09/24/磨刀霍霍：数据分析模型笔记/">磨刀霍霍：数据分析模型笔记</a>
+      <a class="archive-article-title" href="/p/96bf.html">磨刀霍霍：数据分析模型笔记</a>
     </h1>
   
 
@@ -155,13 +177,13 @@
   <div class="archive-article-inner">
     <header class="archive-article-header">
 
-      <a href="/2019/06/23/磨刀霍霍：描述性统计学习笔记/" class="archive-article-date">
+      <a href="/p/332c.html" class="archive-article-date">
 		  <time datetime="2019-06-23T14:53:41.000Z" itemprop="datePublished">Jun 23, 2019</time>
 	  </a>
       
   
     <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2019/06/23/磨刀霍霍：描述性统计学习笔记/">磨刀霍霍：描述性统计学习笔记</a>
+      <a class="archive-article-title" href="/p/332c.html">磨刀霍霍：描述性统计学习笔记</a>
     </h1>
   
 
@@ -175,13 +197,13 @@
   <div class="archive-article-inner">
     <header class="archive-article-header">
 
-      <a href="/2019/06/17/磨刀霍霍：pandas-熊猫仔我来啦/" class="archive-article-date">
+      <a href="/p/6a0a.html" class="archive-article-date">
 		  <time datetime="2019-06-17T14:40:21.000Z" itemprop="datePublished">Jun 17, 2019</time>
 	  </a>
       
   
     <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2019/06/17/磨刀霍霍：pandas-熊猫仔我来啦/">磨刀霍霍：pandas 熊猫仔我来啦~</a>
+      <a class="archive-article-title" href="/p/6a0a.html">磨刀霍霍：pandas 熊猫仔我来啦~</a>
     </h1>
   
 
@@ -195,13 +217,13 @@
   <div class="archive-article-inner">
     <header class="archive-article-header">
 
-      <a href="/2019/03/26/磨刀霍霍：爬虫我又来啦/" class="archive-article-date">
+      <a href="/p/c263.html" class="archive-article-date">
 		  <time datetime="2019-03-26T14:51:29.000Z" itemprop="datePublished">Mar 26, 2019</time>
 	  </a>
       
   
     <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2019/03/26/磨刀霍霍：爬虫我又来啦/">磨刀霍霍：爬虫我又来啦~</a>
+      <a class="archive-article-title" href="/p/c263.html">磨刀霍霍：爬虫我又来啦~</a>
     </h1>
   
 
@@ -215,13 +237,13 @@
   <div class="archive-article-inner">
     <header class="archive-article-header">
 
-      <a href="/2019/02/28/磨刀霍霍：爬爬爬爬爬爬虫爬起来/" class="archive-article-date">
+      <a href="/p/undefined.html" class="archive-article-date">
 		  <time datetime="2019-02-28T15:49:23.000Z" itemprop="datePublished">Feb 28, 2019</time>
 	  </a>
       
   
     <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2019/02/28/磨刀霍霍：爬爬爬爬爬爬虫爬起来/">磨刀霍霍：爬爬爬爬爬爬虫爬起来~</a>
+      <a class="archive-article-title" href="/p/undefined.html">磨刀霍霍：爬爬爬爬爬爬虫爬起来~</a>
     </h1>
   
 
@@ -245,13 +267,13 @@
   <div class="archive-article-inner">
     <header class="archive-article-header">
 
-      <a href="/2018/12/27/磨刀霍霍：python请你轻轻轻点虐/" class="archive-article-date">
+      <a href="/p/30c0.html" class="archive-article-date">
 		  <time datetime="2018-12-26T16:25:18.000Z" itemprop="datePublished">Dec 27, 2018</time>
 	  </a>
       
   
     <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2018/12/27/磨刀霍霍：python请你轻轻轻点虐/">磨刀霍霍：python请你轻轻轻点虐</a>
+      <a class="archive-article-title" href="/p/30c0.html">磨刀霍霍：python请你轻轻轻点虐</a>
     </h1>
   
 
@@ -265,13 +287,13 @@
   <div class="archive-article-inner">
     <header class="archive-article-header">
 
-      <a href="/2018/12/24/磨刀霍霍：飞呀飞呀python的骄傲放纵/" class="archive-article-date">
+      <a href="/p/ad9c.html" class="archive-article-date">
 		  <time datetime="2018-12-23T16:47:44.000Z" itemprop="datePublished">Dec 24, 2018</time>
 	  </a>
       
   
     <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2018/12/24/磨刀霍霍：飞呀飞呀python的骄傲放纵/">磨刀霍霍：飞呀飞呀python的骄傲放纵</a>
+      <a class="archive-article-title" href="/p/ad9c.html">磨刀霍霍：飞呀飞呀python的骄傲放纵</a>
     </h1>
   
 
@@ -285,13 +307,13 @@
   <div class="archive-article-inner">
     <header class="archive-article-header">
 
-      <a href="/2018/12/22/磨刀霍霍：python你慢点飞，我的脑子还在后面追/" class="archive-article-date">
+      <a href="/p/da3b.html" class="archive-article-date">
 		  <time datetime="2018-12-21T16:29:18.000Z" itemprop="datePublished">Dec 22, 2018</time>
 	  </a>
       
   
     <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2018/12/22/磨刀霍霍：python你慢点飞，我的脑子还在后面追/">磨刀霍霍：python你慢点飞，我的脑子还在后面追</a>
+      <a class="archive-article-title" href="/p/da3b.html">磨刀霍霍：python你慢点飞，我的脑子还在后面追</a>
     </h1>
   
 
@@ -406,7 +428,7 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2019/09/24/磨刀霍霍：数据分析模型笔记/">磨刀霍霍：数据分析模型笔记</a></h6>
+              <h6 style="margin: 0;"><a href="/p/96bf.html">磨刀霍霍：数据分析模型笔记</a></h6>
               <span>September 24, 2019</span>
             </div>
 
@@ -418,7 +440,7 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2019/09/23/磨刀霍霍：SQL中的-CASE-WHEN/">磨刀霍霍：SQL 中的 CASE WHEN</a></h6>
+              <h6 style="margin: 0;"><a href="/p/53f8.html">磨刀霍霍：SQL 中的 CASE WHEN</a></h6>
               <span>September 23, 2019</span>
             </div>
 
@@ -430,7 +452,7 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2019/08/29/Y想-190829/">Y想-190829</a></h6>
+              <h6 style="margin: 0;"><a href="/p/1acb.html">Y想-190829</a></h6>
               <span>August 29, 2019</span>
             </div>
 
@@ -442,7 +464,7 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2019/06/30/Y想-190630/">Y想-190630</a></h6>
+              <h6 style="margin: 0;"><a href="/p/4f6b.html">Y想-190630</a></h6>
               <span>June 30, 2019</span>
             </div>
 
@@ -454,7 +476,7 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2019/06/26/磨刀霍霍：Excel中的常用函数/">磨刀霍霍：Excel中的常用函数</a></h6>
+              <h6 style="margin: 0;"><a href="/p/e5cc.html">磨刀霍霍：Excel中的常用函数</a></h6>
               <span>June 26, 2019</span>
             </div>
 
@@ -466,7 +488,7 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2019/06/25/磨刀霍霍：Excel中的引用/">磨刀霍霍：Excel中的引用</a></h6>
+              <h6 style="margin: 0;"><a href="/p/6998.html">磨刀霍霍：Excel中的引用</a></h6>
               <span>June 25, 2019</span>
             </div>
 
@@ -577,6 +599,9 @@
 
 
     <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>

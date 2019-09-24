@@ -66,9 +66,31 @@
 
 
   
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src>
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src>
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pic0.jpg,css/images/pic2.png,css/images/pic4.jpg".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
 
 
-<header id="allheader" class="site-header" role="banner">
+
+
+<header id="allheader" class="site-header" role="banner" style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);">
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -127,7 +149,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/03/19/小李飞刀：做题第九弹！/">小李飞刀：做题第九弹！</a>
+      <a class="article-title" href="/p/undefined.html">小李飞刀：做题第九弹！</a>
     </h1>
   
 
@@ -135,7 +157,7 @@
     
     <div class="article-meta">
       
-	<a href="/2019/03/19/小李飞刀：做题第九弹！/" class="article-date">
+	<a href="/p/undefined.html" class="article-date">
 	  <time datetime="2019-03-19T14:52:11.000Z" itemprop="datePublished">March 19, 2019</time>
 	</a>
 
@@ -155,7 +177,7 @@
 
         
           <p class="article-more-link">
-            <a href="/2019/03/19/小李飞刀：做题第九弹！/#more">Continue Reading →</a>
+            <a href="/p/undefined.html#more">Continue Reading →</a>
           </p>
         </div>
       
@@ -190,7 +212,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/03/18/小李飞刀：做题第八弹！/">小李飞刀：做题第八弹！</a>
+      <a class="article-title" href="/p/191e.html">小李飞刀：做题第八弹！</a>
     </h1>
   
 
@@ -198,7 +220,7 @@
     
     <div class="article-meta">
       
-	<a href="/2019/03/18/小李飞刀：做题第八弹！/" class="article-date">
+	<a href="/p/191e.html" class="article-date">
 	  <time datetime="2019-03-18T15:01:27.000Z" itemprop="datePublished">March 18, 2019</time>
 	</a>
 
@@ -218,7 +240,7 @@
 
         
           <p class="article-more-link">
-            <a href="/2019/03/18/小李飞刀：做题第八弹！/#more">Continue Reading →</a>
+            <a href="/p/191e.html#more">Continue Reading →</a>
           </p>
         </div>
       
@@ -253,7 +275,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/03/17/Y想-190317/">Y想-190317</a>
+      <a class="article-title" href="/p/undefined.html">Y想-190317</a>
     </h1>
   
 
@@ -261,7 +283,7 @@
     
     <div class="article-meta">
       
-	<a href="/2019/03/17/Y想-190317/" class="article-date">
+	<a href="/p/undefined.html" class="article-date">
 	  <time datetime="2019-03-17T13:38:30.000Z" itemprop="datePublished">March 17, 2019</time>
 	</a>
 
@@ -330,7 +352,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/03/12/小李飞刀：做题第七弹！/">小李飞刀：做题第七弹！</a>
+      <a class="article-title" href="/p/679.html">小李飞刀：做题第七弹！</a>
     </h1>
   
 
@@ -338,7 +360,7 @@
     
     <div class="article-meta">
       
-	<a href="/2019/03/12/小李飞刀：做题第七弹！/" class="article-date">
+	<a href="/p/679.html" class="article-date">
 	  <time datetime="2019-03-12T14:39:39.000Z" itemprop="datePublished">March 12, 2019</time>
 	</a>
 
@@ -358,7 +380,7 @@
 
         
           <p class="article-more-link">
-            <a href="/2019/03/12/小李飞刀：做题第七弹！/#more">Continue Reading →</a>
+            <a href="/p/679.html#more">Continue Reading →</a>
           </p>
         </div>
       
@@ -393,7 +415,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/03/10/Y想-190310/">Y想-190310</a>
+      <a class="article-title" href="/p/2e7a.html">Y想-190310</a>
     </h1>
   
 
@@ -401,7 +423,7 @@
     
     <div class="article-meta">
       
-	<a href="/2019/03/10/Y想-190310/" class="article-date">
+	<a href="/p/2e7a.html" class="article-date">
 	  <time datetime="2019-03-10T14:04:04.000Z" itemprop="datePublished">March 10, 2019</time>
 	</a>
 
@@ -472,7 +494,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/03/07/小李飞刀：做题第六弹！/">小李飞刀：做题第六弹！</a>
+      <a class="article-title" href="/p/1978.html">小李飞刀：做题第六弹！</a>
     </h1>
   
 
@@ -480,7 +502,7 @@
     
     <div class="article-meta">
       
-	<a href="/2019/03/07/小李飞刀：做题第六弹！/" class="article-date">
+	<a href="/p/1978.html" class="article-date">
 	  <time datetime="2019-03-07T15:01:28.000Z" itemprop="datePublished">March 7, 2019</time>
 	</a>
 
@@ -500,7 +522,7 @@
 
         
           <p class="article-more-link">
-            <a href="/2019/03/07/小李飞刀：做题第六弹！/#more">Continue Reading →</a>
+            <a href="/p/1978.html#more">Continue Reading →</a>
           </p>
         </div>
       
@@ -535,7 +557,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/03/06/小李飞刀：刷题第五弹！/">小李飞刀：刷题第五弹！</a>
+      <a class="article-title" href="/p/undefined.html">小李飞刀：刷题第五弹！</a>
     </h1>
   
 
@@ -543,7 +565,7 @@
     
     <div class="article-meta">
       
-	<a href="/2019/03/06/小李飞刀：刷题第五弹！/" class="article-date">
+	<a href="/p/undefined.html" class="article-date">
 	  <time datetime="2019-03-06T15:44:05.000Z" itemprop="datePublished">March 6, 2019</time>
 	</a>
 
@@ -563,7 +585,7 @@
 
         
           <p class="article-more-link">
-            <a href="/2019/03/06/小李飞刀：刷题第五弹！/#more">Continue Reading →</a>
+            <a href="/p/undefined.html#more">Continue Reading →</a>
           </p>
         </div>
       
@@ -598,7 +620,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/03/03/Y想-190303/">Y想 190303</a>
+      <a class="article-title" href="/p/7fe7.html">Y想 190303</a>
     </h1>
   
 
@@ -606,7 +628,7 @@
     
     <div class="article-meta">
       
-	<a href="/2019/03/03/Y想-190303/" class="article-date">
+	<a href="/p/7fe7.html" class="article-date">
 	  <time datetime="2019-03-03T15:32:47.000Z" itemprop="datePublished">March 3, 2019</time>
 	</a>
 
@@ -679,7 +701,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/03/01/《绿皮书》影评/">润物细无声——《绿皮书》影评</a>
+      <a class="article-title" href="/p/db31.html">润物细无声——《绿皮书》影评</a>
     </h1>
   
 
@@ -687,7 +709,7 @@
     
     <div class="article-meta">
       
-	<a href="/2019/03/01/《绿皮书》影评/" class="article-date">
+	<a href="/p/db31.html" class="article-date">
 	  <time datetime="2019-03-01T14:21:33.000Z" itemprop="datePublished">March 1, 2019</time>
 	</a>
 
@@ -707,7 +729,7 @@
 
         
           <p class="article-more-link">
-            <a href="/2019/03/01/《绿皮书》影评/#more">Continue Reading →</a>
+            <a href="/p/db31.html#more">Continue Reading →</a>
           </p>
         </div>
       
@@ -742,7 +764,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/02/28/磨刀霍霍：爬爬爬爬爬爬虫爬起来/">磨刀霍霍：爬爬爬爬爬爬虫爬起来~</a>
+      <a class="article-title" href="/p/undefined.html">磨刀霍霍：爬爬爬爬爬爬虫爬起来~</a>
     </h1>
   
 
@@ -750,7 +772,7 @@
     
     <div class="article-meta">
       
-	<a href="/2019/02/28/磨刀霍霍：爬爬爬爬爬爬虫爬起来/" class="article-date">
+	<a href="/p/undefined.html" class="article-date">
 	  <time datetime="2019-02-28T15:49:23.000Z" itemprop="datePublished">February 28, 2019</time>
 	</a>
 
@@ -770,7 +792,7 @@
 
         
           <p class="article-more-link">
-            <a href="/2019/02/28/磨刀霍霍：爬爬爬爬爬爬虫爬起来/#more">Continue Reading →</a>
+            <a href="/p/undefined.html#more">Continue Reading →</a>
           </p>
         </div>
       
@@ -901,7 +923,7 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2019/09/24/磨刀霍霍：数据分析模型笔记/">磨刀霍霍：数据分析模型笔记</a></h6>
+              <h6 style="margin: 0;"><a href="/p/96bf.html">磨刀霍霍：数据分析模型笔记</a></h6>
               <span>September 24, 2019</span>
             </div>
 
@@ -913,7 +935,7 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2019/09/23/磨刀霍霍：SQL中的-CASE-WHEN/">磨刀霍霍：SQL 中的 CASE WHEN</a></h6>
+              <h6 style="margin: 0;"><a href="/p/53f8.html">磨刀霍霍：SQL 中的 CASE WHEN</a></h6>
               <span>September 23, 2019</span>
             </div>
 
@@ -925,7 +947,7 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2019/08/29/Y想-190829/">Y想-190829</a></h6>
+              <h6 style="margin: 0;"><a href="/p/1acb.html">Y想-190829</a></h6>
               <span>August 29, 2019</span>
             </div>
 
@@ -937,7 +959,7 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2019/06/30/Y想-190630/">Y想-190630</a></h6>
+              <h6 style="margin: 0;"><a href="/p/4f6b.html">Y想-190630</a></h6>
               <span>June 30, 2019</span>
             </div>
 
@@ -949,7 +971,7 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2019/06/26/磨刀霍霍：Excel中的常用函数/">磨刀霍霍：Excel中的常用函数</a></h6>
+              <h6 style="margin: 0;"><a href="/p/e5cc.html">磨刀霍霍：Excel中的常用函数</a></h6>
               <span>June 26, 2019</span>
             </div>
 
@@ -961,7 +983,7 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2019/06/25/磨刀霍霍：Excel中的引用/">磨刀霍霍：Excel中的引用</a></h6>
+              <h6 style="margin: 0;"><a href="/p/6998.html">磨刀霍霍：Excel中的引用</a></h6>
               <span>June 25, 2019</span>
             </div>
 
@@ -1072,6 +1094,9 @@
 
 
     <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>
