@@ -11,18 +11,18 @@
   
   
   
-  <meta name="description" content="一周小确幸 看完了《绿皮书》，这真是一部很棒很棒的电影！ 换了指甲的样式（虽然是因为原来的断掉了TUT），然后又可以弹尤克里里啦！ 和上周一样去了同一家咖啡馆，老板知道我喜欢喝甜甜的东西后，给了我一块自制的马卡龙！超级好吃！ 用kindle看书真的好快啊,这周已经看完了3本理财书！ 给blog找到了好看的装扮！ 小伙伴佳扬出发去了梦想地！祝福！希望都有美好前程！  好好学习，天天向上 这周认真的装">
-<meta name="keywords" content="小李の胡说八道">
+  <meta name="description" content="这是个很有趣的函数！">
+<meta name="keywords" content="python,Numpy,认真学习の日常">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Y想-190303">
-<meta property="og:url" content="http://yoursite.com/2019/03/03/Y想-190303/index.html">
+<meta property="og:title" content="磨刀霍霍：Numpy中的bincount">
+<meta property="og:url" content="http://yoursite.com/2019/10/11/磨刀霍霍：Numpy中的bincount/index.html">
 <meta property="og:site_name" content="Gaga酱の奇思妙想">
-<meta property="og:description" content="一周小确幸 看完了《绿皮书》，这真是一部很棒很棒的电影！ 换了指甲的样式（虽然是因为原来的断掉了TUT），然后又可以弹尤克里里啦！ 和上周一样去了同一家咖啡馆，老板知道我喜欢喝甜甜的东西后，给了我一块自制的马卡龙！超级好吃！ 用kindle看书真的好快啊,这周已经看完了3本理财书！ 给blog找到了好看的装扮！ 小伙伴佳扬出发去了梦想地！祝福！希望都有美好前程！  好好学习，天天向上 这周认真的装">
+<meta property="og:description" content="这是个很有趣的函数！">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-29T15:11:22.186Z">
+<meta property="og:updated_time" content="2019-10-11T15:10:50.954Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Y想-190303">
-<meta name="twitter:description" content="一周小确幸 看完了《绿皮书》，这真是一部很棒很棒的电影！ 换了指甲的样式（虽然是因为原来的断掉了TUT），然后又可以弹尤克里里啦！ 和上周一样去了同一家咖啡馆，老板知道我喜欢喝甜甜的东西后，给了我一块自制的马卡龙！超级好吃！ 用kindle看书真的好快啊,这周已经看完了3本理财书！ 给blog找到了好看的装扮！ 小伙伴佳扬出发去了梦想地！祝福！希望都有美好前程！  好好学习，天天向上 这周认真的装">
+<meta name="twitter:title" content="磨刀霍霍：Numpy中的bincount">
+<meta name="twitter:description" content="这是个很有趣的函数！">
   
   <link rel="icon" href="/css/images/favicon.png">
   
@@ -118,7 +118,7 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-Y想-190303" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost">
+          <section id="main" style="float:none;"><article id="post-磨刀霍霍：Numpy中的bincount" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost">
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -126,7 +126,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      Y想-190303
+      磨刀霍霍：Numpy中的bincount
     </h1>
   
 
@@ -134,64 +134,54 @@
     
     <div class="article-meta">
       
-	<a href="/2019/03/03/Y想-190303/" class="article-date">
-	  <time datetime="2019-03-03T15:32:47.000Z" itemprop="datePublished">March 3, 2019</time>
+	<a href="/2019/10/11/磨刀霍霍：Numpy中的bincount/" class="article-date">
+	  <time datetime="2019-10-11T14:43:59.000Z" itemprop="datePublished">October 11, 2019</time>
 	</a>
 
       
 	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/每周都有新发现/">每周都有新发现</a>
+    <a class="article-category-link" href="/categories/小李の放学后/">小李の放学后</a>
  
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="一周小确幸"><a href="#一周小确幸" class="headerlink" title="一周小确幸"></a>一周小确幸</h4><ul>
-<li>看完了《绿皮书》，这真是一部很棒很棒的电影！</li>
-<li>换了指甲的样式（虽然是因为原来的断掉了TUT），然后又可以弹尤克里里啦！</li>
-<li>和上周一样去了同一家咖啡馆，老板知道我喜欢喝甜甜的东西后，给了我一块自制的马卡龙！超级好吃！</li>
-<li>用kindle看书真的好快啊,这周已经看完了3本理财书！</li>
-<li>给blog找到了好看的装扮！</li>
-<li>小伙伴佳扬出发去了梦想地！祝福！希望都有美好前程！</li>
+        <h1 id="开始学习"><a href="#开始学习" class="headerlink" title="开始学习~"></a>开始学习~</h1><h2 id="关于-bincount"><a href="#关于-bincount" class="headerlink" title="关于 bincount"></a>关于 <code>bincount</code></h2><p>主要是用于统计数组中的各项数字的<strong>频次情况</strong>，并建立新的数列（类似于建立直方图）。<br>这样建立了数据的<strong>映射</strong>情况，因此还能反向还原数组本身。</p>
+<h2 id="朴素的用法"><a href="#朴素的用法" class="headerlink" title="朴素的用法"></a>朴素的用法</h2><ul>
+<li><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- `bin` 的**数量**是要比数组 x 中的**最大值**大 `1`</span><br><span class="line">- 每个 `bin` 都给出了索引值在数组 x 中出现的次数</span><br><span class="line"></span><br><span class="line">```python</span><br><span class="line"># 假设数组 x</span><br><span class="line">x = numpy.array([1,3,4,5,7,7])</span><br><span class="line"># bin = 7 + 1 = 8</span><br><span class="line">numpy.bincount(x)</span><br><span class="line"># 仅 7 出现了 2 次</span><br><span class="line"># 输出 [0,1,0,1,1,1,0,2]</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<h4 id="好好学习，天天向上"><a href="#好好学习，天天向上" class="headerlink" title="好好学习，天天向上"></a>好好学习，天天向上</h4><ul>
-<li>这周认真的装扮了Blog，加了<code>小爱心</code>特效，然后加上了<code>豆瓣影音</code>的插件。<br>（因为狂刷blog，这周的github都是满格的~)</li>
-<li>leetcode刷题数据5题SQL题,并写了解题过程</li>
-<li>这周开始玩耍爬虫了，但是还没有主动开始写，要努力了！</li>
-<li>尤克里里演奏曲目有：</li>
+<h2 id="带上参数-weights-的用法"><a href="#带上参数-weights-的用法" class="headerlink" title="带上参数 weights 的用法"></a>带上参数 <code>weights</code> 的用法</h2><ul>
+<li><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- 一旦 `weights` 被指定，则数组 x 会被加权</span><br><span class="line"></span><br><span class="line">```python</span><br><span class="line"># 假设数组 x</span><br><span class="line">x = numpy.array([1,3,3,4])</span><br><span class="line"># 假设权重 w</span><br><span class="line">w = numpy.array([2,4,5,7,8,9])</span><br><span class="line"># bin = 4 + 1 = 5</span><br><span class="line">numpy.bincount(x,w)</span><br><span class="line"># 索引 0 - &gt; 0 --&gt; w[0] = 2</span><br><span class="line"># 索引 1 - &gt; 1 --&gt; w[1] = 4</span><br><span class="line"># 索引 2 - &gt; 0 --&gt; w[0] = 2</span><br><span class="line"># 索引 3 - &gt; 2 --&gt; w[2] = 5</span><br><span class="line"># 索引 4 - &gt; 1 --&gt; w[1] = 4</span><br><span class="line"># 输出 [2,4,1,5,4]</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<ol>
-<li>《半情歌》（大横按真的好难呀，还要多多练习）</li>
-<li>《大鱼》</li>
-<li>《雪落下的声音》</li>
+<h2 id="带上参数-minlength-的用法"><a href="#带上参数-minlength-的用法" class="headerlink" title="带上参数 minlength 的用法"></a>带上参数 <code>minlength</code> 的用法</h2><ul>
+<li><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- 如果 `minlength` 被指定，那么输出数组中 `bin` 的数量至少为它指定的数</span><br><span class="line">- `bin ≥ minlength`</span><br><span class="line"></span><br><span class="line">```python</span><br><span class="line"># 假设数组 x</span><br><span class="line">x = numpy.array([1,3,3,4])</span><br><span class="line"># 原本 bin = 4 + 1 = 5</span><br><span class="line">numpy.bincount(x,minlength = 7)</span><br><span class="line"># bin 因为 minlength 的存在变成了 7</span><br><span class="line"># 输出 [0,1,0,2,1,0,0]</span><br><span class="line">numpy.bincount(x,minlength = 1)</span><br><span class="line"># minlength 小于 bin 原有值 5 ,所以参数失效</span><br><span class="line"># 输出[0,1,0,2,1]</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 根据索引列表 I ，对数值列表 X 进行累加，得到 F</span></span><br><span class="line">X = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line">I = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">9</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">1</span>]</span><br><span class="line">F = np.bincount(I,X)</span><br><span class="line">print(F)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 给定一个数值向量，和一个索引向量，根据后者的索引，在前者对应位置加 1 （注意重复索引）</span></span><br><span class="line">Z = np.ones(<span class="number">10</span>)</span><br><span class="line">I = np.random.randint(<span class="number">0</span>,len(Z),<span class="number">20</span>)</span><br><span class="line">Z_new = Z + np.bincount(I, minlength = len(Z))</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 给定向量D，根据索引数组 S 得到子集，计算子集上的均值</span></span><br><span class="line">D = np.random.uniform(<span class="number">0</span>,<span class="number">1</span>,<span class="number">100</span>)</span><br><span class="line">S = np.random.randint(<span class="number">0</span>,<span class="number">10</span>,<span class="number">100</span>)</span><br><span class="line">D_sums = np.bincount(S, weights = D)</span><br><span class="line">D_counts = np.bincount(S)</span><br><span class="line">D_means = D_sums / D_counts</span><br><span class="line">print(D_means)</span><br></pre></td></tr></table></figure>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ol>
+<li><a href="https://www.cnblogs.com/eilearn/p/9015375.html" target="_blank" rel="noopener">Python—numpy.bincount()</a></li>
 </ol>
-<ul>
-<li>本周书单有：</li>
-</ul>
-<ol>
-<li><a href="https://book.douban.com/subject/3576486/" target="_blank" rel="noopener">《小狗钱钱1》</a></li>
-<li><a href="https://book.douban.com/subject/6971390/" target="_blank" rel="noopener">《小狗钱钱2》</a></li>
-<li><a href="https://book.douban.com/subject/27167650/" target="_blank" rel="noopener">《给新手的极简股票课》</a></li>
-<li><a href="https://book.douban.com/subject/1045231/" target="_blank" rel="noopener">《花儿与少年》</a>（还在阅读中…）</li>
-</ol>
-
       
     </div>
     <footer class="entry-meta entry-footer">
       
 	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/每周都有新发现/">每周都有新发现</a>
+    <a class="article-category-link" href="/categories/小李の放学后/">小李の放学后</a>
 
       
   <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小李の胡说八道/">小李の胡说八道</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Numpy/">Numpy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/认真学习の日常/">认真学习の日常</a></li></ul>
 
       
         
 	<div id="comment">
 	
 	<!-- 多说评论框 start -->
-	 <div class="ds-thread" data-thread-key="/2019/03/03/Y想-190303/" data-title="Y想-190303" data-url="http://yoursite.com/2019/03/03/Y想-190303/"></div>
+	 <div class="ds-thread" data-thread-key="/2019/10/11/磨刀霍霍：Numpy中的bincount/" data-title="磨刀霍霍：Numpy中的bincount" data-url="http://yoursite.com/2019/10/11/磨刀霍霍：Numpy中的bincount/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -219,19 +209,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/03/06/小李飞刀：刷题第五弹！/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          小李飞刀：刷题第五弹！
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/03/01/《绿皮书》影评/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/09/29/Y想-190929/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">润物细无声——《绿皮书》影评</div>
+      <div class="article-nav-title">Y想-190929</div>
     </a>
   
 </nav>
@@ -246,7 +227,7 @@
     <div id="toc" class="toc-article">
     <strong class="toc-title">Contents</strong>
     
-      <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#一周小确幸"><span class="nav-number">1.</span> <span class="nav-text">一周小确幸</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#好好学习，天天向上"><span class="nav-number">2.</span> <span class="nav-text">好好学习，天天向上</span></a></li></ol>
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#开始学习"><span class="nav-number">1.</span> <span class="nav-text">开始学习~</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于-bincount"><span class="nav-number">1.1.</span> <span class="nav-text">关于 bincount</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#朴素的用法"><span class="nav-number">1.2.</span> <span class="nav-text">朴素的用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#带上参数-weights-的用法"><span class="nav-number">1.3.</span> <span class="nav-text">带上参数 weights 的用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#带上参数-minlength-的用法"><span class="nav-number">1.4.</span> <span class="nav-text">带上参数 minlength 的用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习题"><span class="nav-number">1.5.</span> <span class="nav-text">练习题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">2.</span> <span class="nav-text">参考资料</span></a></li></ol>
     
     </div>
   </aside>
