@@ -66,9 +66,31 @@
 
 
   
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src>
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src>
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pic0.jpg,css/images/pic2.png,css/images/pic4.jpg".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
 
 
-<header id="allheader" class="site-header" role="banner">
+
+
+<header id="allheader" class="site-header" role="banner" style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);">
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -149,7 +171,7 @@
       
         <h4 id="一周小确幸"><a href="#一周小确幸" class="headerlink" title="一周小确幸"></a>一周小确幸</h4><ul>
 <li>这周出差了<strong>上海</strong>，暌违了 15 年的另一个故乡，看着曾经留下脚印和岁月的地方，真的感触良多</li>
-<li>上海博物馆赛高！<strong>大克鼎</strong>真的是一件历史和背后故事都很棒的文物</li>
+<li><strong>上海博物馆</strong>赛高！<strong>大克鼎</strong>真的是一件历史和背后故事都很棒的文物</li>
 <li>思考了很多关于未来的事情，果然战线拉的太长，不仅会疲惫，也会怠惰，要克制</li>
 <li>努力写好日程表，也会努力执行的！没有计划的人生是不行的！</li>
 </ul>
@@ -157,7 +179,7 @@
 <li>本周书单有：</li>
 </ul>
 <ol>
-<li>[傲慢与偏见]（<a href="https://book.douban.com/subject/4881639/）" target="_blank" rel="noopener">https://book.douban.com/subject/4881639/）</a></li>
+<li><a href="https://book.douban.com/subject/4881639/" target="_blank" rel="noopener">傲慢与偏见</a></li>
 </ol>
 
       
@@ -1063,6 +1085,9 @@
 
 
     <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>
