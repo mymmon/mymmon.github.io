@@ -248,9 +248,31 @@
 
 
   
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src>
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src>
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pic0.jpg,css/images/pic2.png,css/images/pic4.jpg".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
 
 
-<header id="allheader" class="site-header" role="banner">
+
+
+<header id="allheader" class="site-header" role="banner" style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);">
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -316,7 +338,7 @@
     <div class="article-meta">
       
 	<a href="/movies/index.html" class="article-date">
-	  <time datetime="2019-11-11T12:28:59.733Z" itemprop="datePublished">November 11, 2019</time>
+	  <time datetime="2019-11-20T13:18:45.743Z" itemprop="datePublished">November 20, 2019</time>
 	</a>
 
        
@@ -408,13 +430,13 @@
 <div class="hexo-douban-tabs">
     <a class="hexo-douban-tab" id="hexo-douban-tab1" href="javascript:;" rel="external">
         在看
-        (5)</a>
+        (2)</a>
     <a class="hexo-douban-tab" id="hexo-douban-tab2" href="javascript:;" rel="external">
         想看
         (18)</a>
     <a class="hexo-douban-tab" id="hexo-douban-tab3" href="javascript:;" rel="external">
         已看
-        (158)</a>
+        (161)</a>
 </div>
 <div>
     <div id="hexo-douban-item1">
@@ -426,42 +448,6 @@
             <a target="_blank" href="https://movie.douban.com/subject/34846655/">通灵之战 第二十季 / Битва Экстрасенсов Сезон 20</a>
         </div>
         <div class="hexo-douban-meta">2019-09-28(俄罗斯) / 马拉特·巴沙罗夫 / 俄罗斯 / bitvaextrasensov.tnt-online.ru / 通灵之战 第二十季 / 真人秀 / 俄语</div>
-    </div>
-</div>
-
-
-        
-        <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2564217876.jpg" referrerpolicy="no-referrer"></div>
-    <div class="hexo-douban-info">
-        <div class="hexo-douban-title">
-            <a target="_blank" href="https://movie.douban.com/subject/26955950/">喜欢的话请响铃 / 좋아하면 울리는</a>
-        </div>
-        <div class="hexo-douban-meta">2019-08-22(韩国) / 金所泫 / 郑家蓝 / 宋江 / 高敏诗 / 池赫拉 / 申承浩 / 李在应 / Seung-ho Shin /  廉智詠 / 宋建熙 / 崔周元 / 金熙昌  / 韩国 / 李娜静 / 55分钟 / 喜欢的话请响铃 / 爱情 / 科幻 / 李雅言 / 徐宝拉 / 韩语</div>
-    </div>
-</div>
-
-
-        
-        <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2535548737.jpg" referrerpolicy="no-referrer"></div>
-    <div class="hexo-douban-info">
-        <div class="hexo-douban-title">
-            <a target="_blank" href="https://movie.douban.com/subject/30335576/">历史那些事 第一季</a>
-        </div>
-        <div class="hexo-douban-meta">2018-10-24(中国大陆) / 钟文斌 / 胡艺潇 / 母焌成 / 杨澍 / 中国大陆 / 徐晋非 / 28分钟 / 历史 / 纪录片 / 脱口秀 / 吉国瑞 Guorui Ji / 汉语普通话</div>
-    </div>
-</div>
-
-
-        
-        <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2553399755.jpg" referrerpolicy="no-referrer"></div>
-    <div class="hexo-douban-info">
-        <div class="hexo-douban-title">
-            <a target="_blank" href="https://movie.douban.com/subject/33408040/">宠物医院</a>
-        </div>
-        <div class="hexo-douban-meta">2019-05-07(中国大陆) / 中国大陆 / 35分钟 / 真人秀 / 汉语普通话</div>
     </div>
 </div>
 
@@ -579,7 +565,7 @@
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/27017288/">小公女 / 소공녀</a>
         </div>
-        <div class="hexo-douban-meta">2018-03-22(韩国) / 李絮 / 安在洪 / 姜臻雅 / 金国熙 / 李成旭 / 崔德门 / 金在华 / 曹秀香 / 金艺恩 / 金在祿 / 韩国 / 全高云 / 106分钟 / 小公女 / 剧情 / 爱情 / 全高云 Go-woon Jeon / 韩语</div>
+        <div class="hexo-douban-meta">2017-10(釜山电影节) / 2018-03-22(韩国) / 李絮 / 安在洪 / 姜臻雅 / 金国熙 / 李成旭 / 崔德门 / 金在华 / 曹秀香 / 金艺恩 / 金在祿 / 韩国 / 全高云 / 106分钟 / 小公女 / 剧情 / 喜剧 / 爱情 / 全高云 Go-woon Jeon / 韩语</div>
     </div>
 </div>
 
@@ -615,7 +601,7 @@
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/11525673/">布达佩斯大饭店 / The Grand Budapest Hotel</a>
         </div>
-        <div class="hexo-douban-meta">2014-02-06(柏林电影节) / 2014-03-28(美国) / 拉尔夫·费因斯 / 托尼·雷沃罗利 / 艾德里安·布洛迪 / 威廉·达福 / 裘德·洛 / 爱德华·诺顿 / 西尔莎·罗南 / 蒂尔达·斯文顿 / 比尔·默瑞 / 蕾雅·赛杜 / 欧文·威尔逊 / 詹森·舒瓦兹曼 / 马修·阿马立克 / F·默里·亚伯拉罕 / 汤姆·威尔金森 / 杰夫·高布伦 / 哈威·凯特尔 / 尼尔·哈夫 / 拉里·派恩 / 吉塞尔达·沃洛迪 / 瓦里丝·阿卢瓦利亚 / 弗洛里安·卢卡斯 / 卡尔·马克维斯 / 鲍勃·巴拉班 / 费舍·史蒂芬斯 / 华莱士·沃洛达斯基 / 吴永庆 / 丽萨·克鲁泽 / 野村训市 / 汉勒斯·魏格纳 / 加布里埃尔·拉什 / 卢卡斯·赫奇斯 / 美国 / 德国 / 英国 / www.grandbudapesthotel.com / 韦斯·安德森 / 99分钟 / 布达佩斯大饭店 / 剧情 / 喜剧 / 冒险 / 韦斯·安德森 Wes Anderson / 雨果·吉尼斯 Hugo Guinness / 斯蒂芬·茨威格 Stefan Zweig / 英语 / 法语 / 德语</div>
+        <div class="hexo-douban-meta">2014-02-06(柏林电影节) / 2014-03-28(美国) / 拉尔夫·费因斯 / 托尼·雷沃罗利 / 艾德里安·布洛迪 / 威廉·达福 / 裘德·洛 / 爱德华·诺顿 / 西尔莎·罗南 / 蒂尔达·斯文顿 / 比尔·默瑞 / 蕾雅·赛杜 / 欧文·威尔逊 / 詹森·舒瓦兹曼 / 马修·阿马立克 / F·默里·亚伯拉罕 / 汤姆·威尔金森 / 杰夫·高布伦 / 哈威·凯特尔 / 弗洛里安·卢卡斯 / 吉塞尔达·沃洛迪 / 卡尔·马克维斯 / 鲍勃·巴拉班 / 费舍·史蒂芬斯 / 华莱士·沃洛达斯基 / 瓦里丝·阿卢瓦利亚 / 丽萨·克鲁泽 / 野村训市 / 吴永庆 / 拉里·派恩 / 尼尔·哈夫 / 汉勒斯·魏格纳 / 加布里埃尔·拉什 / 卢卡斯·赫奇斯 / 美国 / 德国 / 英国 / www.grandbudapesthotel.com / 韦斯·安德森 / 99分钟 / 布达佩斯大饭店 / 剧情 / 喜剧 / 冒险 / 韦斯·安德森 Wes Anderson / 雨果·吉尼斯 Hugo Guinness / 斯蒂芬·茨威格 Stefan Zweig / 英语 / 法语 / 德语</div>
     </div>
 </div>
 
@@ -714,6 +700,45 @@
 </div>
     </div>
     <div id="hexo-douban-item3">
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2553399755.jpg" referrerpolicy="no-referrer"></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/33408040/">宠物医院</a>
+        </div>
+        <div class="hexo-douban-meta">2019-11-14 /  治愈 2019 纪录片 bilibili / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> 没有养宠物，只云养了一只蛾子“薯条”。第一集的结尾有个小姐姐说的对，猫猫狗狗都是生来会爱与被爱，所以早早的回去了喵星和汪星，而人类则是在相处中，不断的学习爱与被爱中，然后成长。</div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2535548737.jpg" referrerpolicy="no-referrer"></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/30335576/">历史那些事 第一季</a>
+        </div>
+        <div class="hexo-douban-meta">2019-11-14 /  纪录片 创新 文化 / ★★★★★ 力荐 </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2564217876.jpg" referrerpolicy="no-referrer"></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/26955950/">喜欢的话请响铃 / 좋아하면 울리는</a>
+        </div>
+        <div class="hexo-douban-meta">2019-11-14 /  / ★★★★☆ 推荐 </div>
+        <div class="hexo-douban-comments"> 蹲第二季…为什么没人告诉我是连载…</div>
+    </div>
+</div>
+
+
         
         <div class="hexo-douban-item">
     <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2533984745.jpg" referrerpolicy="no-referrer"></div>
@@ -1731,7 +1756,7 @@
 
         
         <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1569455435.jpg" referrerpolicy="no-referrer"></div>
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1597593082.jpg" referrerpolicy="no-referrer"></div>
     <div class="hexo-douban-info">
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/3036473/">勇敢传说 / Brave</a>
@@ -3010,6 +3035,18 @@ for (var i = 0; i < firstpages.length; i++) {
               <div class="widget-entry-summary" style="margin: 0;">
             
 
+              <h6 style="margin: 0;"><a href="/2019/11/17/Y想-191117/">Y想-191117</a></h6>
+              <span>November 17, 2019</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
               <h6 style="margin: 0;"><a href="/2019/11/03/Y想-191104/">Y想-191104</a></h6>
               <span>November 3, 2019</span>
             </div>
@@ -3064,18 +3101,6 @@ for (var i = 0; i < firstpages.length; i++) {
 
           </li>
         
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2019/09/24/磨刀霍霍：数据分析模型笔记/">磨刀霍霍：数据分析模型笔记</a></h6>
-              <span>September 24, 2019</span>
-            </div>
-
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -3115,7 +3140,7 @@ for (var i = 0; i < firstpages.length; i++) {
     <h3 class="widget-title">Archives</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">6</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">6</span></li></ul>
     </div>
   </div>
 
@@ -3181,6 +3206,9 @@ for (var i = 0; i < firstpages.length; i++) {
 
 
     <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>

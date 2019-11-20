@@ -116,6 +116,7 @@
 <meta property="og:image" content="http://yoursite.com/assets/douban-loading.gif">
 <meta property="og:image" content="http://yoursite.com/assets/douban-loading.gif">
 <meta property="og:image" content="http://yoursite.com/assets/douban-loading.gif">
+<meta property="og:image" content="http://yoursite.com/assets/douban-loading.gif">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="阅">
 <meta name="twitter:description" content="文学的真正的使命就是使感情成为可见的东西。——泰纳         .hexo-douban-tabs {     margin-bottom: 15px;     margin-top: 15px; }  .hexo-douban-tab {     padding: 5px; }  .hexo-douban-active {     backgroun">
@@ -164,9 +165,31 @@
 
 
   
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src>
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src>
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pic0.jpg,css/images/pic2.png,css/images/pic4.jpg".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
 
 
-<header id="allheader" class="site-header" role="banner">
+
+
+<header id="allheader" class="site-header" role="banner" style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);">
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -232,7 +255,7 @@
     <div class="article-meta">
       
 	<a href="/books/index.html" class="article-date">
-	  <time datetime="2019-11-11T12:28:59.701Z" itemprop="datePublished">November 11, 2019</time>
+	  <time datetime="2019-11-20T13:18:45.700Z" itemprop="datePublished">November 20, 2019</time>
 	</a>
 
        
@@ -324,16 +347,34 @@
 <div class="hexo-douban-tabs">
     <a class="hexo-douban-tab" id="hexo-douban-tab1" href="javascript:;" rel="external">
         在读
-        (12)</a>
+        (11)</a>
     <a class="hexo-douban-tab" id="hexo-douban-tab2" href="javascript:;" rel="external">
         想读
         (42)</a>
     <a class="hexo-douban-tab" id="hexo-douban-tab3" href="javascript:;" rel="external">
         已读
-        (43)</a>
+        (45)</a>
 </div>
 <div>
     <div id="hexo-douban-item1">
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/subject/m/public/s2347562.jpg" referrerpolicy="no-referrer"></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title"><a target="_blank" href="https://book.douban.com/subject/2035162/"> 刀锋</a></div>
+        <div class="hexo-douban-meta">
+        
+  
+  [英]毛姆 / 周煦良 / 上海译文出版社 / 2007-3 / 18.00元
+
+        </div>
+        <div class="hexo-douban-meta">2019-11-20
+      在读 / </div>
+        <div class="hexo-douban-comments">
+  </div>
+    </div>
+</div>
+
         
         <div class="hexo-douban-item">
     <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/subject/m/public/s9012761.jpg" referrerpolicy="no-referrer"></div>
@@ -491,46 +532,6 @@
         </div>
         <div class="hexo-douban-meta">2019-06-27
       在读 /  奇幻</div>
-        <div class="hexo-douban-comments">
-  </div>
-    </div>
-</div>
-
-        
-        <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/subject/m/public/s6973090.jpg" referrerpolicy="no-referrer"></div>
-    <div class="hexo-douban-info">
-        <div class="hexo-douban-title"><a target="_blank" href="https://book.douban.com/subject/6434328/"> 谁说菜鸟不会数据分析</a></div>
-        <div class="hexo-douban-meta">
-        
-  
-  张文霖、刘夏璐、狄松 编著 / 电子工业出版社 / 2011-7 / 59.00元
-
-        </div>
-        <div class="hexo-douban-meta">2019-03-08
-      在读 /  统计 数据分析</div>
-        <div class="hexo-douban-comments">
-      通俗易懂的数据分析入门书
-      
-  
-
-  </div>
-    </div>
-</div>
-
-        
-        <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/subject/m/public/s27283822.jpg" referrerpolicy="no-referrer"></div>
-    <div class="hexo-douban-info">
-        <div class="hexo-douban-title"><a target="_blank" href="https://book.douban.com/subject/25863515/"> 图解HTTP</a></div>
-        <div class="hexo-douban-meta">
-        
-  
-  【日】上野宣 / 于均良 / 人民邮电出版社 / 2014-4-15 / 49.00元
-
-        </div>
-        <div class="hexo-douban-meta">2019-03-07
-      在读 /  HTTP 计算机</div>
         <div class="hexo-douban-comments">
   </div>
     </div>
@@ -1383,6 +1384,46 @@
 
     </div>
     <div id="hexo-douban-item3">
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/subject/m/public/s27283822.jpg" referrerpolicy="no-referrer"></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title"><a target="_blank" href="https://book.douban.com/subject/25863515/"> 图解HTTP</a></div>
+        <div class="hexo-douban-meta">
+        
+  
+  【日】上野宣 / 于均良 / 人民邮电出版社 / 2014-4-15 / 49.00元
+
+      </div>
+        <div class="hexo-douban-meta">2019-11-14
+      读过 /  HTTP 计算机 / </div>
+        <div class="hexo-douban-comments">
+  </div>
+    </div>
+</div>
+
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/subject/m/public/s6973090.jpg" referrerpolicy="no-referrer"></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title"><a target="_blank" href="https://book.douban.com/subject/6434328/"> 谁说菜鸟不会数据分析</a></div>
+        <div class="hexo-douban-meta">
+        
+  
+  张文霖、刘夏璐、狄松 编著 / 电子工业出版社 / 2011-7 / 59.00元
+
+      </div>
+        <div class="hexo-douban-meta">2019-11-14
+      读过 /  统计 数据分析 / ★★★★★ 力荐</div>
+        <div class="hexo-douban-comments">
+      通俗易懂的数据分析入门书
+      
+  
+
+  </div>
+    </div>
+</div>
+
         
         <div class="hexo-douban-item">
     <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/subject/m/public/s4571103.jpg" referrerpolicy="no-referrer"></div>
@@ -2503,6 +2544,18 @@ for (var i = 0; i < firstpages.length; i++) {
               <div class="widget-entry-summary" style="margin: 0;">
             
 
+              <h6 style="margin: 0;"><a href="/2019/11/17/Y想-191117/">Y想-191117</a></h6>
+              <span>November 17, 2019</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
               <h6 style="margin: 0;"><a href="/2019/11/03/Y想-191104/">Y想-191104</a></h6>
               <span>November 3, 2019</span>
             </div>
@@ -2557,18 +2610,6 @@ for (var i = 0; i < firstpages.length; i++) {
 
           </li>
         
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2019/09/24/磨刀霍霍：数据分析模型笔记/">磨刀霍霍：数据分析模型笔记</a></h6>
-              <span>September 24, 2019</span>
-            </div>
-
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -2608,7 +2649,7 @@ for (var i = 0; i < firstpages.length; i++) {
     <h3 class="widget-title">Archives</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">6</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">6</span></li></ul>
     </div>
   </div>
 
@@ -2674,6 +2715,9 @@ for (var i = 0; i < firstpages.length; i++) {
 
 
     <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>
