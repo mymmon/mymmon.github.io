@@ -262,9 +262,31 @@
 
 
   
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src>
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src>
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pic0.jpg,css/images/pic2.png,css/images/pic4.jpg".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
 
 
-<header id="allheader" class="site-header" role="banner">
+
+
+<header id="allheader" class="site-header" role="banner" style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);">
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -330,7 +352,7 @@
     <div class="article-meta">
       
 	<a href="/movies/index.html" class="article-date">
-	  <time datetime="2020-04-11T13:27:38.126Z" itemprop="datePublished">April 11, 2020</time>
+	  <time datetime="2020-05-06T15:29:52.580Z" itemprop="datePublished">May 6, 2020</time>
 	</a>
 
        
@@ -439,7 +461,7 @@
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/30170894/">大宋少年志</a>
         </div>
-        <div class="hexo-douban-meta">2019-06-03(中国大陆) / 张新成 / 周雨彤 / 郑伟 / 王佑硕 / 禾浩辰 / 苏晓彤 / 闫肃 / 刘美含 / 隋咏良 / 李晓川 / 高梓淇 / 卢庆辉 / 杨洪武 / 佟凡 / 艾平 / 楚建 / 杨平友 / 龚思乐 / 冯齐 / 徐紫茵 / 中国大陆 / 伊峥 / 王飞 / 彭学军 / 罗志刚 / 刘崇杰 / 45分钟 / 悬疑 / 古装 / 王倦 Juan Wang / 潘晓晨 Xiaochen Pan / 吴峥 Zheng Wu / 李喆 Zhe Li / 黄剑东 Jiandong Huang / 汉语普通话</div>
+        <div class="hexo-douban-meta">2019-06-03(中国大陆) / 张新成 / 周雨彤 / 郑伟 / 王佑硕 / 禾浩辰 / 苏晓彤 / 闫肃 / 刘美含 / 隋咏良 / 李晓川 / 高梓淇 / 卢庆辉 / 杨洪武 / 佟凡 / 艾平 / 楚建 / 杨平友 / 龚思乐 / 冯齐 / 徐紫茵 / 徐佳琦 / 中国大陆 / 伊峥 / 王飞 / 彭学军 / 罗志刚 / 刘崇杰 / 45分钟 / 悬疑 / 古装 / 王倦 Juan Wang / 潘晓晨 Xiaochen Pan / 吴峥 Zheng Wu / 李喆 Zhe Li / 黄剑东 Jiandong Huang / 汉语普通话</div>
     </div>
 </div>
 
@@ -473,7 +495,7 @@
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/34945795/">人生第一次</a>
         </div>
-        <div class="hexo-douban-meta">2020-01-15(中国大陆) / 涂松岩 / 高亚麟 / 王耀庆 / 秦博 / 韩童生 / 郎月婷 / 辛柏青 / 王仁君 / 寇振海 / 张钧甯 / 许文广 / 阿云嘎 / 中国大陆 / v.cctv.com/jishi/rsdyc/index.shtml / 秦博 / 于颖 / 施筱青 / 张怡 / 32分钟 / 纪录片 / 汉语普通话</div>
+        <div class="hexo-douban-meta">2020-01-15(中国大陆) / 涂松岩 / 高亚麟 / 王耀庆 / 秦博 / 韩童生 / 郎月婷 / 辛柏青 / 王仁君 / 寇振海 / 张钧甯 / 许文广 / 阿云嘎 / 中国大陆 / v.cctv.com/jishi/rsdyc/index.shtml / 秦博 / 于颖 / 施筱青 / 孙功旭 / 张怡 / 詹佳骏 / 陈婷 / 张涛 / 黄旭晨 / 黄远 / 蒋逸哲 / 谢抒豪 / 32分钟 / 纪录片 / 汉语普通话</div>
     </div>
 </div>
 
@@ -600,7 +622,7 @@
 
         
         <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2390682933.jpg" referrerpolicy="no-referrer"></div>
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2390683986.jpg" referrerpolicy="no-referrer"></div>
     <div class="hexo-douban-info">
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/26611076/">溺水小刀 / 溺れるナイフ</a>
@@ -653,7 +675,7 @@
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/30424374/">爱，死亡和机器人 第一季 / Love, Death &amp; Robots Season 1</a>
         </div>
-        <div class="hexo-douban-meta">2019-03-15(美国) / 斯科特·怀特 / 诺兰·诺斯 / 马修·杨·金 / 迈克尔·本耶尔 / 乔什·布雷纳 / 艾莉·康德伦 / 亨利·杜思韦特 / 亚伦·希梅尔斯坦 / 斯蒂芬·卡皮契奇 / 莫里斯·拉马奇 / 艾米丽·奥布莱恩 / 凯文·迈克尔·理查德森 / 海伦·萨德勒 / 伊兰妮·谭 / 柯克·桑顿 / 萨米拉·威利 / 玛丽·伊丽莎白·温斯特德 / 卡洛斯·阿拉斯拉奇 / 亚当·巴特利 / 托弗·戈瑞斯 / 尤里·洛文塔尔 / 克里斯托弗·L·帕森 / 弗雷德·塔特西奥 / 布鲁斯·托马斯 / 艾玛·索内特 / 加里·安东尼·威廉斯 / 盖瑞·科尔 / 约翰·迪·马吉欧 / 克里斯·帕内尔 / 吉姆·皮里 / 内斯特·塞拉诺 / 吉尔·塔利 / 劳拉·沃德尔 / 泰姆·温特斯 / 格文多林·叶 / 奥米德·阿布塔西 / 安东尼奥·阿尔瓦雷斯 / 布莱恩·布鲁姆 / 格雷厄姆·汉密尔顿 / 迪特尔·詹森 / 安德烈·索格利扎索 / 詹姆斯·霍兰 / 柯特奈·泰勒 / 克里斯蒂尼·亚当斯 / 格雷厄姆·福克斯 / 素玛立·蒙塔诺 / JB·布兰科 / 哈基姆·凯-卡西姆 / 麦德雷妮·奈特 / 尼尔·卡普兰 / 美国 / 维克多·马尔多纳多 / 加布里埃尔·彭纳基奥利 / 阿尔弗雷多·托雷斯 / 弗兰克·巴尔森 / 阿尔贝托·米尔戈 / 蒂姆·米勒 / 达米安·纽诺 / 杰罗姆·陈 / 维塔利·舒舒科 / 欧文·沙利文 / 罗伯特·瓦利 / 戴夫·威尔逊 / 乔恩·叶 / 哈维尔·雷西奥·格雷西亚 / 爱，死亡和机器人 / 15分钟 / 爱，死亡和机器人 / 喜剧 / 科幻 / 动画 / 奇幻 / 恐怖 / 蒂姆·米勒 Tim Miller / 约翰·斯卡尔齐 John Scalzi / 阿拉斯泰尔·雷诺兹 Alastair Reynolds / 彼得·F·汉密尔顿 Peter F. Hamilton / 马尔科·克鲁斯 Marko Kloos / 乔·R·兰斯代尔 Joe R. Lansdale / 贾尼斯·罗伯逊 Janis Robertson / 英语</div>
+        <div class="hexo-douban-meta">2019-03-15(美国) / 斯科特·怀特 / 诺兰·诺斯 / 马修·杨·金 / 迈克尔·本耶尔 / 乔什·布雷纳 / 艾莉·康德伦 / 亨利·杜思韦特 / 亚伦·希梅尔斯坦 / 斯蒂芬·卡皮契奇 / 莫里斯·拉马奇 / 艾米丽·奥布莱恩 / 凯文·迈克尔·理查德森 / 海伦·萨德勒 / 伊兰妮·谭 / 柯克·桑顿 / 萨米拉·威利 / 玛丽·伊丽莎白·温斯特德 / 卡洛斯·阿拉斯拉奇 / 亚当·巴特利 / 托弗·戈瑞斯 / 尤里·洛文塔尔 / 克里斯托弗·L·帕森 / 弗雷德·塔特西奥 / 布鲁斯·托马斯 / 艾玛·索内特 / 加里·安东尼·威廉斯 / 盖瑞·科尔 / 约翰·迪·马吉欧 / 克里斯·帕内尔 / 吉姆·皮里 / 内斯特·塞拉诺 / 吉尔·塔利 / 劳拉·沃德尔 / 泰姆·温特斯 / 格文多林·叶 / 奥米德·阿布塔西 / 安东尼奥·阿尔瓦雷斯 / 布莱恩·布鲁姆 / 格雷厄姆·汉密尔顿 / 迪特尔·詹森 / 安德烈·索格利扎索 / 詹姆斯·霍兰 / 柯特奈·泰勒 / 克里斯蒂尼·亚当斯 / 格雷厄姆·福克斯 / 素玛立·蒙塔诺 / JB·布兰科 / 哈基姆·凯-卡西姆 / 梅德雷妮·奈特 / 尼尔·卡普兰 / 美国 / 维克多·马尔多纳多 / 加布里埃尔·彭纳基奥利 / 阿尔弗雷多·托雷斯 / 弗兰克·巴尔森 / 阿尔贝托·米尔戈 / 蒂姆·米勒 / 达米安·纽诺 / 杰罗姆·陈 / 维塔利·舒舒科 / 欧文·沙利文 / 罗伯特·瓦利 / 戴夫·威尔逊 / 乔恩·叶 / 哈维尔·雷西奥·格雷西亚 / 爱，死亡和机器人 / 15分钟 / 爱，死亡和机器人 / 喜剧 / 科幻 / 动画 / 奇幻 / 恐怖 / 蒂姆·米勒 Tim Miller / 约翰·斯卡尔齐 John Scalzi / 阿拉斯泰尔·雷诺兹 Alastair Reynolds / 彼得·F·汉密尔顿 Peter F. Hamilton / 马尔科·克鲁斯 Marko Kloos / 乔·R·兰斯代尔 Joe R. Lansdale / 贾尼斯·罗伯逊 Janis Robertson / 英语</div>
     </div>
 </div>
 
@@ -761,7 +783,7 @@
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/27003543/">与神同行2：因与缘 / 신과함께-인과 연</a>
         </div>
-        <div class="hexo-douban-meta">2018-08-01(韩国) / 河正宇 / 朱智勋 / 马东锡 / 金香起 / 李政宰 / 赵汉哲 / 金明坤 / 金东旭 / 郑惟安 / 都暻秀 / 申载敏 / 崔贤钟 / 闵武济 / 姜在恩 / 吴熙俊 / 李璟荣 / 洪仁 / 金泰俊 / 南一祐 / 郑志薰 / 韩国 / 金容华 / 142分钟 / 与神同行2：因与缘 / 动作 / 奇幻 / 金容华 Yong-hwa Kim / 韩语</div>
+        <div class="hexo-douban-meta">2018-08-01(韩国) / 河正宇 / 朱智勋 / 马东锡 / 金香起 / 李政宰 / 赵汉哲 / 金明坤 / 金东旭 / 郑惟安 / 都暻秀 / 闵武济 / 姜在恩 / 吴熙俊 / 李璟荣 / 洪仁 / 崔贤钟 / 申载敏 / 金泰俊 / 南一祐 / 郑志薰 / 韩国 / 金容华 / 142分钟 / 与神同行2：因与缘 / 动作 / 奇幻 / 金容华 Yong-hwa Kim / 韩语</div>
     </div>
 </div>
 
@@ -1897,7 +1919,7 @@
 
         
         <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2374045339.jpg" referrerpolicy="no-referrer"></div>
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p1143572677.jpg" referrerpolicy="no-referrer"></div>
     <div class="hexo-douban-info">
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/3670447/">大内密探灵灵狗 / 大內密探靈靈狗</a>
@@ -1910,7 +1932,7 @@
 
         
         <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p462058001.jpg" referrerpolicy="no-referrer"></div>
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p462058385.jpg" referrerpolicy="no-referrer"></div>
     <div class="hexo-douban-info">
         <div class="hexo-douban-title">
             <a target="_blank" href="https://movie.douban.com/subject/2135981/">画皮 / 畫皮</a>
@@ -3373,6 +3395,9 @@ for (var i = 0; i < firstpages.length; i++) {
 
 
     <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>
