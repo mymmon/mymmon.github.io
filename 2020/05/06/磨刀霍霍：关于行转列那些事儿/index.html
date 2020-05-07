@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Aloha | Gaga酱的奇思妙想</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="萌萌の嘎嘎">
+  
+  
+  
+  
+  <meta name="description" content="查缺补漏的日常！">
+<meta name="keywords" content="SQL,认真学习の日常">
+<meta property="og:type" content="article">
+<meta property="og:title" content="磨刀霍霍：关于行转列那些事儿">
+<meta property="og:url" content="http://yoursite.com/2020/05/06/磨刀霍霍：关于行转列那些事儿/index.html">
+<meta property="og:site_name" content="Gaga酱の奇思妙想">
+<meta property="og:description" content="查缺补漏的日常！">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-05-07T15:30:09.359Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="磨刀霍霍：关于行转列那些事儿">
+<meta name="twitter:description" content="查缺补漏的日常！">
+  
+  <link rel="icon" href="/css/images/favicon.png">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/fashion.css">
+  <link rel="stylesheet" href="/css/glyphs.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142486934-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-142486934-1');
+  </script>
+
+
+</head>
+</html>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h3 class="site-title">
+            
+              <a href="/" title="Gaga酱の奇思妙想" rel="home"> Gaga酱の奇思妙想 </a>
+            
+          </h3>
+          
+          
+            <div class="site-description">深水静流</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/">冲鸭❤</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/archives">archives❤</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/categories">碎碎念的基本法❤</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/tags">tags❤</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/about">岁月如歌❤</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/books">阅❤</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class href="/movies">影❤</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-磨刀霍霍：关于行转列那些事儿" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost">
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      磨刀霍霍：关于行转列那些事儿
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2020/05/06/磨刀霍霍：关于行转列那些事儿/" class="article-date">
+	  <time datetime="2020-05-06T15:19:53.000Z" itemprop="datePublished">May 6, 2020</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/小李の放学后/">小李の放学后</a>
+ 
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p></p>
+<h1 id="关于行列转换"><a href="#关于行列转换" class="headerlink" title="关于行列转换"></a>关于行列转换</h1><h2 id="关于行转列"><a href="#关于行转列" class="headerlink" title="关于行转列"></a>关于行转列</h2><ul>
+<li>常见的基础例子</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">--创建学生成绩表T_StudentScore</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> T_StudentScore(PK_ID <span class="built_in">int</span> ,<span class="keyword">Name</span> <span class="built_in">varchar</span>(<span class="number">10</span>) , Course <span class="built_in">varchar</span>(<span class="number">10</span>) , Score <span class="built_in">int</span>)</span><br><span class="line"><span class="comment">--更改PK_ID 的列属性,选择”是标识“，标识增量为1，也就是PK_ID 字段的数据是自增长的</span></span><br><span class="line"><span class="comment">--向学生成绩表添加几条成绩信息</span></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> T_StudentScore <span class="keyword">values</span>(<span class="string">'木子'</span> , <span class="string">'语文'</span> , <span class="number">74</span>) </span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> T_StudentScore <span class="keyword">values</span>(<span class="string">'木子'</span> , <span class="string">'数学'</span> , <span class="number">83</span>) </span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> T_StudentScore <span class="keyword">values</span>(<span class="string">'木子'</span> , <span class="string">'物理'</span> , <span class="number">93</span>) </span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> T_StudentScore <span class="keyword">values</span>(<span class="string">'山石'</span> , <span class="string">'语文'</span> , <span class="number">74</span>) </span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> T_StudentScore <span class="keyword">values</span>(<span class="string">'山石'</span> , <span class="string">'数学'</span> , <span class="number">84</span>) </span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> T_StudentScore <span class="keyword">values</span>(<span class="string">'山石'</span> , <span class="string">'物理'</span> , <span class="number">94</span>)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>需要考虑是否为<strong>动态变化</strong>的情况</p>
+</blockquote>
+<h3 id="方法-1-静态行转列"><a href="#方法-1-静态行转列" class="headerlink" title="方法 1 : 静态行转列"></a>方法 1 : 静态行转列</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">distinct</span> <span class="keyword">Name</span>,</span><br><span class="line"><span class="keyword">SUM</span>(<span class="keyword">CASE</span> Course <span class="keyword">WHEN</span> <span class="string">'语文'</span> Score <span class="keyword">ELSE</span> <span class="number">0</span> <span class="keyword">END</span>) 语文,</span><br><span class="line"><span class="keyword">SUM</span>(<span class="keyword">CASE</span> Course <span class="keyword">WHEN</span> <span class="string">'语文'</span> Score <span class="keyword">ELSE</span> <span class="number">0</span> <span class="keyword">END</span>) 数学,</span><br><span class="line"><span class="keyword">SUM</span>(<span class="keyword">CASE</span> Course <span class="keyword">WHEN</span> <span class="string">'语文'</span> Score <span class="keyword">ELSE</span> <span class="number">0</span> <span class="keyword">END</span>) 物理</span><br><span class="line"><span class="keyword">FROM</span> T_StudentScore </span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> <span class="keyword">Name</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>distinct</code> 不能省略</p>
+</blockquote>
+<h3 id="方法-2-povit-函数"><a href="#方法-2-povit-函数" class="headerlink" title="方法 2 : povit 函数"></a>方法 2 : povit 函数</h3><ol>
+<li>需要确认使用的表</li>
+<li>需要确认那一列的值作为新的列</li>
+<li>确认新的列要取的值</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> T_StudentScore </span><br><span class="line">POVIT(</span><br><span class="line">    <span class="keyword">SUM</span>(Score)</span><br><span class="line">    <span class="keyword">FOR</span> Course <span class="keyword">IN</span> (<span class="string">'语文'</span>,<span class="string">'数学'</span>,<span class="string">'物理'</span>)</span><br><span class="line">) <span class="keyword">AS</span> Course_c</span><br></pre></td></tr></table></figure>
+<h2 id="关于列转行"><a href="#关于列转行" class="headerlink" title="关于列转行"></a>关于列转行</h2><ul>
+<li>常见的基础例子</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> ProgrectDetail</span><br><span class="line">(</span><br><span class="line">    ProgrectName         <span class="keyword">NVARCHAR</span>(<span class="number">20</span>), <span class="comment">--工程名称</span></span><br><span class="line">    OverseaSupply        <span class="built_in">INT</span>,          <span class="comment">--海外供应商供给数量</span></span><br><span class="line">    NativeSupply         <span class="built_in">INT</span>,          <span class="comment">--国内供应商供给数量</span></span><br><span class="line">    SouthSupply          <span class="built_in">INT</span>,          <span class="comment">--南方供应商供给数量</span></span><br><span class="line">    NorthSupply          <span class="built_in">INT</span>           <span class="comment">--北方供应商供给数量</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> ProgrectDetail</span><br><span class="line"><span class="keyword">SELECT</span> <span class="string">'A'</span>, <span class="number">100</span>, <span class="number">200</span>, <span class="number">50</span>, <span class="number">50</span></span><br><span class="line"><span class="keyword">UNION</span> <span class="keyword">ALL</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="string">'B'</span>, <span class="number">200</span>, <span class="number">300</span>, <span class="number">150</span>, <span class="number">150</span></span><br><span class="line"><span class="keyword">UNION</span> <span class="keyword">ALL</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="string">'C'</span>, <span class="number">159</span>, <span class="number">400</span>, <span class="number">20</span>, <span class="number">320</span></span><br><span class="line"><span class="keyword">UNION</span> <span class="keyword">ALL</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="string">'D'</span>, <span class="number">250</span>, <span class="number">30</span>, <span class="number">15</span>, <span class="number">15</span></span><br></pre></td></tr></table></figure>
+<h3 id="方法-1-union-函数"><a href="#方法-1-union-函数" class="headerlink" title="方法 1 : union 函数"></a>方法 1 : union 函数</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ProgrectName, <span class="string">'OverseaSupply'</span> <span class="keyword">AS</span> Supplier,</span><br><span class="line">        <span class="keyword">MAX</span>(OverseaSupply) <span class="keyword">AS</span> <span class="string">'SupplyNum'</span></span><br><span class="line"><span class="keyword">FROM</span> ProgrectDetail</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> ProgrectName</span><br><span class="line"><span class="keyword">UNION</span> <span class="keyword">ALL</span></span><br><span class="line"><span class="keyword">SELECT</span> ProgrectName, <span class="string">'NativeSupply'</span> <span class="keyword">AS</span> Supplier,</span><br><span class="line">        <span class="keyword">MAX</span>(NativeSupply) <span class="keyword">AS</span> <span class="string">'SupplyNum'</span></span><br><span class="line"><span class="keyword">FROM</span> ProgrectDetail</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> ProgrectName</span><br><span class="line"><span class="keyword">UNION</span> <span class="keyword">ALL</span></span><br><span class="line"><span class="keyword">SELECT</span> ProgrectName, <span class="string">'SouthSupply'</span> <span class="keyword">AS</span> Supplier,</span><br><span class="line">        <span class="keyword">MAX</span>(SouthSupply) <span class="keyword">AS</span> <span class="string">'SupplyNum'</span></span><br><span class="line"><span class="keyword">FROM</span> ProgrectDetail</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> ProgrectName</span><br><span class="line"><span class="keyword">UNION</span> <span class="keyword">ALL</span></span><br><span class="line"><span class="keyword">SELECT</span> ProgrectName, <span class="string">'NorthSupply'</span> <span class="keyword">AS</span> Supplier,</span><br><span class="line">        <span class="keyword">MAX</span>(NorthSupply) <span class="keyword">AS</span> <span class="string">'SupplyNum'</span></span><br><span class="line"><span class="keyword">FROM</span> ProgrectDetail</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> ProgrectName</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/小李の放学后/">小李の放学后</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SQL/">SQL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/认真学习の日常/">认真学习の日常</a></li></ul>
+
+      
+        
+	<div id="comment">
+	
+	<!-- 多说评论框 start -->
+	 <div class="ds-thread" data-thread-key="/2020/05/06/磨刀霍霍：关于行转列那些事儿/" data-title="磨刀霍霍：关于行转列那些事儿" data-url="http://yoursite.com/2020/05/06/磨刀霍霍：关于行转列那些事儿/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"iTimeTraveler"};
+	  (function() {
+	    var ds = document.createElement('script');
+	    ds.type = 'text/javascript';ds.async = true;
+	    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	    ds.charset = 'UTF-8';
+	    (document.getElementsByTagName('head')[0] 
+	     || document.getElementsByTagName('body')[0]).appendChild(ds);
+	  })();
+	  </script>
+	<!-- 多说公共JS代码 end -->
+	
+	</div>
+	<link rel="stylesheet" href="/css/comment.css">
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/06/磨刀霍霍：创建高性能的索引/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">磨刀霍霍： HOW TO 创建高性能的索引</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于行列转换"><span class="nav-number">1.</span> <span class="nav-text">关于行列转换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于行转列"><span class="nav-number">1.1.</span> <span class="nav-text">关于行转列</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法-1-静态行转列"><span class="nav-number">1.1.1.</span> <span class="nav-text">方法 1 : 静态行转列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法-2-povit-函数"><span class="nav-number">1.1.2.</span> <span class="nav-text">方法 2 : povit 函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于列转行"><span class="nav-number">1.2.</span> <span class="nav-text">关于列转行</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法-1-union-函数"><span class="nav-number">1.2.1.</span> <span class="nav-text">方法 1 : union 函数</span></a></li></ol></li></ol></li></ol>
+    
+    </div>
+  </aside>
+
+
+
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">冲鸭❤</a>
+  
+    <a href="/archives" class="mobile-nav-link">archives❤</a>
+  
+    <a href="/categories" class="mobile-nav-link">碎碎念的基本法❤</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags❤</a>
+  
+    <a href="/about" class="mobile-nav-link">岁月如歌❤</a>
+  
+    <a href="/books" class="mobile-nav-link">阅❤</a>
+  
+    <a href="/movies" class="mobile-nav-link">影❤</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2020 Gaga酱の奇思妙想 All Rights Reserved.
+        
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script type="text/javascript" src="js/love.js"></script>
+  <script type="text/javascript" src="js/float.js"></script>
+  <script type="text/javascript" src="js/typewriter.js"></script>
+  <script type="text/javascript" color="0,104,183" opacity="1" zindex="-1" count="50" src="js/particle.js"></script>
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
