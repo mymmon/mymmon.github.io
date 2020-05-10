@@ -11,18 +11,18 @@
   
   
   
-  <meta name="description" content="你眼里的 not in 不是他的 &amp;lt;&amp;gt; any!!!">
+  <meta name="description" content="是谁在敲打我的窗~">
 <meta name="keywords" content="SQL,认真学习の日常">
 <meta property="og:type" content="article">
-<meta property="og:title" content="磨刀霍霍：聊聊SQL子查询关键字">
-<meta property="og:url" content="http://yoursite.com/2020/05/08/磨刀霍霍：聊聊SQL子查询关键字/index.html">
+<meta property="og:title" content="磨刀霍霍：视图那些事儿">
+<meta property="og:url" content="http://yoursite.com/2020/05/10/磨刀霍霍：视图那些事儿/index.html">
 <meta property="og:site_name" content="Gaga酱の奇思妙想">
-<meta property="og:description" content="你眼里的 not in 不是他的 &amp;lt;&amp;gt; any!!!">
+<meta property="og:description" content="是谁在敲打我的窗~">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-05-08T15:23:04.675Z">
+<meta property="og:updated_time" content="2020-05-10T06:51:59.101Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="磨刀霍霍：聊聊SQL子查询关键字">
-<meta name="twitter:description" content="你眼里的 not in 不是他的 &amp;lt;&amp;gt; any!!!">
+<meta name="twitter:title" content="磨刀霍霍：视图那些事儿">
+<meta name="twitter:description" content="是谁在敲打我的窗~">
   
   <link rel="icon" href="/css/images/favicon.png">
   
@@ -118,7 +118,7 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-磨刀霍霍：聊聊SQL子查询关键字" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost">
+          <section id="main" style="float:none;"><article id="post-磨刀霍霍：视图那些事儿" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost">
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -126,7 +126,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      磨刀霍霍：聊聊SQL子查询关键字
+      磨刀霍霍：视图那些事儿
     </h1>
   
 
@@ -134,8 +134,8 @@
     
     <div class="article-meta">
       
-	<a href="/2020/05/08/磨刀霍霍：聊聊SQL子查询关键字/" class="article-date">
-	  <time datetime="2020-05-08T14:56:16.000Z" itemprop="datePublished">May 8, 2020</time>
+	<a href="/2020/05/10/磨刀霍霍：视图那些事儿/" class="article-date">
+	  <time datetime="2020-05-10T05:35:46.000Z" itemprop="datePublished">May 10, 2020</time>
 	</a>
 
       
@@ -146,36 +146,33 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p></p>
-<h1 id="SQL-子查询关键字"><a href="#SQL-子查询关键字" class="headerlink" title="SQL 子查询关键字"></a>SQL 子查询关键字</h1><h2 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h2><blockquote>
-<p><code>where</code> 子句中允许出现查询语句，称为子查询</p>
-</blockquote>
-<h2 id="单行子查询"><a href="#单行子查询" class="headerlink" title="单行子查询"></a>单行子查询</h2><blockquote>
-<p>返回一行数据的子查询语句</p>
-</blockquote>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 原来需要两条查询的语句</span></span><br><span class="line"><span class="comment">-- 查出小 A 的值</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">value</span> <span class="keyword">from</span> <span class="keyword">table</span> <span class="keyword">where</span> <span class="keyword">name</span> = <span class="string">'A'</span> <span class="comment">--假设结果为10</span></span><br><span class="line"><span class="comment">-- 查出比小 A 值更高的亲故</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">name</span> <span class="keyword">from</span> <span class="keyword">table</span> <span class="keyword">where</span> <span class="keyword">value</span> &gt; <span class="number">10</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 利用子查询合并为一句</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">name</span> <span class="keyword">from</span> <span class="keyword">table</span> <span class="keyword">where</span> <span class="keyword">value</span> &gt; (<span class="keyword">select</span> <span class="keyword">value</span> <span class="keyword">from</span> <span class="keyword">table</span> <span class="keyword">where</span> <span class="keyword">name</span> = <span class="string">'A'</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="多行子查询"><a href="#多行子查询" class="headerlink" title="多行子查询"></a>多行子查询</h2><blockquote>
-<p>返回多行数据的子查询语句</p>
-</blockquote>
-<h3 id="any"><a href="#any" class="headerlink" title="any"></a>any</h3><blockquote>
-<p>表示<strong>任意一个</strong><br><code>&lt;&gt;any</code> 表示不等于其中任何一个即成立<br>子查询不返回结果时，为 false<br>结果值有 null 时，null 不参与比较</p>
-</blockquote>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 查出任意一个比小 A 值更高的亲故</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">name</span> <span class="keyword">from</span> <span class="keyword">table</span> <span class="keyword">where</span> <span class="keyword">value</span> &gt; <span class="keyword">any</span> (<span class="keyword">select</span> <span class="keyword">value</span> <span class="keyword">from</span> <span class="keyword">table</span> <span class="keyword">where</span> <span class="keyword">name</span> = <span class="string">'A'</span>)</span><br></pre></td></tr></table></figure>
-<h3 id="all"><a href="#all" class="headerlink" title="all"></a>all</h3><blockquote>
-<p>表示<strong>所有</strong><br><code>&gt;all</code> 表示要大于所有子查询出的结果<br>子查询不返回结果时，为 true<br>结果值有 null 时，不返回数据</p>
-</blockquote>
-<h3 id="in"><a href="#in" class="headerlink" title="in"></a>in</h3><blockquote>
-<p>表示值是否存在子查询结果<br>即 <code>=any</code><br>子查询不返回结果时，为 false<br>结果值有 null 时，null 不参与比较</p>
-</blockquote>
-<h3 id="not-in"><a href="#not-in" class="headerlink" title="not in"></a>not in</h3><blockquote>
-<p>即 <code>&lt;&gt;all</code></p>
-</blockquote>
-<h3 id="exist"><a href="#exist" class="headerlink" title="exist"></a>exist</h3><blockquote>
-<p>表示子查询是否返回结果，而不管返回的具体内容</p>
-</blockquote>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="https://www.jianshu.com/p/9ba386ce3f52" target="_blank" rel="noopener">sql中几个子查询关键词any,all,exists,in</a></li>
+        <h1 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h1><h2 id="关于视图"><a href="#关于视图" class="headerlink" title="关于视图"></a>关于视图</h2><ul>
+<li>也称作虚拟表，是一组数据的逻辑表示</li>
+<li>本质是一个 SELECT 语句的结果集</li>
+<li>本身不包含任何数据，当基表数据变化的时候，视窗也会跟着变化</li>
+<li>主要是用于查询，简化复杂查询</li>
+<li>分为 <code>简单视图</code>、<code>复杂视图</code>和<code>连接视图</code> </li>
 </ul>
+<h2 id="SQL-语句"><a href="#SQL-语句" class="headerlink" title="SQL 语句"></a>SQL 语句</h2><ul>
+<li>创建视图</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">CREATEV VIEW [view_name] AS</span><br><span class="line"><span class="keyword">SELECT</span> column_name(s)</span><br><span class="line"><span class="keyword">FROM</span> table_name</span><br><span class="line"><span class="keyword">WHERE</span> condition</span><br></pre></td></tr></table></figure>
+<ul>
+<li>查询视图</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> column_name(s)</span><br><span class="line"><span class="keyword">FROM</span> [view_name]</span><br><span class="line"><span class="keyword">WHERE</span> condition</span><br></pre></td></tr></table></figure>
+<ul>
+<li>更新视图</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">OR</span> <span class="keyword">REPLACE</span> <span class="keyword">VIEW</span> view_name <span class="keyword">AS</span></span><br><span class="line"><span class="keyword">SELECT</span> column_name(s)</span><br><span class="line"><span class="keyword">FROM</span> table_name</span><br><span class="line"><span class="keyword">WHERE</span> condition</span><br></pre></td></tr></table></figure>
+<ul>
+<li>撤销视图</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">VIEW</span> view_name</span><br></pre></td></tr></table></figure>
+<ul>
+<li>check option 约束</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> column_name(s)</span><br><span class="line"><span class="keyword">FROM</span> [view_name]</span><br><span class="line"><span class="keyword">WHERE</span> condition</span><br><span class="line"><span class="keyword">WITH</span> <span class="keyword">check</span> <span class="keyword">option</span></span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -192,7 +189,7 @@
 	<div id="comment">
 	
 	<!-- 多说评论框 start -->
-	 <div class="ds-thread" data-thread-key="/2020/05/08/磨刀霍霍：聊聊SQL子查询关键字/" data-title="磨刀霍霍：聊聊SQL子查询关键字" data-url="http://yoursite.com/2020/05/08/磨刀霍霍：聊聊SQL子查询关键字/"></div>
+	 <div class="ds-thread" data-thread-key="/2020/05/10/磨刀霍霍：视图那些事儿/" data-title="磨刀霍霍：视图那些事儿" data-url="http://yoursite.com/2020/05/10/磨刀霍霍：视图那些事儿/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -220,19 +217,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/05/10/磨刀霍霍：视图那些事儿/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          磨刀霍霍：视图那些事儿
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/05/06/磨刀霍霍：关于行转列那些事儿/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/05/08/磨刀霍霍：聊聊SQL子查询关键字/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">磨刀霍霍：关于行转列那些事儿</div>
+      <div class="article-nav-title">磨刀霍霍：聊聊SQL子查询关键字</div>
     </a>
   
 </nav>
@@ -247,7 +235,7 @@
     <div id="toc" class="toc-article">
     <strong class="toc-title">Contents</strong>
     
-      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SQL-子查询关键字"><span class="nav-number">1.</span> <span class="nav-text">SQL 子查询关键字</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#子查询"><span class="nav-number">1.1.</span> <span class="nav-text">子查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单行子查询"><span class="nav-number">1.2.</span> <span class="nav-text">单行子查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多行子查询"><span class="nav-number">1.3.</span> <span class="nav-text">多行子查询</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#any"><span class="nav-number">1.3.1.</span> <span class="nav-text">any</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#all"><span class="nav-number">1.3.2.</span> <span class="nav-text">all</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#in"><span class="nav-number">1.3.3.</span> <span class="nav-text">in</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#not-in"><span class="nav-number">1.3.4.</span> <span class="nav-text">not in</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#exist"><span class="nav-number">1.3.5.</span> <span class="nav-text">exist</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">1.4.</span> <span class="nav-text">参考资料</span></a></li></ol></li></ol>
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#视图"><span class="nav-number">1.</span> <span class="nav-text">视图</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于视图"><span class="nav-number">1.1.</span> <span class="nav-text">关于视图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL-语句"><span class="nav-number">1.2.</span> <span class="nav-text">SQL 语句</span></a></li></ol></li></ol>
     
     </div>
   </aside>
