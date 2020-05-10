@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="Gaga酱の奇思妙想">
 <meta property="og:description" content="是谁在敲打我的窗~">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-05-10T06:51:59.101Z">
+<meta property="og:updated_time" content="2020-05-10T07:13:25.752Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="磨刀霍霍：视图那些事儿">
 <meta name="twitter:description" content="是谁在敲打我的窗~">
@@ -67,9 +67,31 @@
 
 
   
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src>
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src>
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pic0.jpg,css/images/pic2.png,css/images/pic4.jpg".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
 
 
-<header id="allheader" class="site-header" role="banner">
+
+
+<header id="allheader" class="site-header" role="banner" style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);">
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -150,7 +172,7 @@
 <li>也称作虚拟表，是一组数据的逻辑表示</li>
 <li>本质是一个 SELECT 语句的结果集</li>
 <li>本身不包含任何数据，当基表数据变化的时候，视窗也会跟着变化</li>
-<li>主要是用于查询，简化复杂查询</li>
+<li>主要是用于查询，简化复杂且频繁的查询</li>
 <li>分为 <code>简单视图</code>、<code>复杂视图</code>和<code>连接视图</code> </li>
 </ul>
 <h2 id="SQL-语句"><a href="#SQL-语句" class="headerlink" title="SQL 语句"></a>SQL 语句</h2><ul>
@@ -290,6 +312,9 @@
 
 
     <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>
