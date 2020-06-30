@@ -20,7 +20,7 @@
 <meta property="og:description" content="有图有真相！">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2020/06/30/磨刀霍霍：《数据化风控》学习笔记/《数据化风控》学习笔记.png">
-<meta property="og:updated_time" content="2020-06-30T14:55:51.849Z">
+<meta property="og:updated_time" content="2020-06-30T14:56:01.444Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="磨刀霍霍：《数据化风控》学习笔记">
 <meta name="twitter:description" content="有图有真相！">
@@ -69,9 +69,31 @@
 
 
   
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src>
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src>
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pic0.jpg,css/images/pic2.png,css/images/pic4.jpg".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
 
 
-<header id="allheader" class="site-header" role="banner">
+
+
+<header id="allheader" class="site-header" role="banner" style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);">
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -194,6 +216,15 @@
     
 <nav id="article-nav">
   
+    <a href="/2020/06/30/Y想-200630/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Y想-200630
+        
+      </div>
+    </a>
+  
   
     <a href="/2020/05/11/磨刀霍霍：协方差矩阵那些事儿/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
@@ -267,6 +298,9 @@
 
 
     <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>
