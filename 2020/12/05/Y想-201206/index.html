@@ -19,12 +19,12 @@
 <meta property="og:site_name" content="Gaga酱の奇思妙想">
 <meta property="og:description" content="一周小确幸  拆到了人生的第一只隐藏款，可可爱爱，最近应该会幸运爆棚 不太开心，TS 输了秋季赛，电子竞技真是残酷啊 这周开始年终的收尾工作了，今年果然输出少了很多 T T  好好学习，天天向上 《山茶文具店》终于快看完了，日式文学真的是很闷了 &amp;gt;&amp;lt;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2020/12/05/Y想-201206/IMG_2110.JPG">
-<meta property="og:updated_time" content="2020-12-06T07:37:29.197Z">
+<meta property="og:image" content="http://yoursite.com/2020/12/05/Y想-201206/IMG_2110.jpg">
+<meta property="og:updated_time" content="2020-12-06T07:42:17.629Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Y想-201206">
 <meta name="twitter:description" content="一周小确幸  拆到了人生的第一只隐藏款，可可爱爱，最近应该会幸运爆棚 不太开心，TS 输了秋季赛，电子竞技真是残酷啊 这周开始年终的收尾工作了，今年果然输出少了很多 T T  好好学习，天天向上 《山茶文具店》终于快看完了，日式文学真的是很闷了 &amp;gt;&amp;lt;">
-<meta name="twitter:image" content="http://yoursite.com/2020/12/05/Y想-201206/IMG_2110.JPG">
+<meta name="twitter:image" content="http://yoursite.com/2020/12/05/Y想-201206/IMG_2110.jpg">
   
   <link rel="icon" href="/css/images/favicon.png">
   
@@ -69,9 +69,31 @@
 
 
   
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src>
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src>
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pic0.jpg,css/images/pic2.png,css/images/pic4.jpg".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
 
 
-<header id="allheader" class="site-header" role="banner">
+
+
+<header id="allheader" class="site-header" role="banner" style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);">
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -148,7 +170,7 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="一周小确幸"><a href="#一周小确幸" class="headerlink" title="一周小确幸"></a>一周小确幸</h3><p><img src="IMG_2110.JPG" alt></p>
+        <h3 id="一周小确幸"><a href="#一周小确幸" class="headerlink" title="一周小确幸"></a>一周小确幸</h3><p><img src="IMG_2110.jpg" alt></p>
 <ul>
 <li>拆到了人生的第一只<strong>隐藏款</strong>，可可爱爱，最近应该会幸运爆棚</li>
 <li>不太开心，<code>TS</code> 输了秋季赛，电子竞技真是残酷啊</li>
@@ -275,6 +297,9 @@
 
 
     <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>
