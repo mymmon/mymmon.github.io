@@ -11,18 +11,18 @@
   
   
   
-  <meta name="description" content="关于Gaga一只闽南鹅，闽南话名字读音是Gaga，你可以叫我嘎嘎。 关于Blog在江五渣同学的耳濡目染下，捡起了积灰多年的Github，搭起了这个小站。 2018年2月13日就是小站的生日啦~ 关于过去和未来庸庸碌碌的过了三年的职业生涯，写文档、做PPT、制作视频、写demo代码，然后发现想要的生活其实在别处。 但愿未来勇敢的走。 关于萌萌萌萌。不能忘记。">
+  <meta name="description" content="关于Gaga一只闽南鹅，闽南话名字读音是Gaga，你可以叫我嘎嘎。 关于Blog在江五渣同学的耳濡目染下，捡起了积灰多年的Github，搭起了这个小站。 2018年2月13日就是小站的生日啦~ 关于过去和未来庸庸碌碌的过了三年的职业生涯，写文档、做PPT、制作视频、写demo代码，然后发现想要的生活其实在别处。 但愿未来勇敢的走。">
 <meta name="keywords" content="萌萌の嘎嘎">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Aloha! Nice to meet U!">
 <meta property="og:url" content="http://yoursite.com/about/index.html">
 <meta property="og:site_name" content="Gaga酱の奇思妙想">
-<meta property="og:description" content="关于Gaga一只闽南鹅，闽南话名字读音是Gaga，你可以叫我嘎嘎。 关于Blog在江五渣同学的耳濡目染下，捡起了积灰多年的Github，搭起了这个小站。 2018年2月13日就是小站的生日啦~ 关于过去和未来庸庸碌碌的过了三年的职业生涯，写文档、做PPT、制作视频、写demo代码，然后发现想要的生活其实在别处。 但愿未来勇敢的走。 关于萌萌萌萌。不能忘记。">
+<meta property="og:description" content="关于Gaga一只闽南鹅，闽南话名字读音是Gaga，你可以叫我嘎嘎。 关于Blog在江五渣同学的耳濡目染下，捡起了积灰多年的Github，搭起了这个小站。 2018年2月13日就是小站的生日啦~ 关于过去和未来庸庸碌碌的过了三年的职业生涯，写文档、做PPT、制作视频、写demo代码，然后发现想要的生活其实在别处。 但愿未来勇敢的走。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-10T17:00:13.798Z">
+<meta property="og:updated_time" content="2021-02-28T07:54:39.757Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Aloha! Nice to meet U!">
-<meta name="twitter:description" content="关于Gaga一只闽南鹅，闽南话名字读音是Gaga，你可以叫我嘎嘎。 关于Blog在江五渣同学的耳濡目染下，捡起了积灰多年的Github，搭起了这个小站。 2018年2月13日就是小站的生日啦~ 关于过去和未来庸庸碌碌的过了三年的职业生涯，写文档、做PPT、制作视频、写demo代码，然后发现想要的生活其实在别处。 但愿未来勇敢的走。 关于萌萌萌萌。不能忘记。">
+<meta name="twitter:description" content="关于Gaga一只闽南鹅，闽南话名字读音是Gaga，你可以叫我嘎嘎。 关于Blog在江五渣同学的耳濡目染下，捡起了积灰多年的Github，搭起了这个小站。 2018年2月13日就是小站的生日啦~ 关于过去和未来庸庸碌碌的过了三年的职业生涯，写文档、做PPT、制作视频、写demo代码，然后发现想要的生活其实在别处。 但愿未来勇敢的走。">
   
   <link rel="icon" href="/css/images/favicon.png">
   
@@ -67,9 +67,31 @@
 
 
   
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src>
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src>
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pic0.jpg,css/images/pic2.png,css/images/pic4.jpg".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
 
 
-<header id="allheader" class="site-header" role="banner">
+
+
+<header id="allheader" class="site-header" role="banner" style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);">
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -144,7 +166,6 @@
 <p><code>2018年2月13日</code>就是小站的生日啦~</p>
 <h3 id="关于过去和未来"><a href="#关于过去和未来" class="headerlink" title="关于过去和未来"></a>关于过去和未来</h3><p>庸庸碌碌的过了三年的职业生涯，<br>写文档、做PPT、制作视频、写demo代码，<br>然后发现想要的生活其实在别处。</p>
 <p>但愿未来勇敢的走。</p>
-<h3 id="关于萌萌"><a href="#关于萌萌" class="headerlink" title="关于萌萌"></a>关于萌萌</h3><p><code>萌萌</code>。<br>不能忘记。</p>
 
       
     </div>
@@ -457,6 +478,9 @@
 
 
     <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>

@@ -66,9 +66,31 @@
 
 
   
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src>
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src>
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pic0.jpg,css/images/pic2.png,css/images/pic4.jpg".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
 
 
-<header id="allheader" class="site-header" role="banner">
+
+
+<header id="allheader" class="site-header" role="banner" style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);">
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -664,7 +686,7 @@
 
 
   
-    <article id="post-磨刀霍霍：关于行转列那些事儿" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-磨刀霍霍：创建高性能的索引" class="article article-type-post" itemscope itemprop="blogPost">
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -672,7 +694,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2020/05/06/磨刀霍霍：关于行转列那些事儿/">磨刀霍霍：关于行转列那些事儿</a>
+      <a class="article-title" href="/2020/05/06/磨刀霍霍：创建高性能的索引/">磨刀霍霍： HOW TO 创建高性能的索引</a>
     </h1>
   
 
@@ -680,7 +702,7 @@
     
     <div class="article-meta">
       
-	<a href="/2020/05/06/磨刀霍霍：关于行转列那些事儿/" class="article-date">
+	<a href="/2020/05/06/磨刀霍霍：创建高性能的索引/" class="article-date">
 	  <time datetime="2020-05-06T15:19:53.000Z" itemprop="datePublished">May 6, 2020</time>
 	</a>
 
@@ -696,11 +718,11 @@
 
           
           <div class="entry-summary">
-          查缺补漏的日常！
+          学习的快乐！
 
         
           <p class="article-more-link">
-            <a href="/2020/05/06/磨刀霍霍：关于行转列那些事儿/#more">Continue Reading →</a>
+            <a href="/2020/05/06/磨刀霍霍：创建高性能的索引/#more">Continue Reading →</a>
           </p>
         </div>
       
@@ -712,7 +734,7 @@
 
       
   <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SQL/">SQL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/认真学习の日常/">认真学习の日常</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/《高性能-MySQL》学习笔记/">《高性能 MySQL》学习笔记</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/认真学习の日常/">认真学习の日常</a></li></ul>
 
       
     </footer>
@@ -1002,6 +1024,9 @@
 
 
     <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>
