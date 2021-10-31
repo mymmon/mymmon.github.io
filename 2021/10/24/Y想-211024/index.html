@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="Gaga酱の奇思妙想">
 <meta property="og:description" content="一周小确幸 是黑色的十月没有错了，想起以前写的深耕，又到了一年总结的时候，才想起自己浪费了太多的时间 给今年的工作学习制定一个 deadline ，11月底前完成所有任务的收官，剩下的就归给 2022 年了！  好好学习，天天向上 本周曲目有：本周偷懒了！  本周书单有：    山月记（在读） 反正竞赛还很长(读完)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-10-24T07:00:50.259Z">
+<meta property="og:updated_time" content="2021-10-24T07:01:48.564Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Y想-211024">
 <meta name="twitter:description" content="一周小确幸 是黑色的十月没有错了，想起以前写的深耕，又到了一年总结的时候，才想起自己浪费了太多的时间 给今年的工作学习制定一个 deadline ，11月底前完成所有任务的收官，剩下的就归给 2022 年了！  好好学习，天天向上 本周曲目有：本周偷懒了！  本周书单有：    山月记（在读） 反正竞赛还很长(读完)">
@@ -67,9 +67,31 @@
 
 
   
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src>
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src>
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pic0.jpg,css/images/pic2.png,css/images/pic4.jpg".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
 
 
-<header id="allheader" class="site-header" role="banner">
+
+
+<header id="allheader" class="site-header" role="banner" style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);">
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -205,6 +227,15 @@
     
 <nav id="article-nav">
   
+    <a href="/2021/10/31/Y想-211031/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Y想-211031
+        
+      </div>
+    </a>
+  
   
     <a href="/2021/10/17/Y想-211017/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
@@ -278,6 +309,9 @@
 
 
     <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>
