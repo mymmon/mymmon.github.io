@@ -67,9 +67,31 @@
 
 
   
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src>
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src>
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pic0.jpg,css/images/pic2.png,css/images/pic4.jpg".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
 
 
-<header id="allheader" class="site-header" role="banner">
+
+
+<header id="allheader" class="site-header" role="banner" style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);">
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -143,21 +165,21 @@
             
                 <a href="#SQL" title="SQL" rel="8">SQL</a>
             
+                <a href="#Excel" title="Excel" rel="2">Excel</a>
+            
                 <a href="#Numpy" title="Numpy" rel="2">Numpy</a>
             
                 <a href="#认真学习の日常" title="认真学习の日常" rel="18">认真学习の日常</a>
             
-                <a href="#Excel" title="Excel" rel="2">Excel</a>
+                <a href="#数据分析" title="数据分析" rel="2">数据分析</a>
             
                 <a href="#做题笔记" title="做题笔记" rel="1">做题笔记</a>
             
-                <a href="#数据分析" title="数据分析" rel="2">数据分析</a>
+                <a href="#《高性能 MySQL》学习笔记" title="《高性能 MySQL》学习笔记" rel="1">《高性能 MySQL》学习笔记</a>
             
                 <a href="#一些奇奇怪怪の日常" title="一些奇奇怪怪の日常" rel="1">一些奇奇怪怪の日常</a>
             
                 <a href="#爬虫" title="爬虫" rel="2">爬虫</a>
-            
-                <a href="#《高性能 MySQL》学习笔记" title="《高性能 MySQL》学习笔记" rel="1">《高性能 MySQL》学习笔记</a>
             
                 <a href="#pandas" title="pandas" rel="1">pandas</a>
             
@@ -3136,13 +3158,13 @@
   <div class="archive-article-inner">
     <header class="archive-article-header">
 
-      <a href="/2020/05/06/磨刀霍霍：创建高性能的索引/" class="archive-article-date">
+      <a href="/2020/05/06/磨刀霍霍：关于行转列那些事儿/" class="archive-article-date">
 		  <time datetime="2020-05-06T15:19:53.000Z" itemprop="datePublished">May 06, 2020</time>
 	  </a>
       
   
     <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2020/05/06/磨刀霍霍：创建高性能的索引/">磨刀霍霍： HOW TO 创建高性能的索引</a>
+      <a class="archive-article-title" href="/2020/05/06/磨刀霍霍：关于行转列那些事儿/">磨刀霍霍：关于行转列那些事儿</a>
     </h1>
   
 
@@ -3155,13 +3177,13 @@
   <div class="archive-article-inner">
     <header class="archive-article-header">
 
-      <a href="/2020/05/06/磨刀霍霍：关于行转列那些事儿/" class="archive-article-date">
+      <a href="/2020/05/06/磨刀霍霍：创建高性能的索引/" class="archive-article-date">
 		  <time datetime="2020-05-06T15:19:53.000Z" itemprop="datePublished">May 06, 2020</time>
 	  </a>
       
   
     <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2020/05/06/磨刀霍霍：关于行转列那些事儿/">磨刀霍霍：关于行转列那些事儿</a>
+      <a class="archive-article-title" href="/2020/05/06/磨刀霍霍：创建高性能的索引/">磨刀霍霍： HOW TO 创建高性能的索引</a>
     </h1>
   
 
@@ -3691,6 +3713,9 @@
 
 
     <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>

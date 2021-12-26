@@ -11,18 +11,18 @@
   
   
   
-  <meta name="description" content="title: Y想-211219date: 2021-12-19 16:04:10tags:  小李の胡说八道category: 每周都有新发现date: 2021-12-19 16:30:06   一周小确幸 真·计划赶不上变化，赶作业赶得不知道啥时候才能休假，只能坐等新一波作业 温泉真是冬日治愈系活动第一名，马杀鸡第二名！  好好学习，天天向上 本周曲目有：  -《青城山下白素贞》  本周书">
+  <meta name="description" content="abbrlink: 0title: Y想-211219date: 2021-12-19 16:04:10tags:  小李の胡说八道category: 每周都有新发现date: 2021-12-19 16:30:06   一周小确幸 真·计划赶不上变化，赶作业赶得不知道啥时候才能休假，只能坐等新一波作业 温泉真是冬日治愈系活动第一名，马杀鸡第二名！  好好学习，天天向上 本周曲目有：  -《青城">
 <meta name="keywords" content="萌萌の嘎嘎">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Gaga酱の奇思妙想">
 <meta property="og:url" content="http://yoursite.com/2021/12/19/Y想-211219/index.html">
 <meta property="og:site_name" content="Gaga酱の奇思妙想">
-<meta property="og:description" content="title: Y想-211219date: 2021-12-19 16:04:10tags:  小李の胡说八道category: 每周都有新发现date: 2021-12-19 16:30:06   一周小确幸 真·计划赶不上变化，赶作业赶得不知道啥时候才能休假，只能坐等新一波作业 温泉真是冬日治愈系活动第一名，马杀鸡第二名！  好好学习，天天向上 本周曲目有：  -《青城山下白素贞》  本周书">
+<meta property="og:description" content="abbrlink: 0title: Y想-211219date: 2021-12-19 16:04:10tags:  小李の胡说八道category: 每周都有新发现date: 2021-12-19 16:30:06   一周小确幸 真·计划赶不上变化，赶作业赶得不知道啥时候才能休假，只能坐等新一波作业 温泉真是冬日治愈系活动第一名，马杀鸡第二名！  好好学习，天天向上 本周曲目有：  -《青城">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-12-19T08:57:38.240Z">
+<meta property="og:updated_time" content="2021-12-26T13:29:16.602Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Gaga酱の奇思妙想">
-<meta name="twitter:description" content="title: Y想-211219date: 2021-12-19 16:04:10tags:  小李の胡说八道category: 每周都有新发现date: 2021-12-19 16:30:06   一周小确幸 真·计划赶不上变化，赶作业赶得不知道啥时候才能休假，只能坐等新一波作业 温泉真是冬日治愈系活动第一名，马杀鸡第二名！  好好学习，天天向上 本周曲目有：  -《青城山下白素贞》  本周书">
+<meta name="twitter:description" content="abbrlink: 0title: Y想-211219date: 2021-12-19 16:04:10tags:  小李の胡说八道category: 每周都有新发现date: 2021-12-19 16:30:06   一周小确幸 真·计划赶不上变化，赶作业赶得不知道啥时候才能休假，只能坐等新一波作业 温泉真是冬日治愈系活动第一名，马杀鸡第二名！  好好学习，天天向上 本周曲目有：  -《青城">
   
   <link rel="icon" href="/css/images/favicon.png">
   
@@ -67,9 +67,31 @@
 
 
   
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src>
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src>
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pic0.jpg,css/images/pic2.png,css/images/pic4.jpg".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
 
 
-<header id="allheader" class="site-header" role="banner">
+
+
+<header id="allheader" class="site-header" role="banner" style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);">
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -134,7 +156,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<p>title: Y想-211219<br>date: 2021-12-19 16:04:10<br>tags:</p>
+<p>abbrlink: 0<br>title: Y想-211219<br>date: 2021-12-19 16:04:10<br>tags:</p>
 <ul>
 <li>小李の胡说八道<br>category:</li>
 <li>每周都有新发现<br>date: 2021-12-19 16:30:06</li>
@@ -264,6 +286,9 @@
 
 
     <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>
