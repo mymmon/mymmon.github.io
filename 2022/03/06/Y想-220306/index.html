@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="Gaga酱の奇思妙想">
 <meta property="og:description" content="一周小确幸 这周情绪阈值波动比较大，出现了比较多的突发事件，幸好也认真做了复盘，但是总觉得自己还是有很多需要提升的地方，首要的就是不能太凭着直觉做事情，还是要思考来龙去脉 本周的运动量又是超标的一周, 感觉一年份的运动量都贡献在这里了，但是还蛮有成就感的！人呐就是好矛盾的，每次都是兴致高涨地冲冲冲，然后再苦兮兮地说再也不参加了。然后新一年又忘记今年的苦…大概明年还是这个轮回吧 久违的和慕哥频繁见面">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2022-03-06T06:31:42.006Z">
+<meta property="og:updated_time" content="2022-03-06T06:31:58.706Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Y想-220306">
 <meta name="twitter:description" content="一周小确幸 这周情绪阈值波动比较大，出现了比较多的突发事件，幸好也认真做了复盘，但是总觉得自己还是有很多需要提升的地方，首要的就是不能太凭着直觉做事情，还是要思考来龙去脉 本周的运动量又是超标的一周, 感觉一年份的运动量都贡献在这里了，但是还蛮有成就感的！人呐就是好矛盾的，每次都是兴致高涨地冲冲冲，然后再苦兮兮地说再也不参加了。然后新一年又忘记今年的苦…大概明年还是这个轮回吧 久违的和慕哥频繁见面">
@@ -67,9 +67,31 @@
 
 
   
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src>
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src>
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pic0.jpg,css/images/pic2.png,css/images/pic4.jpg".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
 
 
-<header id="allheader" class="site-header" role="banner">
+
+
+<header id="allheader" class="site-header" role="banner" style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);">
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -280,6 +302,9 @@
 
 
     <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
     
     
 </script>
